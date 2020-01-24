@@ -104,6 +104,32 @@ body {
   box-shadow: none;
 }
 
+.desktop-svg {
+  display: block;
+  width: 100%;
+  height: 15rem;
+}
+
+.mobile-svg {
+  display: none;
+}
+
+@media screen and (max-width: 768px) {
+  .page {
+    padding-block-start: 2rem;
+  }
+  
+  .desktop-svg {
+    display: none;
+  }
+
+  .mobile-svg {
+    display: block;
+    width: 100%;
+    height: 10rem;
+  }
+}
+
 @media screen and (max-width: 600px) {
   .social-medias {
     grid-template-columns: repeat(3, 5rem);
