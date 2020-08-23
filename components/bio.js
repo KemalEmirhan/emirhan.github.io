@@ -18,9 +18,9 @@ const Bio = () => {
                     Frontend, Nodejs, Java for Backend. 
                     Former, Huawei engineer.
                 </p>
-                <p className={styles.bio_desc__job}>
+                <span className={styles.bio_desc__job}>
                     Frontend Engineer @Digiturk
-                </p>
+                </span>
             </div>
         </section>
     );
