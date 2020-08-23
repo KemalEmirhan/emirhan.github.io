@@ -7,14 +7,35 @@ const FileList = () => {
             <div className={styles.list_header}>
                 <h4>More informations about me</h4>
             </div>
-            <ul className={styles.list_content}>
-                <li className={styles.list_content__item}>Github</li>
-                <li className={styles.list_content__item}>LinkedIn</li>
-                <li className={styles.list_content__item}>Medium</li>
-                <li className={styles.list_content__item}>Twitter</li>
-                <li className={styles.list_content__item}>Instagram</li>
-                <li className={styles.list_content__item}>Gmail</li>
-            </ul>
+            <div className={styles.list_wrapper}>
+                <ul className={styles.list_wrapper__content}>
+                    <li className={styles.list_wrapper__content_item}>
+                        <img src="/file-empty.svg" alt="File" />
+                        <a href="https://github.com/KemalEmirhan" target="_blank" rel="noopener noreferrer">
+                            <span>
+                                Github
+                            </span>
+                        </a>
+                    </li>
+                    <li className={styles.list_wrapper__content_item}>
+                        <img src="/file-empty.svg" alt="File" />
+                        <a href="https://www.linkedin.com/in/emirhan-kemal-kösem-259569b3/" target="_blank" rel="noopener noreferrer">
+                        <span>LinkedIn</span></a>
+                    </li>
+                    <li className={styles.list_wrapper__content_item}>
+                        <img src="/file-empty.svg" alt="File" />
+                        <a href="https://medium.com/@emirhankemalkosem" target="_blank" rel="noopener noreferrer"><span>Medium</span></a>
+                    </li>
+                    <li className={styles.list_wrapper__content_item}>
+                        <img src="/file-empty.svg" alt="File" />  
+                        <a href="ttps://twitter.com/KsemEmir" target="_blank" rel="noopener noreferrer"><span>Twitter</span></a>  
+                    </li>
+                    <li className={styles.list_wrapper__content_item}>
+                        <img src="/file-empty.svg" alt="File" />
+                        <a href="/resume.pdf" rel="noopener noreferrer" download><span>Resume</span></a>
+                    </li>
+                </ul>
+            </div>
         </section>
     )
 }
