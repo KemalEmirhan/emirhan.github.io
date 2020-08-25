@@ -28,7 +28,7 @@ const FileList = () => {
                     </li>
                     <li className={styles.list_wrapper__content_item}>
                         <img src="/file-empty.svg" alt="File" />  
-                        <a href="ttps://twitter.com/KsemEmir" target="_blank" rel="noopener noreferrer"><span>Twitter</span></a>  
+                        <a href="https://twitter.com/KsemEmir" target="_blank" rel="noopener noreferrer"><span>Twitter</span></a>  
                     </li>
                     <li className={styles.list_wrapper__content_item}>
                         <img src="/file-empty.svg" alt="File" />
