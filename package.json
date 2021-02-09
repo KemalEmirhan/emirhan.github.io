@@ -1,16 +1,32 @@
 {
-  "name": "x",
-  "version": "0.1.0",
+  "name": "website",
+  "version": "1.0.0",
   "private": true,
+  "author": {
+    "name": "Emirhan Kemal Kosem",
+    "email": "emirhankemalkosem@gmail.com"
+  },
   "scripts": {
     "dev": "next dev",
     "build": "next build",
     "start": "next start"
   },
   "dependencies": {
-    "next": "^10.0.0",
-    "react": "16.13.1",
-    "react-dom": "16.13.1",
-    "sass": "^1.26.10"
-  }
+    "autoprefixer": "^10.2.4",
+    "next": "^10.0.6",
+    "postcss": "^8.2.5",
+    "react": "^17.0.1",
+    "react-dom": "^17.0.1",
+    "sass": "^1.26.10",
+    "tailwindcss": "^2.0.3"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/KemalEmirhan/emirhan.github.io"
+  },
+  "browserslist": [
+    "last 1 version",
+    "> 1%",
+    "IE 10"
+  ]
 }
