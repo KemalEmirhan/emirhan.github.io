@@ -34,13 +34,6 @@ a:active {
   height: 100vh;
 }
 
-.container {
-  width: 100%;
-  max-width: 1280px;
-  padding: 0 1rem;
-  margin: 0 auto;
-}
-
 /* Tailwind imports */
 @tailwind base;
 @tailwind components;

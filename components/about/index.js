@@ -1,15 +1,12 @@
 import React from 'react';
-import Image from "next/image";
-import styles from '../styles/bio.module.scss';
+import useAge from '@hooks/useAge';
 
-const Bio = () => {
-    const age = ((new Date()).getFullYear() - 1994) - 1;
+export default About = () => {
+    const age = useAge();
 
     return (
         <section className={styles.bio}>
-            <div className={styles.bio_pic}>
-                <Image src="/pp.jpeg" alt="Emirhan Kemal Kösem" loading="lazy" width="240px" height="240px" /> 
-            </div>
+            
             <div className={styles.bio_desc}>
                 <h2 className={styles.bio_desc__header}>
                     Emirhan Kemal KÖSEM
@@ -26,5 +23,3 @@ const Bio = () => {
         </section>
     );
 }
-
-export default Bio;
