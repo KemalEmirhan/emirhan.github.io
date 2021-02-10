@@ -1,6 +1,8 @@
-import Head from 'next/head'
+import React from 'react';
+import Head from 'next/head';
+import Image from 'next/image';
 
-export default Home = () => {
+const Home = () => {
   return (
     <div className="page">
       <Head>
@@ -15,3 +17,5 @@ export default Home = () => {
     </div>
   );
 }
+
+export default Home;
