@@ -6,8 +6,8 @@ const Account = () => {
         <div className="">
             {Array.from(accountLinks).map((link) => (
                 <div className="">
-                    <a href={link.url} title={link.name} target="_blank" rel="noopener noreferrer">
-                        <img src={link.icon} alt={link.name} loading="lazy" />
+                    <a href={link.url} title={link.name} target="_blank" rel="noopener noreferrer" role="presentation">
+                        <img src={link.icon} alt={link.name} loading="lazy" width="64" height="64" />
                     </a>
                 </div>
             ))}
