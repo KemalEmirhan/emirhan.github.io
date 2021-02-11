@@ -1,6 +1,10 @@
 import React from 'react';
 import Head from 'next/head';
-import Image from 'next/image';
+
+// Import Local Components
+import About from '@components/about';
+import Photo from '@components/photo';
+import Account from '@components/accounts';
 
 const Home = () => {
   return (
@@ -12,7 +16,12 @@ const Home = () => {
       </Head>
 
       <main className="container">
+        <div>
+          <About />
+          <Photo />
+        </div>
         
+        <Account />
       </main>
     </div>
   );

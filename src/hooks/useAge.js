@@ -1,5 +1,7 @@
 const BIRTH_YEAR = 1994;
 
-export const useAge = () => {
+const useAge = () => {
     return ((new Date()).getFullYear() - BIRTH_YEAR) - 1;
 }
+
+export default useAge;
