@@ -1,6 +1,6 @@
 module.exports = {
     purge: ['./pages/**/*.{js,ts,jsx,tsx}', './components/**/*.{js,ts,jsx,tsx}'],
-    darkMode: false,
+    darkMode: 'media',
     theme: {
         screens: {
           sm: '480px',
@@ -11,6 +11,8 @@ module.exports = {
         extend: {
           colors: {
             'company-blue': '#1e64ff',
+            'dark-background': '#070910',
+            'dark-text-color': '#c9d1d9',
           }
         },
       },
