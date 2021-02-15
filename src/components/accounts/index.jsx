@@ -10,7 +10,7 @@ const Account = () => {
                     <div className="w-1/4 hover:underline" key={link.name}>
                         <a className="flex justify-center md:justify-start items-center" href={link.url} title={link.name} target="_blank" rel="noopener noreferrer" role="presentation">
                             <span className="font-light dark:text-white">{link.name}</span>
-                            <img src={link.icon} alt={link.name} width="24" height="24" className="hidden md:block ml-2" />
+                            <img src={link.icon} alt={link.name} width="16" height="16" className="hidden md:block ml-2" />
                         </a>
                     </div>
                 ))}

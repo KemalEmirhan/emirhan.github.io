@@ -5,6 +5,10 @@
           box-sizing: border-box;
 }
 
+@import  'tailwindcss/base';
+@import  'tailwindcss/components';
+@import  'tailwindcss/utilities';
+
 ul[class],
 ol[class] {
   padding: 0;
