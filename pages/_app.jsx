@@ -1,6 +1,12 @@
+import React from 'react';
 import 'tailwindcss/tailwind.css';
 
-function MyApp({ Component, pageProps }) {
+const MyApp = ({ Component, pageProps }) => {
+
+  React.useEffect(() => {
+    localStorage.setItem('theme', 'light');
+  }, []);
+  
   return <Component {...pageProps} />
 }
 
