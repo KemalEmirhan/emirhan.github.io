@@ -1,16 +1,20 @@
 import React from 'react';
 import 'tailwindcss/tailwind.css';
 
+import { AppProvider } from 'src/context';
+
 const MyApp = ({ Component, pageProps }) => {
-  
-  React.useEffect(() => {  
+
+  React.useEffect(() => {
     const html = document.documentElement;
-    
-    localStorage.setItem('theme', 'light');
-    if (html) html.classList.add('light');
+    html.classList.add('light');
   }, []);
-  
-  return <Component {...pageProps} />
+
+  return (
+    <AppProvider>
+      <Component {...pageProps} />
+    </AppProvider>
+  );
 }
 
 export default MyApp;

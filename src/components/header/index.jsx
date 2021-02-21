@@ -1,19 +1,18 @@
 import React from 'react';
 import Image from 'next/image';
+import { useAppState, useAppDispatch } from 'src/context';
 
 const Header = () => {
+    const { theme } = useAppState();
+    const dispatch = useAppDispatch();
+
     const toggleDarkMode = e => {
         e.preventDefault();
-        const theme = localStorage.getItem('theme');
-        const html = document.documentElement;
-
+        
         if (theme === 'light') {
-            html.classList.replace('light', 'dark');
-
-            localStorage.theme = 'dark'
+            dispatch({ type: 'darkTheme', payload: 'dark' });
         } else {
-            html.classList.replace('dark', 'light');
-            localStorage.theme = 'light';
+            dispatch({ type: 'lightTheme', payload: 'light' });
         }
     }
     
