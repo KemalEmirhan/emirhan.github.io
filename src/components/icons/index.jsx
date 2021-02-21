@@ -7,7 +7,7 @@ import TwitterIcon from './twitter.icon';
 
 const Icon = ({ iconName, color }) => {
     switch (iconName) {
-        case 'github':
+        case 'Github':
             return <GithubIcon bgColor={color} />;
         
         case 'LinkedIn': 
