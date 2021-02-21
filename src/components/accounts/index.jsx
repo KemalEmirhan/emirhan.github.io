@@ -9,12 +9,12 @@ const Account = () => {
 
     return (
         <div className="max-w-screen-md mx-auto flex flex-col justify-center md:justify-start">
-            <p className="font-semi-bold mb-4 md:mb-6 text-center md:text-left dark:text-white md:border-b md:border-b-gray-300 md:pb-2">You can find me at</p>
+            <p className="font-semi-bold text-base mb-4 md:mb-6 text-center md:text-left dark:text-white md:border-b md:border-b-gray-300 md:pb-2">You can find me at</p>
             <div className="flex justify-center md:justify-start items-center">
                 {Array.from(accountLinks).map((account) => (
                     <div className="w-1/4 hover:underline dark:hover:text-white" key={account.name}>
                         <a className="flex justify-center md:justify-start items-center" href={account.url} title={account.name} target="_blank" rel="noopener noreferrer" role="presentation">
-                            <span className="font-light dark:text-white">{account.name}</span>
+                            <span className="text-sm md:text-base font-light dark:text-white">{account.name}</span>
                             <Icon iconName={account.name} color={ theme === 'dark' && (account.name === 'Github' || account.name === 'Medium') ? '#fff' : account.color} />
                         </a>
                     </div>
