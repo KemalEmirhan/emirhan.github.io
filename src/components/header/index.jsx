@@ -23,7 +23,7 @@ const Header = () => {
             </a>
 
             <div className="flex items-center justify-center text-black dark:text-white bg-gray-300 hover:bg-gray-200 dark:bg-gray-600 w-8 h-8 rounded-md cursor-pointer dark:hover:bg-gray-500 transition duration-250 ease-in-out">
-                <Image src="/moon.svg" alt="Dark Mode" title="Dark Mode" width="24" height="24" onClick={toggleDarkMode} />
+                <Image src={theme === 'light' ? '/moon.svg' : '/sun.svg'} alt="Dark Mode" title="Dark Mode" width="24" height="24" onClick={toggleDarkMode} />
             </div>
         </div>
     );
