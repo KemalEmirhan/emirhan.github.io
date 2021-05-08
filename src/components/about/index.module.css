@@ -29,11 +29,20 @@
 .about_content {
     @apply
     mb-4
-    text-center 
-    font-light text-sm md:text-base md:text-left text-black
+    text-center
 }
 
-:global(.dark) .about_content {
+.about_content > p {
+    @apply
+    font-light text-sm md:text-base text-black
+}
+
+.about_content > p:last-child {
+    @apply
+    mt-2
+}
+
+:global(.dark) .about_content > p{
     @apply
     text-white
 }
@@ -44,10 +53,9 @@
     rounded-md 
     mx-auto
     bg-company-blue 
-    text-white font-semibold text-sm md:text-base
 }
 
-:global(.dark) .about_role {
+.about_role > p {
     @apply
-    text-white
+    text-white font-semibold text-sm md:text-base
 }

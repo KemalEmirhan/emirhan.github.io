@@ -8,16 +8,17 @@ const About = () => {
     return (
         <article className={styles.about}>
             <h2 className={styles.about_header}>
-                Emirhan Kemal KÖSEM
+                About Me
             </h2>
-            <p className={styles.about_content}>
-                I'm {age} years old. I graduated from my university at september of 2018 and got the Bachelor's Degree. Nowadays, I'm doing web development things in both sides which are Frontend and Backend. So, I'm using Reactjs with NextJS(VanillaJS, TypeScript), Sass and HTML5 for 
-                Frontend, Nodejs, Java for Backend. 
-                Former Huawei, Digiturk.
-            </p>
-            <span className={styles.about_role}>
-                Frontend Engineer @Iyzico
-            </span>
+            <section className={styles.about_content}>
+                <p>
+                    Hey, I'm Emirhan 👋  &nbsp; {age} years old. I'm Front-End Software Engineer who writes HTML5, CSS3 and JS(reactjs, nextjs). I'm interested with web standards, a11y and Figma these days. <wbr />
+                </p>
+                <p>If you react me, you feel free ✌</p>
+            </section>
+            <section className={styles.about_role}>
+                <p>Front-End Software Engineer @Iyzico</p>
+            </section>
         </article>
     );
 }
