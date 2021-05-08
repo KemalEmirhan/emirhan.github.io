@@ -1,0 +1,53 @@
+.about {
+    @apply
+    max-w-screen-md 
+    mx-auto 
+    flex flex-col items-baseline 
+    bg-blue-100
+    rounded-md 
+    px-8 py-6
+}
+
+:global(.dark) .about {
+    @apply
+    bg-gray-800;
+}
+
+.about_header {
+    @apply
+    text-xl md:text-2xl 
+    mb-6 
+    m-auto 
+    text-center
+}
+
+:global(.dark) .about_header {
+    @apply
+    text-white tracking-wide font-semibold
+}
+
+.about_content {
+    @apply
+    mb-4
+    text-center 
+    font-light text-sm md:text-base md:text-left text-black
+}
+
+:global(.dark) .about_content {
+    @apply
+    text-white
+}
+
+.about_role {
+    @apply
+    p-2 
+    rounded-md 
+    mx-auto
+    bg-company-blue 
+    text-white font-semibold text-sm md:text-base
+}
+
+:global(.dark) .about_role {
+    @apply
+    text-white
+}

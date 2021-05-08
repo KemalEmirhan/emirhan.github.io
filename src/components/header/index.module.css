@@ -1,0 +1,42 @@
+.header_container {
+    @apply
+    flex items-center justify-between 
+    max-w-screen-md 
+    mx-auto
+}
+
+.logo_wrapper {
+    @apply
+    mr-auto
+}
+
+.logo {
+    @apply
+    font-semibold text-black
+}
+
+:global(.dark) .logo {
+    @apply
+    text-white 
+}
+
+.dark_toggle {
+    @apply
+    flex items-center justify-center 
+    text-black
+     hover:bg-gray-100 
+    w-8 h-8 
+    rounded-md 
+    cursor-pointer transition duration-200 ease-in-out
+}
+
+:global(.dark) .dark_toggle {
+    @apply
+    text-white
+    hover:bg-gray-800
+}
+
+:global(.dark) .dark_toggle img {
+    @apply
+    fill-current
+}

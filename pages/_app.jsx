@@ -1,5 +1,5 @@
 import React from 'react';
-import 'tailwindcss/tailwind.css';
+import '@style/index.css';
 
 import { AppProvider } from 'src/context';
 

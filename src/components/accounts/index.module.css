@@ -1,0 +1,55 @@
+.accounts {
+    @apply
+    max-w-screen-md
+    mx-auto
+    flex flex-col justify-center md:justify-start
+}
+
+.accounts_header {
+    @apply
+    md:pb-2
+    mb-4 md:mb-6 
+    text-center md:text-left 
+    md:border-b md:border-gray-300
+} 
+
+.accounts_header > p {
+    @apply
+    font-semibold text-base capitalize
+    text-gray-600
+}
+
+:global(.dark) .accounts_header > p{
+    @apply
+    text-white
+}
+
+.accounts_content {
+    @apply
+    flex justify-center md:justify-start items-center
+}
+
+.links-container {
+    @apply
+    w-1/4 hover:underline 
+}
+
+:global(.dark) .links-container {
+    @apply
+    hover:text-white
+}
+
+.link {
+    @apply
+    flex justify-center md:justify-start items-center
+}
+
+.link_name {
+    @apply
+    text-sm md:text-base font-light dark:text-white
+}
+
+:global(.dark) .link_name {
+    @apply
+    text-white
+}

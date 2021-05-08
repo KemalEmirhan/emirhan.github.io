@@ -1,0 +1,24 @@
+.main {
+    @apply
+    w-full h-screen grid grid-rows-5 px-4 md:px-0 
+}
+
+:global(.dark) .main {
+    @apply
+    bg-dark-background
+}
+
+.header {
+    @apply
+    container lg:container mx-auto my-auto row-start-1 row-end-2
+}
+
+.content {
+    @apply
+    container lg:container mx-auto my-auto flex flex-col md:items-center row-start-2 row-end-5
+}
+
+.footer {
+    @apply
+    container my-auto mx-auto row-start-5
+}

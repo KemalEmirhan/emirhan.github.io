@@ -1,29 +1,29 @@
 import React from 'react';
 import Head from 'next/head';
 
-// Import Local Components
 import About from '@components/about';
 import Account from '@components/accounts';
 import Header from '@components/header';
+import styles from '@style/home.module.css';
 
 const Home = () => {
   return (
-    <main className="w-full h-screen grid grid-rows-5 px-4 md:px-0 dark:bg-dark-background">
+    <main className={styles.main}>
       <Head>
         <title>Emirhan Kosem</title>
         <link rel="icon" href="/favicon.ico" />
         <link href="https://fonts.googleapis.com/css2?family=Inter:wght@200;300;400;500;700&display=swap" rel="stylesheet" />
       </Head>
 
-      <header className="container lg:container-md mx-auto my-auto row-start-1 row-end-2">
+      <header className={styles.header}>
         <Header />
       </header>
       
-      <section className="container lg:container-md mx-auto my-auto flex flex-col md:items-center row-start-2 row-end-5">
+      <section className={styles.content}>
         <About />
       </section>
 
-      <footer className="container my-auto mx-auto row-start-5">
+      <footer className={styles.footer}>
         <Account />
       </footer>
     </main>
