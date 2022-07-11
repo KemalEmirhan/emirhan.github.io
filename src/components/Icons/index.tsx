@@ -5,7 +5,9 @@ import LinkedInIcon from './linkedIn.icon';
 import MediumIcon from './medium.icon';
 import TwitterIcon from './twitter.icon';
 
-const Icon = ({ iconName, color }) => {
+import { TBaseIconProps } from './icons.type';
+
+const Icon = ({ iconName, color }: TBaseIconProps): React.ReactElement | null => {
     switch (iconName) {
         case 'Github':
             return <GithubIcon bgColor={color} />;

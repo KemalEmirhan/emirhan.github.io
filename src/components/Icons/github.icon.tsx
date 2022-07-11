@@ -1,6 +1,7 @@
-import React from "react";
+import * as React from "react";
+import { TIconProp } from './icons.type';
 
-const GithubIcon = ({ bgColor }) => {
+const GithubIcon = ({ bgColor }: TIconProp): React.ReactElement => {
     return (
         <svg role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" width="16" height="16" className="hidden md:block ml-2">
             <title>Github</title>

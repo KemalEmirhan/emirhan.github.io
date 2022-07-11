@@ -1,8 +1,8 @@
 import React from 'react';
 import useAge from '@hooks/useAge';
-import styles from './index.module.css';
+import styles from './About.module.scss';
 
-const About = () => {
+const About = (): React.ReactElement => {
     const age = useAge();
 
     return (

@@ -1,6 +1,7 @@
-import React from 'react';
+import * as React from 'react';
+import { TIconProp } from './icons.type';
 
-const TwitterIcon = ({ bgColor }) => {
+const TwitterIcon = ({ bgColor }: TIconProp): React.ReactElement => {
     return (
         <svg role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="16" height="16" className="hidden md:block ml-2">
             <title>Twitter</title>
