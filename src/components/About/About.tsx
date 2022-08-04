@@ -6,17 +6,17 @@ const About = (): React.ReactElement => {
     const age = useAge();
 
     return (
-        <article className={styles.about}>
-            <h2 className={styles.about_header}>
+        <article>
+            <h2>
                 About Me
             </h2>
-            <section className={styles.about_content}>
+            <section>
                 <p>
                     Hey, I'm Emirhan 👋  &nbsp; {age} years old. I'm Front-End Software Engineer who writes HTML5, CSS3 and JS(reactjs, nextjs). I'm interested with web standards, a11y and Figma these days. <wbr />
                 </p>
-                <p>If you react me, you feel free ✌</p>
+                <p>If you reach me, you feel free ✌</p>
             </section>
-            <section className={styles.about_role}>
+            <section>
                 <p>Front-End Software Engineer @Iyzico</p>
             </section>
         </article>
