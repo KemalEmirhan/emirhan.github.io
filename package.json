@@ -47,6 +47,10 @@
     "type": "git",
     "url": "https://github.com/KemalEmirhan/emirhan.github.io"
   },
+  "engines": {
+    "node": ">=20.0.0",
+    "yarn": ">=1.22.0"
+  },
   "browserslist": [
     "last 1 version",
     "> 1%",
