@@ -1,5 +1,3 @@
 import accountLinks from './accountLinks';
 
-export {
-    accountLinks,
-}
+export { accountLinks };

@@ -1,8 +1,8 @@
 export type TIconProp = {
-    bgColor: string
+  bgColor: string;
 };
 
 export type TBaseIconProps = {
-    iconName: string,
-    color: string
+  iconName: string;
+  color: string;
 };
