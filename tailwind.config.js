@@ -1,24 +1,23 @@
-module.exports = {
-  mode: 'jit',
-  purge: ['./pages/**/*.{js,ts,jsx,tsx}', './src/components/**/*.{js,ts,jsx,tsx}'],
-  darkMode: 'class',
+/** @type {import('tailwindcss').Config} */
+export default {
+  content: ['./app/**/*.{js,ts,jsx,tsx,mdx}', './src/**/*.{js,ts,jsx,tsx,mdx}'],
   theme: {
-    screens: {
-      sm: '480px',
-      md: '768px',
-      lg: '976px',
-      xl: '1440px',
-    },
     extend: {
-      colors: {
-        'company-blue': '#1e64ff',
-        'dark-background': '#070910',
-        'dark-text-color': '#c9d1d9',
-      }
+      fontFamily: {
+        sans: [
+          '-apple-system',
+          'BlinkMacSystemFont',
+          'Segoe UI',
+          'Roboto',
+          'Helvetica',
+          'Arial',
+          'sans-serif',
+          'Apple Color Emoji',
+          'Segoe UI Emoji',
+          'Segoe UI Symbol',
+        ],
+      },
     },
-  },
-  variants: {
-    extend: {},
   },
   plugins: [],
-}
+};
