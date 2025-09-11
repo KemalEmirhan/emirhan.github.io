@@ -9,15 +9,16 @@ You can check it: <https://emirhan.dev>
 - **Next.js 15** - React framework with App Router (latest)
 - **React 18** - UI library
 - **TypeScript 5.5** - Type safety
+- **Zod 4.1** - Runtime type validation and schema definition
 - **TailwindCSS 3.4** - Utility-first CSS framework
-- **Node.js** - Runtime environment
+- **Node.js 20+** - Runtime environment
 
 ## 🛠️ Getting Started
 
 ### Prerequisites
 
-- Node.js 18+
-- npm or yarn
+- Node.js 20+
+- Yarn 1.22+
 
 ### Installation
 
@@ -31,16 +32,12 @@ cd emirhan.github.io
 2. Install dependencies:
 
 ```bash
-npm install
-# or
 yarn install
 ```
 
 3. Run the development server:
 
 ```bash
-npm run dev
-# or
 yarn dev
 ```
 
@@ -51,14 +48,19 @@ yarn dev
 ```
 ├── app/                  # Next.js App Router
 │   ├── layout.tsx        # Root layout component
-│   └── page.tsx          # Home page
+│   ├── page.tsx          # Home page
+│   └── not-found.tsx     # 404 page
 ├── src/
 │   ├── components/       # React components
-│   │   ├── About/        # About section
-│   │   ├── Accounts/     # Social accounts
-│   │   └── Header/       # Navigation header
+│   │   ├── About/        # About section component
+│   │   ├── Accounts/     # Social accounts component
+│   │   └── Icons/        # Icon system with registry
 │   ├── hooks/           # Custom React hooks
-│   └── constants/       # App constants
+│   │   └── useAge.ts     # Age calculation hook
+│   ├── constants/       # App constants
+│   │   └── accountLinks.ts # Social media links
+│   └── schemas/         # Zod schemas for type validation
+│       └── index.ts     # Type definitions and validation
 ├── styles/
 │   └── globals.css      # Global styles with TailwindCSS
 ├── tailwind.config.js   # TailwindCSS configuration
@@ -68,7 +70,25 @@ yarn dev
 
 ## 🎨 Styling
 
-This project uses TailwindCSS for styling. All components are styled with utility classes for consistency and maintainability.
+This project uses TailwindCSS for styling. All components are styled with utility classes for consistency and maintainability. The design follows a minimalist approach with smooth transitions using `duration-150` for optimal user experience.
+
+## 🔒 Type Safety & Validation
+
+This project leverages **Zod** for comprehensive type safety and runtime validation:
+
+- **Schema-first approach** - All data structures are defined using Zod schemas
+- **Runtime validation** - Data is validated at runtime to ensure type safety
+- **Type inference** - TypeScript types are automatically inferred from Zod schemas
+- **Icon system** - Icon registry and props are fully typed and validated
+- **Account links** - Social media links are validated for proper URL format and color codes
+- **Age calculation** - Birth date validation ensures accurate age calculation
+
+### Key Features
+
+- **Icon Registry** - Centralized SVG icon management with type-safe props
+- **Account Links** - Validated social media links with proper URL and color validation
+- **Custom Hooks** - Type-safe custom hooks like `useAge` for dynamic age calculation
+- **Component Props** - All component props are validated using Zod schemas
 
 ## 🚀 Deployment
 
@@ -99,6 +119,7 @@ This project includes comprehensive linting and formatting tools:
 - **Husky** - Git hooks for pre-commit linting
 - **lint-staged** - Run linters on staged files only
 - **TypeScript** - Type checking and validation
+- **Zod** - Runtime type validation and schema definition
 
 ### Pre-commit Hooks
 
@@ -107,6 +128,7 @@ The project automatically runs linting and formatting on commit:
 - ESLint fixes are applied automatically
 - Prettier formatting is applied
 - Only staged files are processed for faster commits
+- TypeScript type checking ensures type safety
 
 ## Preview
 
