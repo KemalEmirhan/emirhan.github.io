@@ -1,12 +1,12 @@
 import * as React from 'react';
 
-import About from '@/components/About/About';
-import Account from '@/components/Accounts/Accounts';
-import Header from '@/components/Header/Header';
+import About from '@/components/About';
+import Account from '@/components/Accounts';
+import Header from '@/components/Header';
 
 const Home = (): React.ReactElement => {
   return (
-    <main className='page bg-gray-50 min-h-screen'>
+    <main className='page bg-gray-50 min-h-screen flex flex-col'>
       <nav className='bg-white shadow-sm border-b border-gray-200'>
         <div className='max-w-4xl mx-auto px-6 py-4'>
           <Header />
@@ -17,7 +17,7 @@ const Home = (): React.ReactElement => {
         <About />
       </section>
 
-      <footer className='bg-white border-t border-gray-200'>
+      <footer className='bg-white border-t border-gray-200 mt-auto'>
         <Account />
       </footer>
     </main>
