@@ -2,7 +2,7 @@
 
 A modern personal website built with Next.js 15, React 18, TypeScript, and TailwindCSS.
 
-You can check it: <https://emirhan.dev>
+You can check it: <https://emirkemal.com>
 
 ## 🚀 Tech Stack
 
@@ -45,7 +45,7 @@ yarn dev
 
 ## 📁 Project Structure
 
-```
+```text
 ├── app/                  # Next.js App Router
 │   ├── layout.tsx        # Root layout component
 │   ├── page.tsx          # Home page
@@ -129,7 +129,3 @@ The project automatically runs linting and formatting on commit:
 - Prettier formatting is applied
 - Only staged files are processed for faster commits
 - TypeScript type checking ensures type safety
-
-## Preview
-
-![emirhan.dev](https://media.giphy.com/media/HnTe3YJwNAR1lchQb3/giphy.gif)

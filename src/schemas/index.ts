@@ -39,7 +39,8 @@ export const BirthDateSchema = z.date();
 
 // Type exports
 export type TIconProp = z.infer<typeof IconPropSchema>;
-export type TBaseIconProps = z.infer<typeof BaseIconPropsSchema>;
+export type TBaseIconProps = z.infer<typeof BaseIconPropsSchema> &
+  React.SVGProps<SVGSVGElement>;
 export type TAccountLink = z.infer<typeof AccountLinkSchema>;
 export type TAccountLinks = z.infer<typeof AccountLinksArraySchema>;
 export type TIconData = z.infer<typeof IconDataSchema>;

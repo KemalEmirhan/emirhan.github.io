@@ -3,6 +3,7 @@ import typescript from '@typescript-eslint/eslint-plugin';
 import typescriptParser from '@typescript-eslint/parser';
 import prettier from 'eslint-plugin-prettier';
 import prettierConfig from 'eslint-config-prettier';
+import react from 'eslint-plugin-react';
 import reactHooks from 'eslint-plugin-react-hooks';
 import globals from 'globals';
 
@@ -30,7 +31,8 @@ export default [
     },
     plugins: {
       '@typescript-eslint': typescript,
-      prettier: prettier,
+      prettier,
+      react,
       'react-hooks': reactHooks,
     },
     rules: {

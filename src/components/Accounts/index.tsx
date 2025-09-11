@@ -5,7 +5,10 @@ import accountLinks from '@/constants/accountLinks';
 
 const Account = (): React.ReactElement => {
   return (
-    <footer className='max-w-4xl mx-auto px-4 sm:px-6 py-6 sm:py-8'>
+    <nav
+      className='border-gray-200 max-w-4xl mx-auto px-4 sm:px-6 py-6 sm:py-8'
+      aria-label='account links'
+    >
       <div className='flex flex-wrap justify-center gap-4 sm:gap-6'>
         {accountLinks.map(account => (
           <Link
@@ -22,7 +25,7 @@ const Account = (): React.ReactElement => {
           </Link>
         ))}
       </div>
-    </footer>
+    </nav>
   );
 };
 

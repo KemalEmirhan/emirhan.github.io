@@ -1,1 +1,0 @@
-Please add your profile image as 'profile.jpg' in the public folder
