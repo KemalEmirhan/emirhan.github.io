@@ -1,4 +1,7 @@
-const BIRTH_DATE = new Date(1994, 7, 13);
+import { BirthDateSchema } from '@/schemas';
+
+// Validate birth date with Zod
+const BIRTH_DATE = BirthDateSchema.parse(new Date(1994, 7, 13));
 
 const useAge = (): number => {
   const today = new Date();

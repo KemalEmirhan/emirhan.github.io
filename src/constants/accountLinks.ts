@@ -1,13 +1,17 @@
-type TAccountLink = {
-  url: string;
-  name: string;
-  color: string;
-};
+import {
+  AccountLinksArraySchema,
+  type TAccountLinks,
+  type TAccountLink,
+} from '@/schemas';
 
-const accountLinks: Array<TAccountLink> = [
-  { url: 'https://github.com/KemalEmirhan', name: 'Github', color: '#181717' },
+const accountLinksData: TAccountLink[] = [
   {
-    url: 'https://www.linkedin.com/in/emirhan-kemal-kösem-259569b3/',
+    url: 'https://github.com/KemalEmirhan',
+    name: 'Github',
+    color: '#181717',
+  },
+  {
+    url: 'https://www.linkedin.com/in/emirhan-kemal-kosem-259569b3/',
     name: 'LinkedIn',
     color: '#0077B5',
   },
@@ -16,7 +20,15 @@ const accountLinks: Array<TAccountLink> = [
     name: 'Medium',
     color: '#12100E',
   },
-  { url: 'https://twitter.com/KsemEmir', name: 'Twitter', color: '#1DA1F2' },
+  {
+    url: 'https://twitter.com/KsemEmir',
+    name: 'Twitter',
+    color: '#1DA1F2',
+  },
 ];
+
+// Validate and parse account links with Zod
+const accountLinks: TAccountLinks =
+  AccountLinksArraySchema.parse(accountLinksData);
 
 export default accountLinks;

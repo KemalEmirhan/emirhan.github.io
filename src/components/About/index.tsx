@@ -1,3 +1,5 @@
+'use client';
+
 import React from 'react';
 import Image from 'next/image';
 import useAge from '@/hooks/useAge';
@@ -6,7 +8,7 @@ const About = (): React.ReactElement => {
   const age = useAge();
 
   return (
-    <article className='max-w-4xl mx-auto px-6 py-12'>
+    <article className='max-w-4xl mx-auto px-6 py-12 flex-1'>
       <div className='flex flex-col lg:flex-row gap-8 items-start'>
         <div className='flex-shrink-0 mx-auto lg:mx-0'>
           <div className='relative w-48 h-48 sm:w-56 sm:h-56 lg:w-64 lg:h-64'>
@@ -26,12 +28,11 @@ const About = (): React.ReactElement => {
           </h2>
           <div className='space-y-4'>
             <p className='text-lg text-gray-700 leading-relaxed'>
-              Hey, I'm Emirhan 👋 &nbsp; {age} years old. I'm a Frontend
-              Software Engineer with over 8 years of experience building
-              high-performance web applications across various industries. Based
-              in Berlin, I specialise in React, Next.js, JavaScript, TypeScript,
-              and GraphQL, with a strong focus on accessibility and web
-              standards.
+              Hey, I'm Emirhan 👋 {age} years old. I'm a Frontend Software
+              Engineer with over 8 years of experience building high-performance
+              web applications across various industries. Based in Berlin, I
+              specialise in React, Next.js, JavaScript, TypeScript, and GraphQL,
+              with a strong focus on accessibility and web standards.
             </p>
             <p className='text-lg text-gray-700 leading-relaxed'>
               Throughout my career in fintech, media, telecommunications, and

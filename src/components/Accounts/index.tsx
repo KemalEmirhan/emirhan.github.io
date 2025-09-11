@@ -1,4 +1,4 @@
-import * as React from 'react';
+import React from 'react';
 import Link from 'next/link';
 import Icon from '@/components/Icons';
 import accountLinks from '@/constants/accountLinks';

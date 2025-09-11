@@ -1,32 +1,25 @@
 import React from 'react';
+import { ICON_REGISTRY } from './icon.registry';
+import { TBaseIconProps } from '@/schemas';
 
-import GithubIcon from './github.icon';
-import LinkedInIcon from './linkedIn.icon';
-import MediumIcon from './medium.icon';
-import TwitterIcon from './twitter.icon';
+const Icon = ({ iconName, color }: TBaseIconProps) => {
+  const iconData = ICON_REGISTRY[iconName];
 
-import { TBaseIconProps } from './icons.type';
+  if (!iconData) return null;
 
-const Icon = ({
-  iconName,
-  color,
-}: TBaseIconProps): React.ReactElement | null => {
-  switch (iconName) {
-    case 'Github':
-      return <GithubIcon bgColor={color} />;
+  const { title, viewBox, path, width = 20, height = 20 } = iconData;
 
-    case 'LinkedIn':
-      return <LinkedInIcon bgColor={color} />;
-
-    case 'Medium':
-      return <MediumIcon bgColor={color} />;
-
-    case 'Twitter':
-      return <TwitterIcon bgColor={color} />;
-
-    default:
-      return null;
-  }
+  return (
+    <svg
+      viewBox={viewBox}
+      xmlns='http://www.w3.org/2000/svg'
+      width={width}
+      height={height}
+    >
+      <title>{title}</title>
+      <path fill={color} d={path} />
+    </svg>
+  );
 };
 
 export default Icon;
