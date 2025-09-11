@@ -8,11 +8,10 @@ const About = (): React.ReactElement => {
   return (
     <article className='max-w-4xl mx-auto px-6 py-12'>
       <div className='flex flex-col lg:flex-row gap-8 items-start'>
-        {/* Profile Picture Section */}
         <div className='flex-shrink-0 mx-auto lg:mx-0'>
           <div className='relative w-48 h-48 sm:w-56 sm:h-56 lg:w-64 lg:h-64'>
             <Image
-              src='/pp.jpeg'
+              src='/pp.png'
               alt='Emirhan profile picture'
               fill
               className='object-cover rounded-lg border border-gray-200 shadow-sm'
@@ -21,8 +20,10 @@ const About = (): React.ReactElement => {
           </div>
         </div>
 
-        {/* About Content */}
         <section className='flex-1'>
+          <h2 className='text-2xl md:text-3xl font-bold text-gray-900 mb-6'>
+            About Me
+          </h2>
           <div className='space-y-4'>
             <p className='text-lg text-gray-700 leading-relaxed'>
               Hey, I'm Emirhan 👋 &nbsp; {age} years old. I'm a Frontend
@@ -44,7 +45,7 @@ const About = (): React.ReactElement => {
             </p>
             <p className='text-lg text-gray-700 leading-relaxed'>
               Passionate about creating accessible, user-friendly digital
-              experiences, I'm always eager to stay ahead of the latest frontend
+              experiences, I'm always eager to stay ahead of the latest software
               technologies and continuously expand my skill set.
             </p>
           </div>
