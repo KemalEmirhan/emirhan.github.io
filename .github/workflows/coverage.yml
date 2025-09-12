@@ -6,7 +6,7 @@ on:
 jobs:
   test:
     runs-on: ubuntu-latest
-    if: github.event.pull_request.head.ref != 'main'
+    if: github.event.pull_request.head.ref != 'main' && github.event.pull_request.base.ref == 'main'
     strategy:
       matrix:
         include:
@@ -43,7 +43,7 @@ jobs:
   report-coverage:
     needs: test
     runs-on: ubuntu-latest
-    if: github.event.pull_request.head.ref != 'main'
+    if: github.event.pull_request.head.ref != 'main' && github.event.pull_request.base.ref == 'main'
     permissions:
       pull-requests: write
     steps:
