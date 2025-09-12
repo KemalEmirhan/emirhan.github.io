@@ -7,30 +7,21 @@ describe('Icon Component', () => {
   const cases = [
     {
       iconName: 'Github',
-      color: '#181717',
     },
     {
       iconName: 'LinkedIn',
-      color: '#0077B5',
     },
     {
       iconName: 'Medium',
-      color: '#12100E',
     },
     {
       iconName: 'Twitter',
-      color: '#1DA1F2',
     },
   ];
 
-  test.each(cases)(
-    'should render $iconName icon with $color color',
-    ({ iconName, color }) => {
-      const { container } = render(
-        <Icon iconName={iconName as TIconName} color={color} />
-      );
+  test.each(cases)('should render $iconName icon', ({ iconName }) => {
+    const { container } = render(<Icon name={iconName as TIconName} />);
 
-      expect(container).toMatchSnapshot();
-    }
-  );
+    expect(container).toMatchSnapshot();
+  });
 });

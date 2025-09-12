@@ -4,7 +4,7 @@ on:
     branches: [main]
 
 jobs:
-  test:
+  test-coverage:
     runs-on: ubuntu-latest
     if: github.event.pull_request.head.ref != 'main' && github.event.pull_request.base.ref == 'main'
     strategy:
@@ -41,7 +41,7 @@ jobs:
           path: coverage
 
   report-coverage:
-    needs: test
+    needs: test-coverage
     runs-on: ubuntu-latest
     if: github.event.pull_request.head.ref != 'main' && github.event.pull_request.base.ref == 'main'
     permissions:
