@@ -1,0 +1,62 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`About Component > should render 1`] = `
+<div>
+  <article
+    class="max-w-4xl mx-auto px-6 py-12 flex-1"
+  >
+    <div
+      class="flex flex-col lg:flex-row gap-8 items-start"
+    >
+      <div
+        class="flex-shrink-0 mx-auto lg:mx-0"
+      >
+        <div
+          class="relative w-48 h-48 sm:w-56 sm:h-56 lg:w-64 lg:h-64"
+        >
+          <img
+            alt="Emirhan profile picture"
+            class="object-cover rounded-lg border border-gray-200 shadow-sm"
+            data-nimg="fill"
+            decoding="async"
+            sizes="100vw"
+            src="/_next/image?url=%2Fpp.png&w=3840&q=75"
+            srcset="/_next/image?url=%2Fpp.png&w=640&q=75 640w, /_next/image?url=%2Fpp.png&w=750&q=75 750w, /_next/image?url=%2Fpp.png&w=828&q=75 828w, /_next/image?url=%2Fpp.png&w=1080&q=75 1080w, /_next/image?url=%2Fpp.png&w=1200&q=75 1200w, /_next/image?url=%2Fpp.png&w=1920&q=75 1920w, /_next/image?url=%2Fpp.png&w=2048&q=75 2048w, /_next/image?url=%2Fpp.png&w=3840&q=75 3840w"
+            style="position: absolute; height: 100%; width: 100%; left: 0px; top: 0px; right: 0px; bottom: 0px; color: transparent;"
+          />
+        </div>
+      </div>
+      <section
+        class="flex-1"
+      >
+        <h2
+          class="text-2xl md:text-3xl font-bold text-gray-900 mb-6"
+        >
+          About Me
+        </h2>
+        <div
+          class="space-y-4"
+        >
+          <p
+            class="text-lg text-gray-700 leading-relaxed"
+          >
+            Hey, I'm Emirhan 👋 
+            30
+             years old. I'm a Frontend Software Engineer with over 8 years of experience building high-performance web applications across various industries. Based in Berlin, I specialise in React, Next.js, JavaScript, TypeScript, and GraphQL, with a strong focus on accessibility and web standards.
+          </p>
+          <p
+            class="text-lg text-gray-700 leading-relaxed"
+          >
+            Throughout my career in fintech, media, telecommunications, and e-commerce, I've collaborated closely with cross-functional teams to develop scalable solutions. I enjoy modernising outdated systems, designing efficient component libraries that accelerate development, and optimising web applications for seamless user experiences. By combining technical expertise with a strategic mindset, I make architectural decisions that enhance performance and drive business success.
+          </p>
+          <p
+            class="text-lg text-gray-700 leading-relaxed"
+          >
+            Passionate about creating accessible, user-friendly digital experiences, I'm always eager to stay ahead of the latest software technologies and continuously expand my skill set.
+          </p>
+        </div>
+      </section>
+    </div>
+  </article>
+</div>
+`;
