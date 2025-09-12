@@ -1,16 +1,20 @@
 name: 'Vitest Coverage'
 on:
   pull_request:
+    branches: [main]
 
 jobs:
   test:
     runs-on: ubuntu-latest
+    if: github.event.pull_request.head.ref != 'main'
     strategy:
       matrix:
         include:
-          - branch: main
+          - repository: ${{ github.repository }}
+            ref: main
             artifact: main
-          - branch: ${{ github.head_ref }}
+          - repository: ${{ github.event.pull_request.head.repo.full_name }}
+            ref: ${{ github.head_ref }}
             artifact: pull-request
 
     permissions:
@@ -20,9 +24,8 @@ jobs:
     steps:
       - uses: actions/checkout@v4
         with:
-          ref: ${{ matrix.branch }}
-          # Set repository to correctly checkout from forks
-          repository: ${{ github.event.pull_request.head.repo.full_name }}
+          repository: ${{ matrix.repository }}
+          ref: ${{ matrix.ref }}
       - name: 'Install Node'
         uses: actions/setup-node@v4
         with:
@@ -40,6 +43,7 @@ jobs:
   report-coverage:
     needs: test
     runs-on: ubuntu-latest
+    if: github.event.pull_request.head.ref != 'main'
     permissions:
       pull-requests: write
     steps:
