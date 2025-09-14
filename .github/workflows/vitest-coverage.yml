@@ -1,7 +1,7 @@
 name: Pull Request
 
 env:
-  node_version: '20.18.0'
+  node_version: '20.19.0'
 
 on:
   pull_request:
