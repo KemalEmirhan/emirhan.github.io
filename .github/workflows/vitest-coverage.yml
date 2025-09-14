@@ -1,7 +1,7 @@
 name: Pull Request
 
 env:
-  node_version: '22.17.0'
+  node_version: '20.18.0'
 
 on:
   pull_request:
@@ -23,14 +23,14 @@ jobs:
         uses: actions/setup-node@v4
         with:
           node-version: ${{ env.node_version }}
-          cache: npm
-          cache-dependency-path: package-lock.json
+          cache: yarn
+          cache-dependency-path: yarn.lock
 
       - name: Install dependencies
-        run: npm ci
+        run: yarn install
 
       - name: Build
-        run: npm run build
+        run: yarn build
 
   test:
     # This matrix tests both the main and pull request branches
@@ -56,11 +56,11 @@ jobs:
         uses: actions/setup-node@v4
         with:
           node-version: ${{ env.node_version }}
-          cache: npm
-          cache-dependency-path: package-lock.json
+          cache: yarn
+          cache-dependency-path: yarn.lock
 
       - name: Install dependencies
-        run: npm ci
+        run: yarn install
 
       # Run tests with coverage with summary in json format
       - name: Run tests with coverage
