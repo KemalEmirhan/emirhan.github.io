@@ -1,41 +1,9 @@
-name: Pull Request
-
-env:
-  node_version: '20.19.0'
-
+name: 'Test'
 on:
   pull_request:
-    branches:
-      - main
-  workflow_dispatch:
 
 jobs:
-  build:
-    name: Build and Test
-    runs-on: ubuntu-latest
-    if: github.event.pull_request.head.repo.full_name == github.repository
-
-    steps:
-      - name: Check PR code
-        uses: actions/checkout@v4
-
-      - name: Set up Node.js
-        uses: actions/setup-node@v4
-        with:
-          node-version: ${{ env.node_version }}
-          cache: yarn
-          cache-dependency-path: yarn.lock
-
-      - name: Install dependencies
-        run: yarn install
-
-      - name: Build
-        run: yarn build
-
   test:
-    # This matrix tests both the main and pull request branches
-    name: Test ${{ matrix.artifact }}
-    needs: build
     runs-on: ubuntu-latest
     strategy:
       matrix:
@@ -45,66 +13,46 @@ jobs:
           - branch: ${{ github.head_ref }}
             artifact: pull-request
 
+    permissions:
+      # Required to checkout the code
+      contents: read
+
     steps:
-      - name: Checkout ${{ matrix.branch }}
-        uses: actions/checkout@v4
+      - uses: actions/checkout@v4
         with:
           ref: ${{ matrix.branch }}
-          repository: ${{ github.repository }}
-
-      - name: Set up Node.js
+          ## Set repository to correctly checkout from forks
+          repository: ${{ github.event.pull_request.head.repo.full_name }}
+      - name: 'Install Node'
         uses: actions/setup-node@v4
         with:
-          node-version: ${{ env.node_version }}
-          cache: yarn
-          cache-dependency-path: yarn.lock
-
-      - name: Install dependencies
+          node-version: '20.x'
+      - name: 'Install Deps'
         run: yarn install
-
-      # Run tests with coverage with summary in json format
-      - name: Run tests with coverage
-        run: npx vitest run --coverage.enabled --coverage.reporter=json --coverage.reporter=json-summary --coverage.reporter=lcov
-
-      - name: Copy thresholds config (if exists)
-        run: |
-          if [ -f vitest.thresholds.js ]; then
-            cp vitest.thresholds.js coverage/
-          fi
-
-      - name: Upload coverage artifact
+      - name: 'Test'
+        run: npx vitest --coverage.enabled --coverage.provider=v8 --coverage.reporter=json-summary --coverage.reporter=json
+      - name: 'Upload Coverage'
         uses: actions/upload-artifact@v4
         with:
           name: coverage-${{ matrix.artifact }}
-          path: coverage/
+          path: coverage
 
   report-coverage:
-    name: Report coverage comparison
     needs: test
     runs-on: ubuntu-latest
-    permissions:
-      contents: read
-      pull-requests: write
     steps:
-      - name: Download PR coverage
+      ## Check out the repository to obtain the vitest.config file
+      - uses: actions/checkout@v4
+      - name: 'Download Coverage Artifacts'
         uses: actions/download-artifact@v4
         with:
           name: coverage-pull-request
-          path: pr-coverage
-
-      - name: Download main coverage
-        continue-on-error: true
-        uses: actions/download-artifact@v4
+          path: coverage
+      - uses: actions/download-artifact@v4
         with:
           name: coverage-main
-          path: main-coverage
-
-      - name: Report coverage
-        if: always()
+          path: coverage-main
+      - name: 'Report Coverage'
         uses: davelosert/vitest-coverage-report-action@v2
         with:
-          github-token: ${{ secrets.GITHUB_TOKEN }}
-          json-summary-path: pr-coverage/coverage-summary.json
-          json-summary-compare-path: main-coverage/coverage-summary.json
-          json-final-path: pr-coverage/coverage-final.json
-          comment-on: pr
+          json-summary-compare-path: coverage-main/coverage-summary.json
