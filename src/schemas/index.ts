@@ -10,15 +10,14 @@ export const IconPropSchema = z.object({
 });
 
 export const BaseIconPropsSchema = z.object({
-  iconName: IconNameSchema,
-  color: z.string().min(1, 'Color is required'),
+  name: IconNameSchema,
+  color: z.string().optional(),
 });
 
 // Account link schema
 export const AccountLinkSchema = z.object({
   url: z.url(),
   name: IconNameSchema,
-  color: z.string().regex(/^#[0-9A-Fa-f]{6}$/, 'Invalid hex color format'),
 });
 
 export const AccountLinksArraySchema = z.array(AccountLinkSchema);
@@ -30,6 +29,7 @@ export const IconDataSchema = z.object({
   path: z.string().min(1, 'Path is required'),
   width: z.number().positive().optional(),
   height: z.number().positive().optional(),
+  color: z.string().optional(),
 });
 
 export const IconRegistrySchema = z.record(IconNameSchema, IconDataSchema);

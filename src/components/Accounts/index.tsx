@@ -18,7 +18,7 @@ const Account = (): React.ReactElement => {
             rel='noopener noreferrer'
             className='flex items-center gap-2 sm:gap-3 px-3 sm:px-4 py-2 sm:py-3 rounded-lg bg-white border border-gray-200 hover:border-gray-300 hover:shadow-md transition-all duration-150 group'
           >
-            <Icon iconName={account.name} color={account.color} />
+            <Icon name={account.name} />
             <span className='text-sm sm:text-base text-gray-700 font-medium group-hover:text-gray-900 transition-colors duration-150'>
               {account.name}
             </span>
