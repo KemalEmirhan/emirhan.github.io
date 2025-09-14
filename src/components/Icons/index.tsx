@@ -3,9 +3,9 @@ import { ICON_REGISTRY } from './icon.registry';
 import { TBaseIconProps } from '@/schemas';
 
 const Icon = ({ name, ...props }: TBaseIconProps) => {
-  const iconData = ICON_REGISTRY[name];
+  const iconProps = ICON_REGISTRY[name];
 
-  if (!iconData) return null;
+  if (!iconProps) return null;
 
   const {
     title,
@@ -14,7 +14,7 @@ const Icon = ({ name, ...props }: TBaseIconProps) => {
     color: iconColor,
     width = 20,
     height = 20,
-  } = iconData;
+  } = iconProps;
 
   return (
     <svg
