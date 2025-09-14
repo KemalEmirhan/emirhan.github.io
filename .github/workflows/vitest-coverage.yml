@@ -8,8 +8,6 @@ jobs:
     strategy:
       matrix:
         include:
-          - branch: main
-            artifact: main
           - branch: ${{ github.head_ref }}
             artifact: pull-request
 
@@ -48,11 +46,5 @@ jobs:
         with:
           name: coverage-pull-request
           path: coverage
-      - uses: actions/download-artifact@v4
-        with:
-          name: coverage-main
-          path: coverage-main
       - name: Vitest Coverage Report
         uses: davelosert/vitest-coverage-report-action@v2.8.3
-        with:
-          json-summary-compare-path: coverage-main/coverage-summary.json
