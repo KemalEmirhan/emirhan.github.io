@@ -17,12 +17,14 @@ export default defineConfig({
     coverage: {
       provider: 'v8',
       reporter: ['text', 'json', 'json-summary', 'html'],
+      reportOnFailure: true,
       thresholds: {
         lines: 60,
         branches: 60,
         functions: 60,
         statements: 60,
       },
+      skipFull: false,
       exclude: [
         'node_modules/',
         'src/test/',
@@ -36,6 +38,8 @@ export default defineConfig({
         '**/.next/**',
         'app/',
         'schemas/',
+        'styles/',
+        'html/',
       ],
     },
   },
