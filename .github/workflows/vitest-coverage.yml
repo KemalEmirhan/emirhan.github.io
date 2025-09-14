@@ -22,15 +22,15 @@ jobs:
         with:
           ref: ${{ matrix.branch }}
           ## Set repository to correctly checkout from forks
-          repository: ${{ github.event.pull_request.head.repo.full_name }}
+          repository: ${{ github.event.pull_request.head.repo.full_name || github.repository }}
       - name: 'Install Node'
         uses: actions/setup-node@v4
         with:
           node-version: '20.x'
       - name: 'Install Deps'
-        run: yarn install
+        run: yarn install --frozen-lockfile
       - name: 'Test'
-        run: npx vitest --coverage.enabled --coverage.provider=v8 --coverage.reporter=json-summary --coverage.reporter=json
+        run: yarn test:coverage
       - name: 'Upload Coverage'
         uses: actions/upload-artifact@v4
         with:
@@ -52,7 +52,7 @@ jobs:
         with:
           name: coverage-main
           path: coverage-main
-      - name: 'Report Coverage'
-        uses: davelosert/vitest-coverage-report-action@v2
+      - name: Vitest Coverage Report
+        uses: davelosert/vitest-coverage-report-action@v2.8.3
         with:
           json-summary-compare-path: coverage-main/coverage-summary.json
