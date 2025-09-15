@@ -1,7 +1,13 @@
 import { z } from 'zod';
 
 // Shared icon name enum - single source of truth
-const ICON_NAMES = ['Github', 'LinkedIn', 'Medium', 'Twitter'] as const;
+const ICON_NAMES = [
+  'Github',
+  'LinkedIn',
+  'Medium',
+  'Twitter',
+  'Instagram',
+] as const;
 export const IconNameSchema = z.enum(ICON_NAMES);
 
 // Icon schemas

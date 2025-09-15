@@ -21,6 +21,10 @@ const accountLinksData: TAccountLink[] = [
     url: 'https://twitter.com/KsemEmir',
     name: 'Twitter',
   },
+  {
+    url: 'https://www.instagram.com/emirhankemalkosem/',
+    name: 'Instagram',
+  },
 ];
 
 // Validate and parse account links with Zod
