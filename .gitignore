@@ -4,6 +4,7 @@
 .pnp.js
 
 # testing
+# /coverage
 /playwright-report
 /html
 /test-results

@@ -25,7 +25,7 @@ const Icon = ({ name, ...props }: TBaseIconProps) => {
       {...props}
     >
       <title>{title}</title>
-      <path fill={iconColor ?? 'currentColor'} d={path} />
+      <path fill={iconColor} d={path} />
     </svg>
   );
 };

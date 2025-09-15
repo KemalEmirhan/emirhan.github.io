@@ -33,8 +33,8 @@ const iconRegistryData = {
     height: 20,
     color: '#1DA1F2',
   },
-};
+} as const satisfies TIconRegistry;
 
 // Validate and parse icon registry with Zod
-export const ICON_REGISTRY: TIconRegistry =
+export const ICON_REGISTRY: Readonly<TIconRegistry> =
   IconRegistrySchema.parse(iconRegistryData);
