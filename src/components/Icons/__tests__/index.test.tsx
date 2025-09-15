@@ -24,4 +24,12 @@ describe('Icon Component', () => {
 
     expect(container).toMatchSnapshot();
   });
+
+  test('should return null for invalid icon name', () => {
+    const { container } = render(
+      <Icon name={'Unknown' as unknown as TIconName} />
+    );
+
+    expect(container.firstChild).toBeNull();
+  });
 });

@@ -4,7 +4,8 @@ import { TBaseIconProps } from '@/schemas';
 
 const Icon = ({ name, ...props }: TBaseIconProps) => {
   const iconProps = ICON_REGISTRY[name];
-  const hasIconProps = !!iconProps;
+
+  if (!iconProps) return null;
 
   const {
     title,
@@ -16,18 +17,16 @@ const Icon = ({ name, ...props }: TBaseIconProps) => {
   } = iconProps;
 
   return (
-    hasIconProps && (
-      <svg
-        viewBox={viewBox}
-        xmlns='http://www.w3.org/2000/svg'
-        width={width}
-        height={height}
-        {...props}
-      >
-        <title>{title}</title>
-        <path fill={iconColor} d={path} />
-      </svg>
-    )
+    <svg
+      viewBox={viewBox}
+      xmlns='http://www.w3.org/2000/svg'
+      width={width}
+      height={height}
+      {...props}
+    >
+      <title>{title}</title>
+      <path fill={iconColor} d={path} />
+    </svg>
   );
 };
 
