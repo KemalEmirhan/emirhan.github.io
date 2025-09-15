@@ -1,6 +1,6 @@
 import { IconRegistrySchema, type TIconRegistry } from '@/schemas';
 
-const iconRegistryData = {
+const iconRegistryData = Object.freeze({
   Github: {
     title: 'Github',
     viewBox: '0 0 24 24',
@@ -33,7 +33,7 @@ const iconRegistryData = {
     height: 20,
     color: '#1DA1F2',
   },
-};
+});
 
 // Validate and parse icon registry with Zod
 export const ICON_REGISTRY: TIconRegistry =
