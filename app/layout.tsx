@@ -1,7 +1,7 @@
 /* eslint-disable no-undef */
 import type { Metadata } from 'next';
 import { GoogleAnalytics } from '@next/third-parties/google';
-import StructuredData from '@/components/StructuredData';
+import SEOData from '@/components/SEOData';
 import '@/styles/globals.css';
 
 export const metadata: Metadata = {
@@ -110,7 +110,7 @@ export default function RootLayout({
   return (
     <html lang='en'>
       <head>
-        <StructuredData />
+        <SEOData />
         <GoogleAnalytics gaId={process.env.NEXT_PUBLIC_GA_ID || ''} />
       </head>
       <body>{children}</body>

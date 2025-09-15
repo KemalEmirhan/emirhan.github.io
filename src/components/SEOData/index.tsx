@@ -1,6 +1,6 @@
 import React from 'react';
 
-const StructuredData: React.FC = () => {
+const SEOData = () => {
   const personSchema = {
     '@context': 'https://schema.org',
     '@type': 'Person',
@@ -90,4 +90,4 @@ const StructuredData: React.FC = () => {
   );
 };
 
-export default StructuredData;
+export default SEOData;
