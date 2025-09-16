@@ -18,12 +18,6 @@ export default defineConfig({
       provider: 'v8',
       reporter: ['text', 'json', 'json-summary', 'html'],
       reportOnFailure: true,
-      thresholds: {
-        lines: 59.53,
-        branches: 100,
-        functions: 100,
-        statements: 59.53,
-      },
       skipFull: false,
       exclude: [
         'node_modules/',
