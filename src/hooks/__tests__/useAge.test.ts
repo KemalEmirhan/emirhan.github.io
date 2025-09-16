@@ -24,7 +24,6 @@ describe('useAge', () => {
 
     const result = renderHook(() => useAge()).result.current;
     expect(result).toBe(29);
-    expect(result).toMatchSnapshot();
   });
 
   it('should calculate age correctly on birthday', () => {
@@ -34,7 +33,6 @@ describe('useAge', () => {
 
     const result = renderHook(() => useAge()).result.current;
     expect(result).toBe(30);
-    expect(result).toMatchSnapshot();
   });
 
   it('should calculate age correctly after birthday', () => {
@@ -43,6 +41,5 @@ describe('useAge', () => {
 
     const result = renderHook(() => useAge()).result.current;
     expect(result).toBe(30);
-    expect(result).toMatchSnapshot();
   });
 });

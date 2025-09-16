@@ -1,12 +1,11 @@
-// src/components/SEOData/index.test.tsx
 import { render } from '@testing-library/react';
 import { describe, expect, it } from 'vitest';
 import SEOData from '../';
 
 describe('SEOData', () => {
   it('renders two JSON-LD script tags with valid JSON', () => {
-    render(<SEOData />);
-    const scripts = document.querySelectorAll(
+    const { container } = render(<SEOData />);
+    const scripts = container.querySelectorAll(
       'script[type="application/ld+json"]'
     );
     expect(scripts.length).toBe(2);
@@ -17,8 +16,8 @@ describe('SEOData', () => {
   });
 
   it('renders Person schema with correct structure and required fields', () => {
-    render(<SEOData />);
-    const scripts = document.querySelectorAll(
+    const { container } = render(<SEOData />);
+    const scripts = container.querySelectorAll(
       'script[type="application/ld+json"]'
     );
 
@@ -66,8 +65,8 @@ describe('SEOData', () => {
   });
 
   it('renders WebSite schema with correct structure and required fields', () => {
-    render(<SEOData />);
-    const scripts = document.querySelectorAll(
+    const { container } = render(<SEOData />);
+    const scripts = container.querySelectorAll(
       'script[type="application/ld+json"]'
     );
 
@@ -110,8 +109,8 @@ describe('SEOData', () => {
   });
 
   it('ensures JSON-LD scripts have proper attributes for SEO', () => {
-    render(<SEOData />);
-    const scripts = document.querySelectorAll(
+    const { container } = render(<SEOData />);
+    const scripts = container.querySelectorAll(
       'script[type="application/ld+json"]'
     );
 
@@ -123,8 +122,8 @@ describe('SEOData', () => {
   });
 
   it('validates that all JSON-LD data is properly formatted and parseable', () => {
-    render(<SEOData />);
-    const scripts = document.querySelectorAll(
+    const { container } = render(<SEOData />);
+    const scripts = container.querySelectorAll(
       'script[type="application/ld+json"]'
     );
 
@@ -145,8 +144,8 @@ describe('SEOData', () => {
   });
 
   it('ensures Person schema contains all expected social media links', () => {
-    render(<SEOData />);
-    const scripts = document.querySelectorAll(
+    const { container } = render(<SEOData />);
+    const scripts = container.querySelectorAll(
       'script[type="application/ld+json"]'
     );
 
@@ -170,8 +169,8 @@ describe('SEOData', () => {
   });
 
   it('ensures Person schema contains all expected technical skills', () => {
-    render(<SEOData />);
-    const scripts = document.querySelectorAll(
+    const { container } = render(<SEOData />);
+    const scripts = container.querySelectorAll(
       'script[type="application/ld+json"]'
     );
 

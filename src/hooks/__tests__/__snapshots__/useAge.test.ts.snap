@@ -1,7 +1,0 @@
-// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
-
-exports[`useAge > should calculate age correctly after birthday 1`] = `30`;
-
-exports[`useAge > should calculate age correctly before birthday 1`] = `29`;
-
-exports[`useAge > should calculate age correctly on birthday 1`] = `30`;
