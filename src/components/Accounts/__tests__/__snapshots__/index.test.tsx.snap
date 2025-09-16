@@ -78,7 +78,7 @@ exports[`Account Component > should render 1`] = `
         <span
           class="text-sm sm:text-base text-gray-700 font-medium group-hover:text-gray-900 transition-colors duration-150"
         >
-          LinkedIn
+          Linkedin
         </span>
       </a>
       <a

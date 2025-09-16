@@ -5,7 +5,7 @@ const SEOData = () => {
     '@context': 'https://schema.org',
     '@type': 'Person',
     name: 'Emirhan Kemal Kosem',
-    alternateName: 'emrhnksm',
+    alternateName: 'Emir',
     jobTitle: 'Frontend Software Engineer',
     description:
       'Frontend Software Engineer with 8+ years of experience in React, Next.js, TypeScript, and GraphQL. Based in Berlin, specializing in high-performance web applications, accessibility, and modern web standards.',
@@ -35,14 +35,6 @@ const SEOData = () => {
       'Component Libraries',
       'UI/UX Design',
     ],
-    alumniOf: {
-      '@type': 'Organization',
-      name: 'Software Engineering',
-    },
-    worksFor: {
-      '@type': 'Organization',
-      name: 'Freelance',
-    },
     email: 'emirhankemalkosem@gmail.com',
     birthDate: '1994-08-13',
     nationality: 'Turkish',
