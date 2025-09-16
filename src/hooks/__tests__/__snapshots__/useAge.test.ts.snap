@@ -1,7 +1,0 @@
-// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
-
-exports[`useAge > should calculate age correctly for current year 1`] = `30`;
-
-exports[`useAge > should calculate age correctly for next year 1`] = `31`;
-
-exports[`useAge > should calculate age correctly for previous year 1`] = `29`;

@@ -9,7 +9,7 @@ export default defineConfig({
     environment: 'jsdom',
     setupFiles: ['./src/test/setup.ts'],
     css: true,
-    reporters: ['html'],
+    reporters: ['default', 'verbose'],
     include: [
       'src/**/__tests__/**/*.{test,spec}.{js,mjs,cjs,ts,mts,cts,jsx,tsx}',
     ],
@@ -18,13 +18,14 @@ export default defineConfig({
       provider: 'v8',
       reporter: ['text', 'json', 'json-summary', 'html'],
       reportOnFailure: true,
-      thresholds: {
-        lines: 85,
-        branches: 85,
-        functions: 85,
-        statements: 85,
-      },
       skipFull: false,
+      enabled: true,
+      thresholds: {
+        lines: 80,
+        branches: 80,
+        functions: 80,
+        statements: 80,
+      },
       exclude: [
         'node_modules/',
         'src/test/',

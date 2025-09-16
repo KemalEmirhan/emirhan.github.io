@@ -11,7 +11,7 @@ const accountLinksData: TAccountLink[] = [
   },
   {
     url: 'https://www.linkedin.com/in/emirhan-kemal-kosem-259569b3/',
-    name: 'LinkedIn',
+    name: 'Linkedin',
   },
   {
     url: 'https://medium.com/@emirhankemalkosem',
@@ -20,6 +20,10 @@ const accountLinksData: TAccountLink[] = [
   {
     url: 'https://twitter.com/KsemEmir',
     name: 'Twitter',
+  },
+  {
+    url: 'https://www.instagram.com/emirhankemalkosem/',
+    name: 'Instagram',
   },
 ];
 
