@@ -111,7 +111,7 @@ export default function RootLayout({
     <html lang='en'>
       <head>
         <SEOData />
-        <GoogleAnalytics gaId={process.env.NEXT_PUBLIC_GA_ID || ''} />
+        <GoogleAnalytics gaId={process.env.GA_ID || ''} />
       </head>
       <body>{children}</body>
     </html>
