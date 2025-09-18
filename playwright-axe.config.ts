@@ -1,7 +1,7 @@
 import { defineConfig, devices } from '@playwright/test';
 
 export default defineConfig({
-  testMatch: '*.axe.ts',
+  testMatch: '**/*.axe.ts',
   fullyParallel: true,
   forbidOnly: !!process.env.CI,
   workers: 8,
