@@ -24,7 +24,8 @@
     "test:e2e": "playwright test",
     "test:e2e:ui": "playwright test --ui",
     "test:e2e:headed": "playwright test --headed",
-    "test:all": "yarn test:run && yarn test:e2e",
+    "test:a11y": "playwright test --config playwright-axe.config.ts",
+    "test:all": "yarn test:run && yarn test:e2e && yarn test:a11y",
     "check-all": "yarn type-check && yarn lint && yarn format:check && yarn test:run",
     "fix-all": "yarn lint:fix && yarn format",
     "prepare": "husky install"
@@ -38,6 +39,7 @@
     "zod": "^4.1.8"
   },
   "devDependencies": {
+    "@axe-core/playwright": "^4.10.2",
     "@eslint/eslintrc": "^3.3.1",
     "@eslint/js": "^9.35.0",
     "@playwright/test": "^1.55.0",

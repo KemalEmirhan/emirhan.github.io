@@ -1,0 +1,38 @@
+name: Accessibility Tests
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+jobs:
+  playwright-axe:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20.x
+          cache: 'yarn'
+          cache-dependency-path: yarn.lock
+
+      - name: Install dependencies
+        working-directory: .
+        run: yarn install --frozen-lockfile
+
+      - name: Build
+        working-directory: .
+        run: yarn build
+
+      - name: Install Playwright Browsers
+        working-directory: .
+        run: npx playwright install --with-deps
+
+      - name: Run Accessibility Tests
+        working-directory: .
+        run: npx playwright test --config "playwright-axe.config.ts"
+
+      - uses: daun/playwright-report-summary@v3.10.0
+        if: always()
+        with:
+          report-file: ./accessibility-results.json
+          comment-title: 'Accessibility Test Report'

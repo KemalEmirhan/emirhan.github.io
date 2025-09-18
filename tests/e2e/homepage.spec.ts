@@ -1,8 +1,9 @@
 import { test, expect } from '@playwright/test';
+import { PAGES } from '../constants';
 
 test.describe('Homepage', () => {
   test('should load the homepage successfully', async ({ page }) => {
-    await page.goto('/');
+    await page.goto(PAGES.HOME);
 
     // Check if the page loads without errors
     await expect(page).toHaveTitle('emrhnksm');
@@ -12,7 +13,7 @@ test.describe('Homepage', () => {
   });
 
   test('should display the about section', async ({ page }) => {
-    await page.goto('/');
+    await page.goto(PAGES.HOME);
 
     // Check for the about section
     await expect(page.getByRole('heading', { name: 'About Me' })).toBeVisible();
@@ -24,7 +25,7 @@ test.describe('Homepage', () => {
   });
 
   test('should display the profile image', async ({ page }) => {
-    await page.goto('/');
+    await page.goto(PAGES.HOME);
 
     const profileImage = page.getByAltText('Emirhan profile picture');
     await expect(profileImage).toBeVisible();
@@ -34,7 +35,7 @@ test.describe('Homepage', () => {
   });
 
   test('should display social account links', async ({ page }) => {
-    await page.goto('/');
+    await page.goto(PAGES.HOME);
 
     // Check for the navigation with account links
     const accountNav = page.getByRole('navigation', { name: 'account links' });
@@ -53,7 +54,7 @@ test.describe('Homepage', () => {
   test('should be responsive on mobile devices', async ({ page }) => {
     // Set mobile viewport
     await page.setViewportSize({ width: 375, height: 667 });
-    await page.goto('/');
+    await page.goto(PAGES.HOME);
 
     // Check if the layout adapts to mobile
     const main = page.locator('main');
@@ -64,7 +65,7 @@ test.describe('Homepage', () => {
   });
 
   test('should have proper meta tags', async ({ page }) => {
-    await page.goto('/');
+    await page.goto(PAGES.HOME);
 
     // Check meta description
     const metaDescription = page.locator('meta[name="description"]');
@@ -81,7 +82,7 @@ test.describe('Homepage', () => {
   test('should have smooth hover effects on account links', async ({
     page,
   }) => {
-    await page.goto('/');
+    await page.goto(PAGES.HOME);
 
     const accountLinks = page.locator('nav[aria-label="account links"] a');
     const firstLink = accountLinks.first();
@@ -94,7 +95,7 @@ test.describe('Homepage', () => {
   });
 
   test('should handle keyboard navigation', async ({ page }) => {
-    await page.goto('/');
+    await page.goto(PAGES.HOME);
 
     // Tab through the page to test keyboard navigation
     await page.keyboard.press('Tab');

@@ -8,6 +8,8 @@
 /playwright-report
 /html
 /test-results
+accessibility-results.json
+results.json
 
 # next.js
 /.next/
