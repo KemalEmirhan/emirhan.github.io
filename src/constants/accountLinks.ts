@@ -25,6 +25,10 @@ const accountLinksData: TAccountLink[] = [
     url: 'https://www.instagram.com/emirhankemalkosem/',
     name: 'Instagram',
   },
+  {
+    url: 'https://bsky.app/profile/emirkosem.bsky.social',
+    name: 'Bluesky',
+  },
 ];
 
 // Validate and parse account links with Zod

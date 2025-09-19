@@ -7,6 +7,7 @@ const ACCOUNT_NAMES = [
   'Medium',
   'Twitter',
   'Instagram',
+  'Bluesky',
 ] as const;
 export const AccountNameSchema = z.enum(ACCOUNT_NAMES);
 

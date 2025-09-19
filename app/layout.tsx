@@ -1,8 +1,14 @@
 /* eslint-disable no-undef */
 import type { Metadata } from 'next';
 import { GoogleAnalytics } from '@next/third-parties/google';
+import { Inconsolata } from 'next/font/google';
 import SEOData from '@/components/SEOData';
 import '@/styles/globals.css';
+
+const inconsolata = Inconsolata({
+  subsets: ['latin'],
+  variable: '--font-inconsolata',
+});
 
 export const metadata: Metadata = {
   title: {
@@ -113,7 +119,7 @@ export default function RootLayout({
         <SEOData />
         <GoogleAnalytics gaId={process.env.GA_ID || ''} />
       </head>
-      <body>{children}</body>
+      <body className={inconsolata.variable}>{children}</body>
     </html>
   );
 }
