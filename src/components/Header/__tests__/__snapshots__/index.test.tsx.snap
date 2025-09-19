@@ -1,0 +1,52 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`Header > should render 1`] = `
+<div>
+  <header
+    class="flex flex-col gap-2 max-w-5xl mx-auto py-12"
+  >
+    <div
+      class="grid grid-cols-[145px_1fr] items-center py-6 sm:py-8 gap-6"
+    >
+      <div
+        class="border-r border-black border-dashed pr-4 h-full"
+      >
+        <div
+          class="relative w-16 h-16 sm:w-24 sm:h-24 lg:w-32 lg:h-32 rounded-full border border-gray-200 shadow-sm"
+        >
+          <img
+            alt="Emirhan profile picture"
+            class="object-cover rounded-full"
+            data-nimg="fill"
+            decoding="async"
+            sizes="100vw"
+            src="/_next/image?url=%2Fpp.png&w=3840&q=75"
+            srcset="/_next/image?url=%2Fpp.png&w=640&q=75 640w, /_next/image?url=%2Fpp.png&w=750&q=75 750w, /_next/image?url=%2Fpp.png&w=828&q=75 828w, /_next/image?url=%2Fpp.png&w=1080&q=75 1080w, /_next/image?url=%2Fpp.png&w=1200&q=75 1200w, /_next/image?url=%2Fpp.png&w=1920&q=75 1920w, /_next/image?url=%2Fpp.png&w=2048&q=75 2048w, /_next/image?url=%2Fpp.png&w=3840&q=75 3840w"
+            style="position: absolute; height: 100%; width: 100%; left: 0px; top: 0px; right: 0px; bottom: 0px; color: transparent;"
+          />
+        </div>
+      </div>
+      <div
+        class="flex items-center justify-between"
+      >
+        <h1
+          class="text-2xl font-bold"
+        >
+          emrhnkml.
+        </h1>
+        <time
+          datetime="September 19, 2025"
+        >
+          September 19, 2025
+        </time>
+      </div>
+    </div>
+    <hr
+      class="separator bg-black hidden sm:block w-full h-1"
+    />
+    <hr
+      class="separator bg-black hidden sm:block w-full h-1"
+    />
+  </header>
+</div>
+`;

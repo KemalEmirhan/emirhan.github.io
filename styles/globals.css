@@ -13,7 +13,18 @@
 }
 
 @layer components {
-  .page {
-    min-height: 100vh;
+  .top-blur {
+    mask-image: linear-gradient(#000 25%, #0000);
+  }
+
+  .dot-leaders {
+    background-image: repeating-linear-gradient(to right,
+        #9ca3af 0px,
+        #9ca3af 2px,
+        transparent 1px,
+        transparent 8px);
+    background-size: 4px 2px;
+    background-repeat: repeat-x;
+    background-position: center;
   }
 }

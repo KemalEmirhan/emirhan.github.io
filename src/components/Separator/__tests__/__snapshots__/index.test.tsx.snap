@@ -1,0 +1,9 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`Separator > should render 1`] = `
+<div>
+  <hr
+    class="separator bg-black hidden sm:block w-full h-1"
+  />
+</div>
+`;

@@ -89,7 +89,7 @@ exports[`Account Component > should render 1`] = `
       >
         <svg
           aria-hidden="true"
-          class="lucide lucide-book-open text-gray-700 group-hover:text-gray-900 transition-colors duration-150"
+          class="lucide lucide-at-sign text-gray-700 group-hover:text-gray-900 transition-colors duration-150"
           fill="none"
           height="20"
           stroke="currentColor"
@@ -100,11 +100,13 @@ exports[`Account Component > should render 1`] = `
           width="20"
           xmlns="http://www.w3.org/2000/svg"
         >
-          <path
-            d="M12 7v14"
+          <circle
+            cx="12"
+            cy="12"
+            r="4"
           />
           <path
-            d="M3 18a1 1 0 0 1-1-1V4a1 1 0 0 1 1-1h5a4 4 0 0 1 4 4 4 4 0 0 1 4-4h5a1 1 0 0 1 1 1v13a1 1 0 0 1-1 1h-6a3 3 0 0 0-3 3 3 3 0 0 0-3-3z"
+            d="M16 8v5a3 3 0 0 0 6 0v-1a10 10 0 1 0-4 8"
           />
         </svg>
         <span
@@ -183,6 +185,40 @@ exports[`Account Component > should render 1`] = `
           class="text-sm sm:text-base text-gray-700 font-medium group-hover:text-gray-900 transition-colors duration-150"
         >
           Instagram
+        </span>
+      </a>
+      <a
+        class="flex items-center gap-2 sm:gap-3 px-3 sm:px-4 py-2 sm:py-3 rounded-lg bg-white border border-gray-200 hover:border-gray-300 hover:shadow-md transition-all duration-150 group"
+        href="https://bsky.app/profile/emirkosem.bsky.social"
+        rel="noopener noreferrer"
+        target="_blank"
+      >
+        <svg
+          aria-hidden="true"
+          class="lucide lucide-at-sign text-gray-700 group-hover:text-gray-900 transition-colors duration-150"
+          fill="none"
+          height="20"
+          stroke="currentColor"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          stroke-width="2"
+          viewBox="0 0 24 24"
+          width="20"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <circle
+            cx="12"
+            cy="12"
+            r="4"
+          />
+          <path
+            d="M16 8v5a3 3 0 0 0 6 0v-1a10 10 0 1 0-4 8"
+          />
+        </svg>
+        <span
+          class="text-sm sm:text-base text-gray-700 font-medium group-hover:text-gray-900 transition-colors duration-150"
+        >
+          Bluesky
         </span>
       </a>
     </div>

@@ -3,7 +3,10 @@ import type { Metadata } from 'next';
 import { GoogleAnalytics } from '@next/third-parties/google';
 import { Inconsolata } from 'next/font/google';
 import SEOData from '@/components/SEOData';
+import Blur from '@/components/Blur';
 import '@/styles/globals.css';
+import Header from '@/components/Header';
+import SideBarNavigation from '@/components/SideBarNavigation';
 
 const inconsolata = Inconsolata({
   subsets: ['latin'],
@@ -119,7 +122,14 @@ export default function RootLayout({
         <SEOData />
         <GoogleAnalytics gaId={process.env.GA_ID || ''} />
       </head>
-      <body className={inconsolata.variable}>{children}</body>
+      <body className={inconsolata.variable}>
+        <Blur />
+        <Header />
+        <div className='grid grid-cols-[145px_1fr] max-w-5xl mx-auto h-[calc(100vh-312px-64px)]'>
+          <SideBarNavigation />
+          {children}
+        </div>
+      </body>
     </html>
   );
 }
