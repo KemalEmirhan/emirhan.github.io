@@ -13,11 +13,9 @@ describe('SideBarNavigation', () => {
 
     const aboutLink = getByRole('link', { name: 'About' });
     const socialsLink = getByRole('link', { name: 'Socials' });
-    const bookmarksLink = getByRole('link', { name: 'Bookmarks' });
 
     expect(aboutLink).toBeInTheDocument();
     expect(socialsLink).toBeInTheDocument();
-    expect(bookmarksLink).toBeInTheDocument();
   });
 
   it('should have correct href attributes', () => {
@@ -25,11 +23,9 @@ describe('SideBarNavigation', () => {
 
     const aboutLink = getByRole('link', { name: 'About' });
     const socialsLink = getByRole('link', { name: 'Socials' });
-    const bookmarksLink = getByRole('link', { name: 'Bookmarks' });
 
     expect(aboutLink).toHaveAttribute('href', '/');
     expect(socialsLink).toHaveAttribute('href', '/socials');
-    expect(bookmarksLink).toHaveAttribute('href', '/bookmarks');
   });
 
   it('should have proper accessibility attributes', () => {
@@ -39,6 +35,6 @@ describe('SideBarNavigation', () => {
     expect(nav).toBeInTheDocument();
 
     const links = getAllByRole('link');
-    expect(links).toHaveLength(3);
+    expect(links).toHaveLength(2);
   });
 });

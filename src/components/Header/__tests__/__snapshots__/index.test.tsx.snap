@@ -3,13 +3,13 @@
 exports[`Header > should render 1`] = `
 <div>
   <header
-    class="flex flex-col gap-2 max-w-5xl mx-auto py-12"
+    class="w-full md:max-w-5xl mx-auto"
   >
     <div
-      class="grid grid-cols-[145px_1fr] items-center py-6 sm:py-8 gap-6"
+      class="grid md:grid-cols-[145px_1fr] items-center py-6 px-4 md:px-0 md:py-8 gap-6"
     >
       <div
-        class="border-r border-black border-dashed pr-4 h-full"
+        class="hidden md:block border-r border-black border-dashed pr-4 h-full"
       >
         <div
           class="relative w-16 h-16 sm:w-24 sm:h-24 lg:w-32 lg:h-32 rounded-full border border-gray-200 shadow-sm"
@@ -35,18 +35,12 @@ exports[`Header > should render 1`] = `
           emrhnkml.
         </h1>
         <time
-          datetime="September 19, 2025"
+          datetime="September 21, 2025"
         >
-          September 19, 2025
+          September 21, 2025
         </time>
       </div>
     </div>
-    <hr
-      class="separator bg-black hidden sm:block w-full h-1"
-    />
-    <hr
-      class="separator bg-black hidden sm:block w-full h-1"
-    />
   </header>
 </div>
 `;

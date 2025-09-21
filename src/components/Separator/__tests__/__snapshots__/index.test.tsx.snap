@@ -3,7 +3,7 @@
 exports[`Separator > should render 1`] = `
 <div>
   <hr
-    class="separator bg-black hidden sm:block w-full h-1"
+    class="separator max-w-6xl mx-auto bg-black w-full h-1 undefined"
   />
 </div>
 `;

@@ -1,7 +1,13 @@
 import React from 'react';
 
-const Separator = () => {
-  return <hr className='separator bg-black hidden sm:block w-full h-1' />;
-};
+interface SeparatorProps {
+  className?: string;
+}
+
+const Separator = ({ className }: SeparatorProps) => (
+  <hr
+    className={`separator max-w-6xl mx-auto bg-black w-full h-1 ${className}`}
+  />
+);
 
 export default Separator;

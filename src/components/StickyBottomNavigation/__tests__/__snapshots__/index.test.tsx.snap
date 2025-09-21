@@ -1,0 +1,106 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`StickyBottomNavigation > should handle / 1`] = `
+<div>
+  <div
+    class="fixed lg:hidden bottom-8 left-1/2 -translate-x-1/2 bg-white rounded-3xl shadow-lg px-4 py-2 drop-shadow-lg border border-gray-500 w-fit z-50"
+  >
+    <nav
+      class="flex justify-evenly items-center gap-4"
+    >
+      <a
+        class="flex flex-col items-center"
+        href="/"
+      >
+        <span
+          class="text-gray-500 data-[active=true]:text-gray-900 transition-colors duration-150"
+          data-active="true"
+        >
+          About
+        </span>
+      </a>
+      <a
+        class="flex flex-col items-center"
+        href="/socials"
+      >
+        <span
+          class="text-gray-500 data-[active=true]:text-gray-900 transition-colors duration-150"
+          data-active="false"
+        >
+          Socials
+        </span>
+      </a>
+    </nav>
+  </div>
+</div>
+`;
+
+exports[`StickyBottomNavigation > should handle /socials 1`] = `
+<div>
+  <div
+    class="fixed lg:hidden bottom-8 left-1/2 -translate-x-1/2 bg-white rounded-3xl shadow-lg px-4 py-2 drop-shadow-lg border border-gray-500 w-fit z-50"
+  >
+    <nav
+      class="flex justify-evenly items-center gap-4"
+    >
+      <a
+        class="flex flex-col items-center"
+        href="/"
+      >
+        <span
+          class="text-gray-500 data-[active=true]:text-gray-900 transition-colors duration-150"
+          data-active="false"
+        >
+          About
+        </span>
+      </a>
+      <a
+        class="flex flex-col items-center"
+        href="/socials"
+      >
+        <span
+          class="text-gray-500 data-[active=true]:text-gray-900 transition-colors duration-150"
+          data-active="true"
+        >
+          Socials
+        </span>
+      </a>
+    </nav>
+  </div>
+</div>
+`;
+
+exports[`StickyBottomNavigation > should render 1`] = `
+<div>
+  <div
+    class="fixed lg:hidden bottom-8 left-1/2 -translate-x-1/2 bg-white rounded-3xl shadow-lg px-4 py-2 drop-shadow-lg border border-gray-500 w-fit z-50"
+  >
+    <nav
+      class="flex justify-evenly items-center gap-4"
+    >
+      <a
+        class="flex flex-col items-center"
+        href="/"
+      >
+        <span
+          class="text-gray-500 data-[active=true]:text-gray-900 transition-colors duration-150"
+          data-active="true"
+        >
+          About
+        </span>
+      </a>
+      <a
+        class="flex flex-col items-center"
+        href="/socials"
+      >
+        <span
+          class="text-gray-500 data-[active=true]:text-gray-900 transition-colors duration-150"
+          data-active="false"
+        >
+          Socials
+        </span>
+      </a>
+    </nav>
+  </div>
+</div>
+`;

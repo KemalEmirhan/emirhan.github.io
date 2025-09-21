@@ -3,21 +3,21 @@
 exports[`Table Component > applies custom className when provided 1`] = `
 <div>
   <div
-    class="text-black bg-white text-base custom-table-class"
+    class="text-black bg-white text-sm md:text-base custom-table-class"
   >
     <div
       class="w-full max-w-4xl"
     >
       <div
-        class="flex items-center pb-1 mb-1"
+        class="flex items-center pb-1 mb-1 px-2 md:px-4 lg:px-0"
       >
         <div
-          class="text-left text-lg font-semibold w-1/2"
+          class="text-left text-base md:text-lg font-semibold w-1/2 pr-2"
         >
           PLATFORM
         </div>
         <div
-          class="text-right text-lg font-semibold w-1/2"
+          class="text-right text-base md:text-lg font-semibold w-1/2 pl-2"
         >
           ACCOUNT
         </div>
@@ -26,180 +26,204 @@ exports[`Table Component > applies custom className when provided 1`] = `
         class="border-b border-black mb-2"
       />
       <div
-        class="space-y-1"
+        class="space-y-2 md:space-y-1"
       >
         <div
-          class="flex items-baseline"
+          class="px-2 md:px-4 lg:px-0"
         >
           <div
-            class="text-left pr-2"
-          >
-            <span
-              class="text-base uppercase"
-            >
-              GITHUB
-            </span>
-          </div>
-          <div
-            class="flex-1 relative overflow-hidden h-[2px]"
+            class="flex items-baseline"
           >
             <div
-              class="absolute inset-0 flex items-center dot-leaders"
-            />
-          </div>
-          <div
-            class="text-right pl-2"
-          >
-            <span
-              class="text-base uppercase"
+              class="text-left pr-2"
             >
-              httml
-            </span>
+              <span
+                class="text-base uppercase"
+              >
+                GITHUB
+              </span>
+            </div>
+            <div
+              class="flex-1 relative overflow-hidden h-[2px]"
+            >
+              <div
+                class="absolute inset-0 flex items-center dot-leaders"
+              />
+            </div>
+            <div
+              class="text-right pl-2"
+            >
+              <span
+                class="text-base uppercase"
+              >
+                httml
+              </span>
+            </div>
           </div>
         </div>
         <div
-          class="flex items-baseline"
+          class="px-2 md:px-4 lg:px-0"
         >
           <div
-            class="text-left pr-2"
-          >
-            <span
-              class="text-base uppercase"
-            >
-              LINKEDIN
-            </span>
-          </div>
-          <div
-            class="flex-1 relative overflow-hidden h-[2px]"
+            class="flex items-baseline"
           >
             <div
-              class="absolute inset-0 flex items-center dot-leaders"
-            />
-          </div>
-          <div
-            class="text-right pl-2"
-          >
-            <span
-              class="text-base uppercase"
+              class="text-left pr-2"
             >
-              https://www.linkedin.com/in/emirhan-kemal-kosem-259569b3/
-            </span>
+              <span
+                class="text-base uppercase"
+              >
+                LINKEDIN
+              </span>
+            </div>
+            <div
+              class="flex-1 relative overflow-hidden h-[2px]"
+            >
+              <div
+                class="absolute inset-0 flex items-center dot-leaders"
+              />
+            </div>
+            <div
+              class="text-right pl-2"
+            >
+              <span
+                class="text-base uppercase"
+              >
+                https://www.linkedin.com/in/emirhan-kemal-kosem-259569b3/
+              </span>
+            </div>
           </div>
         </div>
         <div
-          class="flex items-baseline"
+          class="px-2 md:px-4 lg:px-0"
         >
           <div
-            class="text-left pr-2"
-          >
-            <span
-              class="text-base uppercase"
-            >
-              MEDIUM
-            </span>
-          </div>
-          <div
-            class="flex-1 relative overflow-hidden h-[2px]"
+            class="flex items-baseline"
           >
             <div
-              class="absolute inset-0 flex items-center dot-leaders"
-            />
-          </div>
-          <div
-            class="text-right pl-2"
-          >
-            <span
-              class="text-base uppercase"
+              class="text-left pr-2"
             >
-              https://medium.com/emirhankemalkosem
-            </span>
+              <span
+                class="text-base uppercase"
+              >
+                MEDIUM
+              </span>
+            </div>
+            <div
+              class="flex-1 relative overflow-hidden h-[2px]"
+            >
+              <div
+                class="absolute inset-0 flex items-center dot-leaders"
+              />
+            </div>
+            <div
+              class="text-right pl-2"
+            >
+              <span
+                class="text-base uppercase"
+              >
+                https://medium.com/emirhankemalkosem
+              </span>
+            </div>
           </div>
         </div>
         <div
-          class="flex items-baseline"
+          class="px-2 md:px-4 lg:px-0"
         >
           <div
-            class="text-left pr-2"
-          >
-            <span
-              class="text-base uppercase"
-            >
-              TWITTER
-            </span>
-          </div>
-          <div
-            class="flex-1 relative overflow-hidden h-[2px]"
+            class="flex items-baseline"
           >
             <div
-              class="absolute inset-0 flex items-center dot-leaders"
-            />
-          </div>
-          <div
-            class="text-right pl-2"
-          >
-            <span
-              class="text-base uppercase"
+              class="text-left pr-2"
             >
-              https://x.com/KsemEmir
-            </span>
+              <span
+                class="text-base uppercase"
+              >
+                TWITTER
+              </span>
+            </div>
+            <div
+              class="flex-1 relative overflow-hidden h-[2px]"
+            >
+              <div
+                class="absolute inset-0 flex items-center dot-leaders"
+              />
+            </div>
+            <div
+              class="text-right pl-2"
+            >
+              <span
+                class="text-base uppercase"
+              >
+                https://x.com/KsemEmir
+              </span>
+            </div>
           </div>
         </div>
         <div
-          class="flex items-baseline"
+          class="px-2 md:px-4 lg:px-0"
         >
           <div
-            class="text-left pr-2"
-          >
-            <span
-              class="text-base uppercase"
-            >
-              INSTAGRAM
-            </span>
-          </div>
-          <div
-            class="flex-1 relative overflow-hidden h-[2px]"
+            class="flex items-baseline"
           >
             <div
-              class="absolute inset-0 flex items-center dot-leaders"
-            />
-          </div>
-          <div
-            class="text-right pl-2"
-          >
-            <span
-              class="text-base uppercase"
+              class="text-left pr-2"
             >
-              https://www.instagram.com/emirhankemalkosem/
-            </span>
+              <span
+                class="text-base uppercase"
+              >
+                INSTAGRAM
+              </span>
+            </div>
+            <div
+              class="flex-1 relative overflow-hidden h-[2px]"
+            >
+              <div
+                class="absolute inset-0 flex items-center dot-leaders"
+              />
+            </div>
+            <div
+              class="text-right pl-2"
+            >
+              <span
+                class="text-base uppercase"
+              >
+                https://www.instagram.com/emirhankemalkosem/
+              </span>
+            </div>
           </div>
         </div>
         <div
-          class="flex items-baseline"
+          class="px-2 md:px-4 lg:px-0"
         >
           <div
-            class="text-left pr-2"
-          >
-            <span
-              class="text-base uppercase"
-            >
-              BLUESKY
-            </span>
-          </div>
-          <div
-            class="flex-1 relative overflow-hidden h-[2px]"
+            class="flex items-baseline"
           >
             <div
-              class="absolute inset-0 flex items-center dot-leaders"
-            />
-          </div>
-          <div
-            class="text-right pl-2"
-          >
-            <span
-              class="text-base uppercase"
+              class="text-left pr-2"
             >
-              https://bsky.app/profile/emirkosem.bsky.social
-            </span>
+              <span
+                class="text-base uppercase"
+              >
+                BLUESKY
+              </span>
+            </div>
+            <div
+              class="flex-1 relative overflow-hidden h-[2px]"
+            >
+              <div
+                class="absolute inset-0 flex items-center dot-leaders"
+              />
+            </div>
+            <div
+              class="text-right pl-2"
+            >
+              <span
+                class="text-base uppercase"
+              >
+                https://bsky.app/profile/emirkosem.bsky.social
+              </span>
+            </div>
           </div>
         </div>
       </div>
@@ -211,21 +235,21 @@ exports[`Table Component > applies custom className when provided 1`] = `
 exports[`Table Component > renders links when linkField is provided 1`] = `
 <div>
   <div
-    class="text-black bg-white text-base "
+    class="text-black bg-white text-sm md:text-base "
   >
     <div
       class="w-full max-w-4xl"
     >
       <div
-        class="flex items-center pb-1 mb-1"
+        class="flex items-center pb-1 mb-1 px-2 md:px-4 lg:px-0"
       >
         <div
-          class="text-left text-lg font-semibold w-1/2"
+          class="text-left text-base md:text-lg font-semibold w-1/2 pr-2"
         >
           PLATFORM
         </div>
         <div
-          class="text-right text-lg font-semibold w-1/2"
+          class="text-right text-base md:text-lg font-semibold w-1/2 pl-2"
         >
           ACCOUNT
         </div>
@@ -234,58 +258,66 @@ exports[`Table Component > renders links when linkField is provided 1`] = `
         class="border-b border-black mb-2"
       />
       <div
-        class="space-y-1"
+        class="space-y-2 md:space-y-1"
       >
         <div
-          class="flex items-baseline"
+          class="px-2 md:px-4 lg:px-0"
         >
           <div
-            class="text-left pr-2"
-          >
-            <span
-              class="text-base uppercase"
-            >
-              GITHUB
-            </span>
-          </div>
-          <div
-            class="flex-1 relative overflow-hidden h-[2px]"
+            class="flex items-baseline"
           >
             <div
-              class="absolute inset-0 flex items-center dot-leaders"
-            />
-          </div>
-          <div
-            class="text-right pl-2"
-          >
-            <a
-              class="text-gray-500 hover:text-gray-800 underline flex items-center text-base"
-              href="https://github.com/KemalEmirhan"
-              rel="noopener noreferrer"
-              target="_blank"
+              class="text-left pr-2"
             >
-              https://github.com/KemalEmirhan
-              <svg
-                aria-hidden="true"
-                class="lucide lucide-arrow-up-right w-4 h-4"
-                fill="none"
-                height="24"
-                stroke="currentColor"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                stroke-width="2"
-                viewBox="0 0 24 24"
-                width="24"
-                xmlns="http://www.w3.org/2000/svg"
+              <span
+                class="text-base uppercase"
               >
-                <path
-                  d="M7 7h10v10"
-                />
-                <path
-                  d="M7 17 17 7"
-                />
-              </svg>
-            </a>
+                GITHUB
+              </span>
+            </div>
+            <div
+              class="flex-1 relative overflow-hidden h-[2px]"
+            >
+              <div
+                class="absolute inset-0 flex items-center dot-leaders"
+              />
+            </div>
+            <div
+              class="text-right pl-2"
+            >
+              <a
+                class="text-gray-500 hover:text-gray-800 underline flex items-center text-base"
+                href="https://github.com/KemalEmirhan"
+                rel="noopener noreferrer"
+                target="_blank"
+              >
+                <span
+                  class="whitespace-nowrap max-w-[100px] truncate md:max-w-none"
+                >
+                  https://github.com/KemalEmirhan
+                </span>
+                <svg
+                  aria-hidden="true"
+                  class="lucide lucide-arrow-up-right w-3 h-3 md:w-4 md:h-4 flex-shrink-0 ml-1"
+                  fill="none"
+                  height="24"
+                  stroke="currentColor"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  viewBox="0 0 24 24"
+                  width="24"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M7 7h10v10"
+                  />
+                  <path
+                    d="M7 17 17 7"
+                  />
+                </svg>
+              </a>
+            </div>
           </div>
         </div>
       </div>
@@ -297,21 +329,21 @@ exports[`Table Component > renders links when linkField is provided 1`] = `
 exports[`Table Component > renders regular text when linkField is not provided 1`] = `
 <div>
   <div
-    class="text-black bg-white text-base "
+    class="text-black bg-white text-sm md:text-base "
   >
     <div
       class="w-full max-w-4xl"
     >
       <div
-        class="flex items-center pb-1 mb-1"
+        class="flex items-center pb-1 mb-1 px-2 md:px-4 lg:px-0"
       >
         <div
-          class="text-left text-lg font-semibold w-1/2"
+          class="text-left text-base md:text-lg font-semibold w-1/2 pr-2"
         >
           PLATFORM
         </div>
         <div
-          class="text-right text-lg font-semibold w-1/2"
+          class="text-right text-base md:text-lg font-semibold w-1/2 pl-2"
         >
           ACCOUNT
         </div>
@@ -320,180 +352,204 @@ exports[`Table Component > renders regular text when linkField is not provided 1
         class="border-b border-black mb-2"
       />
       <div
-        class="space-y-1"
+        class="space-y-2 md:space-y-1"
       >
         <div
-          class="flex items-baseline"
+          class="px-2 md:px-4 lg:px-0"
         >
           <div
-            class="text-left pr-2"
-          >
-            <span
-              class="text-base uppercase"
-            >
-              GITHUB
-            </span>
-          </div>
-          <div
-            class="flex-1 relative overflow-hidden h-[2px]"
+            class="flex items-baseline"
           >
             <div
-              class="absolute inset-0 flex items-center dot-leaders"
-            />
-          </div>
-          <div
-            class="text-right pl-2"
-          >
-            <span
-              class="text-base uppercase"
+              class="text-left pr-2"
             >
-              httml
-            </span>
+              <span
+                class="text-base uppercase"
+              >
+                GITHUB
+              </span>
+            </div>
+            <div
+              class="flex-1 relative overflow-hidden h-[2px]"
+            >
+              <div
+                class="absolute inset-0 flex items-center dot-leaders"
+              />
+            </div>
+            <div
+              class="text-right pl-2"
+            >
+              <span
+                class="text-base uppercase"
+              >
+                httml
+              </span>
+            </div>
           </div>
         </div>
         <div
-          class="flex items-baseline"
+          class="px-2 md:px-4 lg:px-0"
         >
           <div
-            class="text-left pr-2"
-          >
-            <span
-              class="text-base uppercase"
-            >
-              LINKEDIN
-            </span>
-          </div>
-          <div
-            class="flex-1 relative overflow-hidden h-[2px]"
+            class="flex items-baseline"
           >
             <div
-              class="absolute inset-0 flex items-center dot-leaders"
-            />
-          </div>
-          <div
-            class="text-right pl-2"
-          >
-            <span
-              class="text-base uppercase"
+              class="text-left pr-2"
             >
-              https://www.linkedin.com/in/emirhan-kemal-kosem-259569b3/
-            </span>
+              <span
+                class="text-base uppercase"
+              >
+                LINKEDIN
+              </span>
+            </div>
+            <div
+              class="flex-1 relative overflow-hidden h-[2px]"
+            >
+              <div
+                class="absolute inset-0 flex items-center dot-leaders"
+              />
+            </div>
+            <div
+              class="text-right pl-2"
+            >
+              <span
+                class="text-base uppercase"
+              >
+                https://www.linkedin.com/in/emirhan-kemal-kosem-259569b3/
+              </span>
+            </div>
           </div>
         </div>
         <div
-          class="flex items-baseline"
+          class="px-2 md:px-4 lg:px-0"
         >
           <div
-            class="text-left pr-2"
-          >
-            <span
-              class="text-base uppercase"
-            >
-              MEDIUM
-            </span>
-          </div>
-          <div
-            class="flex-1 relative overflow-hidden h-[2px]"
+            class="flex items-baseline"
           >
             <div
-              class="absolute inset-0 flex items-center dot-leaders"
-            />
-          </div>
-          <div
-            class="text-right pl-2"
-          >
-            <span
-              class="text-base uppercase"
+              class="text-left pr-2"
             >
-              https://medium.com/emirhankemalkosem
-            </span>
+              <span
+                class="text-base uppercase"
+              >
+                MEDIUM
+              </span>
+            </div>
+            <div
+              class="flex-1 relative overflow-hidden h-[2px]"
+            >
+              <div
+                class="absolute inset-0 flex items-center dot-leaders"
+              />
+            </div>
+            <div
+              class="text-right pl-2"
+            >
+              <span
+                class="text-base uppercase"
+              >
+                https://medium.com/emirhankemalkosem
+              </span>
+            </div>
           </div>
         </div>
         <div
-          class="flex items-baseline"
+          class="px-2 md:px-4 lg:px-0"
         >
           <div
-            class="text-left pr-2"
-          >
-            <span
-              class="text-base uppercase"
-            >
-              TWITTER
-            </span>
-          </div>
-          <div
-            class="flex-1 relative overflow-hidden h-[2px]"
+            class="flex items-baseline"
           >
             <div
-              class="absolute inset-0 flex items-center dot-leaders"
-            />
-          </div>
-          <div
-            class="text-right pl-2"
-          >
-            <span
-              class="text-base uppercase"
+              class="text-left pr-2"
             >
-              https://x.com/KsemEmir
-            </span>
+              <span
+                class="text-base uppercase"
+              >
+                TWITTER
+              </span>
+            </div>
+            <div
+              class="flex-1 relative overflow-hidden h-[2px]"
+            >
+              <div
+                class="absolute inset-0 flex items-center dot-leaders"
+              />
+            </div>
+            <div
+              class="text-right pl-2"
+            >
+              <span
+                class="text-base uppercase"
+              >
+                https://x.com/KsemEmir
+              </span>
+            </div>
           </div>
         </div>
         <div
-          class="flex items-baseline"
+          class="px-2 md:px-4 lg:px-0"
         >
           <div
-            class="text-left pr-2"
-          >
-            <span
-              class="text-base uppercase"
-            >
-              INSTAGRAM
-            </span>
-          </div>
-          <div
-            class="flex-1 relative overflow-hidden h-[2px]"
+            class="flex items-baseline"
           >
             <div
-              class="absolute inset-0 flex items-center dot-leaders"
-            />
-          </div>
-          <div
-            class="text-right pl-2"
-          >
-            <span
-              class="text-base uppercase"
+              class="text-left pr-2"
             >
-              https://www.instagram.com/emirhankemalkosem/
-            </span>
+              <span
+                class="text-base uppercase"
+              >
+                INSTAGRAM
+              </span>
+            </div>
+            <div
+              class="flex-1 relative overflow-hidden h-[2px]"
+            >
+              <div
+                class="absolute inset-0 flex items-center dot-leaders"
+              />
+            </div>
+            <div
+              class="text-right pl-2"
+            >
+              <span
+                class="text-base uppercase"
+              >
+                https://www.instagram.com/emirhankemalkosem/
+              </span>
+            </div>
           </div>
         </div>
         <div
-          class="flex items-baseline"
+          class="px-2 md:px-4 lg:px-0"
         >
           <div
-            class="text-left pr-2"
-          >
-            <span
-              class="text-base uppercase"
-            >
-              BLUESKY
-            </span>
-          </div>
-          <div
-            class="flex-1 relative overflow-hidden h-[2px]"
+            class="flex items-baseline"
           >
             <div
-              class="absolute inset-0 flex items-center dot-leaders"
-            />
-          </div>
-          <div
-            class="text-right pl-2"
-          >
-            <span
-              class="text-base uppercase"
+              class="text-left pr-2"
             >
-              https://bsky.app/profile/emirkosem.bsky.social
-            </span>
+              <span
+                class="text-base uppercase"
+              >
+                BLUESKY
+              </span>
+            </div>
+            <div
+              class="flex-1 relative overflow-hidden h-[2px]"
+            >
+              <div
+                class="absolute inset-0 flex items-center dot-leaders"
+              />
+            </div>
+            <div
+              class="text-right pl-2"
+            >
+              <span
+                class="text-base uppercase"
+              >
+                https://bsky.app/profile/emirkosem.bsky.social
+              </span>
+            </div>
           </div>
         </div>
       </div>
@@ -505,21 +561,21 @@ exports[`Table Component > renders regular text when linkField is not provided 1
 exports[`Table Component > renders with empty data array 1`] = `
 <div>
   <div
-    class="text-black bg-white text-base "
+    class="text-black bg-white text-sm md:text-base "
   >
     <div
       class="w-full max-w-4xl"
     >
       <div
-        class="flex items-center pb-1 mb-1"
+        class="flex items-center pb-1 mb-1 px-2 md:px-4 lg:px-0"
       >
         <div
-          class="text-left text-lg font-semibold w-1/2"
+          class="text-left text-base md:text-lg font-semibold w-1/2 pr-2"
         >
           PLATFORM
         </div>
         <div
-          class="text-right text-lg font-semibold w-1/2"
+          class="text-right text-base md:text-lg font-semibold w-1/2 pl-2"
         >
           ACCOUNT
         </div>
@@ -528,7 +584,7 @@ exports[`Table Component > renders with empty data array 1`] = `
         class="border-b border-black mb-2"
       />
       <div
-        class="space-y-1"
+        class="space-y-2 md:space-y-1"
       />
     </div>
   </div>
@@ -538,21 +594,21 @@ exports[`Table Component > renders with empty data array 1`] = `
 exports[`Table Component > should render 1`] = `
 <div>
   <div
-    class="text-black bg-white text-base "
+    class="text-black bg-white text-sm md:text-base "
   >
     <div
       class="w-full max-w-4xl"
     >
       <div
-        class="flex items-center pb-1 mb-1"
+        class="flex items-center pb-1 mb-1 px-2 md:px-4 lg:px-0"
       >
         <div
-          class="text-left text-lg font-semibold w-1/2"
+          class="text-left text-base md:text-lg font-semibold w-1/2 pr-2"
         >
           PLATFORM
         </div>
         <div
-          class="text-right text-lg font-semibold w-1/2"
+          class="text-right text-base md:text-lg font-semibold w-1/2 pl-2"
         >
           ACCOUNT
         </div>
@@ -561,180 +617,204 @@ exports[`Table Component > should render 1`] = `
         class="border-b border-black mb-2"
       />
       <div
-        class="space-y-1"
+        class="space-y-2 md:space-y-1"
       >
         <div
-          class="flex items-baseline"
+          class="px-2 md:px-4 lg:px-0"
         >
           <div
-            class="text-left pr-2"
-          >
-            <span
-              class="text-base uppercase"
-            >
-              GITHUB
-            </span>
-          </div>
-          <div
-            class="flex-1 relative overflow-hidden h-[2px]"
+            class="flex items-baseline"
           >
             <div
-              class="absolute inset-0 flex items-center dot-leaders"
-            />
-          </div>
-          <div
-            class="text-right pl-2"
-          >
-            <span
-              class="text-base uppercase"
+              class="text-left pr-2"
             >
-              httml
-            </span>
+              <span
+                class="text-base uppercase"
+              >
+                GITHUB
+              </span>
+            </div>
+            <div
+              class="flex-1 relative overflow-hidden h-[2px]"
+            >
+              <div
+                class="absolute inset-0 flex items-center dot-leaders"
+              />
+            </div>
+            <div
+              class="text-right pl-2"
+            >
+              <span
+                class="text-base uppercase"
+              >
+                httml
+              </span>
+            </div>
           </div>
         </div>
         <div
-          class="flex items-baseline"
+          class="px-2 md:px-4 lg:px-0"
         >
           <div
-            class="text-left pr-2"
-          >
-            <span
-              class="text-base uppercase"
-            >
-              LINKEDIN
-            </span>
-          </div>
-          <div
-            class="flex-1 relative overflow-hidden h-[2px]"
+            class="flex items-baseline"
           >
             <div
-              class="absolute inset-0 flex items-center dot-leaders"
-            />
-          </div>
-          <div
-            class="text-right pl-2"
-          >
-            <span
-              class="text-base uppercase"
+              class="text-left pr-2"
             >
-              https://www.linkedin.com/in/emirhan-kemal-kosem-259569b3/
-            </span>
+              <span
+                class="text-base uppercase"
+              >
+                LINKEDIN
+              </span>
+            </div>
+            <div
+              class="flex-1 relative overflow-hidden h-[2px]"
+            >
+              <div
+                class="absolute inset-0 flex items-center dot-leaders"
+              />
+            </div>
+            <div
+              class="text-right pl-2"
+            >
+              <span
+                class="text-base uppercase"
+              >
+                https://www.linkedin.com/in/emirhan-kemal-kosem-259569b3/
+              </span>
+            </div>
           </div>
         </div>
         <div
-          class="flex items-baseline"
+          class="px-2 md:px-4 lg:px-0"
         >
           <div
-            class="text-left pr-2"
-          >
-            <span
-              class="text-base uppercase"
-            >
-              MEDIUM
-            </span>
-          </div>
-          <div
-            class="flex-1 relative overflow-hidden h-[2px]"
+            class="flex items-baseline"
           >
             <div
-              class="absolute inset-0 flex items-center dot-leaders"
-            />
-          </div>
-          <div
-            class="text-right pl-2"
-          >
-            <span
-              class="text-base uppercase"
+              class="text-left pr-2"
             >
-              https://medium.com/emirhankemalkosem
-            </span>
+              <span
+                class="text-base uppercase"
+              >
+                MEDIUM
+              </span>
+            </div>
+            <div
+              class="flex-1 relative overflow-hidden h-[2px]"
+            >
+              <div
+                class="absolute inset-0 flex items-center dot-leaders"
+              />
+            </div>
+            <div
+              class="text-right pl-2"
+            >
+              <span
+                class="text-base uppercase"
+              >
+                https://medium.com/emirhankemalkosem
+              </span>
+            </div>
           </div>
         </div>
         <div
-          class="flex items-baseline"
+          class="px-2 md:px-4 lg:px-0"
         >
           <div
-            class="text-left pr-2"
-          >
-            <span
-              class="text-base uppercase"
-            >
-              TWITTER
-            </span>
-          </div>
-          <div
-            class="flex-1 relative overflow-hidden h-[2px]"
+            class="flex items-baseline"
           >
             <div
-              class="absolute inset-0 flex items-center dot-leaders"
-            />
-          </div>
-          <div
-            class="text-right pl-2"
-          >
-            <span
-              class="text-base uppercase"
+              class="text-left pr-2"
             >
-              https://x.com/KsemEmir
-            </span>
+              <span
+                class="text-base uppercase"
+              >
+                TWITTER
+              </span>
+            </div>
+            <div
+              class="flex-1 relative overflow-hidden h-[2px]"
+            >
+              <div
+                class="absolute inset-0 flex items-center dot-leaders"
+              />
+            </div>
+            <div
+              class="text-right pl-2"
+            >
+              <span
+                class="text-base uppercase"
+              >
+                https://x.com/KsemEmir
+              </span>
+            </div>
           </div>
         </div>
         <div
-          class="flex items-baseline"
+          class="px-2 md:px-4 lg:px-0"
         >
           <div
-            class="text-left pr-2"
-          >
-            <span
-              class="text-base uppercase"
-            >
-              INSTAGRAM
-            </span>
-          </div>
-          <div
-            class="flex-1 relative overflow-hidden h-[2px]"
+            class="flex items-baseline"
           >
             <div
-              class="absolute inset-0 flex items-center dot-leaders"
-            />
-          </div>
-          <div
-            class="text-right pl-2"
-          >
-            <span
-              class="text-base uppercase"
+              class="text-left pr-2"
             >
-              https://www.instagram.com/emirhankemalkosem/
-            </span>
+              <span
+                class="text-base uppercase"
+              >
+                INSTAGRAM
+              </span>
+            </div>
+            <div
+              class="flex-1 relative overflow-hidden h-[2px]"
+            >
+              <div
+                class="absolute inset-0 flex items-center dot-leaders"
+              />
+            </div>
+            <div
+              class="text-right pl-2"
+            >
+              <span
+                class="text-base uppercase"
+              >
+                https://www.instagram.com/emirhankemalkosem/
+              </span>
+            </div>
           </div>
         </div>
         <div
-          class="flex items-baseline"
+          class="px-2 md:px-4 lg:px-0"
         >
           <div
-            class="text-left pr-2"
-          >
-            <span
-              class="text-base uppercase"
-            >
-              BLUESKY
-            </span>
-          </div>
-          <div
-            class="flex-1 relative overflow-hidden h-[2px]"
+            class="flex items-baseline"
           >
             <div
-              class="absolute inset-0 flex items-center dot-leaders"
-            />
-          </div>
-          <div
-            class="text-right pl-2"
-          >
-            <span
-              class="text-base uppercase"
+              class="text-left pr-2"
             >
-              https://bsky.app/profile/emirkosem.bsky.social
-            </span>
+              <span
+                class="text-base uppercase"
+              >
+                BLUESKY
+              </span>
+            </div>
+            <div
+              class="flex-1 relative overflow-hidden h-[2px]"
+            >
+              <div
+                class="absolute inset-0 flex items-center dot-leaders"
+              />
+            </div>
+            <div
+              class="text-right pl-2"
+            >
+              <span
+                class="text-base uppercase"
+              >
+                https://bsky.app/profile/emirkosem.bsky.social
+              </span>
+            </div>
           </div>
         </div>
       </div>

@@ -23,10 +23,10 @@ const Socials = () => {
     },
   ];
 
-  const headers: [string, string] = ['PLATFROM', 'ACCOUNT'];
+  const headers: [string, string] = ['PLATFORM', 'ACCOUNT'];
 
   return (
-    <div className='px-8'>
+    <div className='px-2'>
       <Table headers={headers} data={accountsData} linkField='ACCOUNT' />
     </div>
   );

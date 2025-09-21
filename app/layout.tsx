@@ -7,6 +7,8 @@ import Blur from '@/components/Blur';
 import '@/styles/globals.css';
 import Header from '@/components/Header';
 import SideBarNavigation from '@/components/SideBarNavigation';
+import Separator from '@/components/Separator';
+import StickyBottomNavigation from '@/components/StickyBottomNavigation';
 
 const inconsolata = Inconsolata({
   subsets: ['latin'],
@@ -125,9 +127,12 @@ export default function RootLayout({
       <body className={inconsolata.variable}>
         <Blur />
         <Header />
-        <div className='grid grid-cols-[145px_1fr] max-w-5xl mx-auto h-[calc(100vh-312px-64px)]'>
+        <Separator className='mb-1' />
+        <Separator />
+        <div className='grid lg:grid-cols-[145px_1fr] max-w-5xl mx-auto md:min-h-[calc(100vh-312px-64px)] gap-6 p-4 md:p-6 lg:px-0'>
           <SideBarNavigation />
-          {children}
+          <main className='pb-8 md:pb-0'>{children}</main>
+          <StickyBottomNavigation />
         </div>
       </body>
     </html>

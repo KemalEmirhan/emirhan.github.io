@@ -3,8 +3,8 @@ import React from 'react';
 
 const SideBarNavigation = () => {
   return (
-    <div className='border-r border-black border-dashed pr-4 h-full'>
-      <nav className='flex flex-col items-end gap-4 pr-4'>
+    <aside className='hidden lg:block border-b md:border-b-0 md:border-r border-black border-dashed md:pr-4'>
+      <nav className='flex md:flex-col items-end gap-4 py-4 md:py-0 md:pr-4'>
         <Link
           href='/'
           className='text-gray-700 hover:text-gray-900 transition-colors duration-150 underline text-xl uppercase'
@@ -17,14 +17,14 @@ const SideBarNavigation = () => {
         >
           Socials
         </Link>
-        <Link
+        {/* <Link
           href='/bookmarks'
           className='text-gray-700 hover:text-gray-900 transition-colors duration-150 underline text-xl uppercase'
         >
           Bookmarks
-        </Link>
+        </Link> */}
       </nav>
-    </div>
+    </aside>
   );
 };
 

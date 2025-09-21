@@ -2,11 +2,11 @@
 
 exports[`SideBarNavigation > should render 1`] = `
 <div>
-  <div
-    class="border-r border-black border-dashed pr-4 h-full"
+  <aside
+    class="hidden lg:block border-b md:border-b-0 md:border-r border-black border-dashed md:pr-4"
   >
     <nav
-      class="flex flex-col items-end gap-4 pr-4"
+      class="flex md:flex-col items-end gap-4 py-4 md:py-0 md:pr-4"
     >
       <a
         class="text-gray-700 hover:text-gray-900 transition-colors duration-150 underline text-xl uppercase"
@@ -20,13 +20,7 @@ exports[`SideBarNavigation > should render 1`] = `
       >
         Socials
       </a>
-      <a
-        class="text-gray-700 hover:text-gray-900 transition-colors duration-150 underline text-xl uppercase"
-        href="/bookmarks"
-      >
-        Bookmarks
-      </a>
     </nav>
-  </div>
+  </aside>
 </div>
 `;
