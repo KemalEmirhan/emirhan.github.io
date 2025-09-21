@@ -24,7 +24,7 @@ const TableRowValue = ({
         href={value}
         target='_blank'
         rel='noopener noreferrer'
-        className='text-gray-500 hover:text-gray-800 underline flex items-center text-base'
+        className={`text-gray-500 hover:text-gray-800 underline flex items-center ${direction === 'right' && 'justify-end'} text-[${direction}]`}
       >
         <span className='whitespace-nowrap max-w-[100px] truncate md:max-w-none'>
           {value}
@@ -36,7 +36,7 @@ const TableRowValue = ({
     );
   }
 
-  return <span className='text-base uppercase'>{value}</span>;
+  return <span className={`text-[${direction}] uppercase`}>{value}</span>;
 };
 
 export default TableRowValue;
