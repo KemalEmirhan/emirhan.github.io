@@ -12,7 +12,7 @@ const Header = () => {
 
   return (
     <header className='w-full md:max-w-5xl mx-auto'>
-      <div className='grid md:grid-cols-[145px_1fr] items-center py-6 px-4 md:px-0 md:py-8 gap-6'>
+      <div className='grid md:grid-cols-[145px_1fr] items-center py-6 px-4 lg:px-0 md:py-8 gap-6'>
         <div className='hidden md:block border-r border-black border-dashed pr-4 h-full'>
           <Avatar />
         </div>

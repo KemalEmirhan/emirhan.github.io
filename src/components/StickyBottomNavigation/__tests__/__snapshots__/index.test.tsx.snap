@@ -6,8 +6,12 @@ exports[`StickyBottomNavigation > should handle / 1`] = `
     class="fixed lg:hidden bottom-8 left-1/2 -translate-x-1/2 bg-white rounded-3xl shadow-lg px-4 py-2 drop-shadow-lg border border-gray-500 w-fit z-50"
   >
     <nav
-      class="flex justify-evenly items-center gap-4"
+      class="flex justify-evenly items-center gap-4 relative"
     >
+      <div
+        class="absolute w-2 h-2 bg-blue-500 rounded-full bottom-[-4px]"
+        style="left: 16px;"
+      />
       <a
         class="flex flex-col items-center"
         href="/"
@@ -41,8 +45,12 @@ exports[`StickyBottomNavigation > should handle /socials 1`] = `
     class="fixed lg:hidden bottom-8 left-1/2 -translate-x-1/2 bg-white rounded-3xl shadow-lg px-4 py-2 drop-shadow-lg border border-gray-500 w-fit z-50"
   >
     <nav
-      class="flex justify-evenly items-center gap-4"
+      class="flex justify-evenly items-center gap-4 relative"
     >
+      <div
+        class="absolute w-2 h-2 bg-blue-500 rounded-full bottom-[-4px]"
+        style="left: 16px;"
+      />
       <a
         class="flex flex-col items-center"
         href="/"
@@ -76,8 +84,12 @@ exports[`StickyBottomNavigation > should render 1`] = `
     class="fixed lg:hidden bottom-8 left-1/2 -translate-x-1/2 bg-white rounded-3xl shadow-lg px-4 py-2 drop-shadow-lg border border-gray-500 w-fit z-50"
   >
     <nav
-      class="flex justify-evenly items-center gap-4"
+      class="flex justify-evenly items-center gap-4 relative"
     >
+      <div
+        class="absolute w-2 h-2 bg-blue-500 rounded-full bottom-[-4px]"
+        style="left: 16px;"
+      />
       <a
         class="flex flex-col items-center"
         href="/"

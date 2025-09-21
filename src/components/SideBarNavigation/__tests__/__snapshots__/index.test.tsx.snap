@@ -3,19 +3,44 @@
 exports[`SideBarNavigation > should render 1`] = `
 <div>
   <aside
-    class="hidden lg:block border-b md:border-b-0 md:border-r border-black border-dashed md:pr-4"
+    class="hidden lg:block border-r border-black border-dashed"
   >
     <nav
-      class="flex md:flex-col items-end gap-4 py-4 md:py-0 md:pr-4"
+      class="relative flex md:flex-col items-end gap-4 py-0 mr-8"
     >
+      <div
+        class="absolute flex items-center justify-center right-[-24px]"
+        style="top: 6px;"
+      >
+        <svg
+          aria-hidden="true"
+          class="lucide lucide-arrow-right w-4 h-4"
+          fill="none"
+          height="24"
+          stroke="currentColor"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          stroke-width="2"
+          viewBox="0 0 24 24"
+          width="24"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            d="M5 12h14"
+          />
+          <path
+            d="m12 5 7 7-7 7"
+          />
+        </svg>
+      </div>
       <a
-        class="text-gray-700 hover:text-gray-900 transition-colors duration-150 underline text-xl uppercase"
+        class="text-gray-700 hover:text-gray-900 transition-colors duration-150 underline text-xl uppercase flex items-center gap-2"
         href="/"
       >
         About
       </a>
       <a
-        class="text-gray-700 hover:text-gray-900 transition-colors duration-150 underline text-xl uppercase"
+        class="text-gray-700 hover:text-gray-900 transition-colors duration-150 underline text-xl uppercase flex items-center gap-2"
         href="/socials"
       >
         Socials

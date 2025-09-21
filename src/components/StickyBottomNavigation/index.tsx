@@ -2,58 +2,54 @@
 
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
-import React from 'react';
+import React, { useState, useCallback } from 'react';
 import { motion } from 'motion/react';
+import { getActiveLinkIndex, calculateDotPosition } from './utils';
+import { NAVIGATIONS } from '@/constants/navigations';
 
 const StickyBottomNavigation = () => {
   const pathname = usePathname();
+  const [dotX, setDotX] = useState(20); // Initially set to the center of the first link
 
-  // Calculate the position of the blue dot based on active link
-  const getActiveLinkIndex = () => {
-    if (pathname === '/') return 0;
-    if (pathname === '/socials') return 1;
-    return 0; // default to first link
-  };
+  const activeIndex = getActiveLinkIndex(pathname);
 
-  const activeIndex = getActiveLinkIndex();
+  const navRef = useCallback(
+    (navElement: HTMLElement | null) => {
+      if (!navElement) return;
+
+      const centerX = calculateDotPosition(navElement, activeIndex);
+      setDotX(centerX);
+    },
+    [activeIndex]
+  );
 
   return (
     <div className='fixed lg:hidden bottom-8 left-1/2 -translate-x-1/2 bg-white rounded-3xl shadow-lg px-4 py-2 drop-shadow-lg border border-gray-500 w-fit z-50'>
-      <nav className='flex justify-evenly items-center gap-4'>
-        {/* Blue dot indicator */}
+      <nav
+        ref={navRef}
+        className='flex justify-evenly items-center gap-4 relative'
+      >
         <motion.div
-          className='absolute w-2 h-2 bg-blue-500 rounded-full'
+          className='absolute w-2 h-2 bg-blue-500 rounded-full bottom-[-4px]'
           initial={false}
-          animate={{
-            x: activeIndex * 64,
-          }}
-          transition={{
-            type: 'spring',
-            stiffness: 200,
-            damping: 25,
-          }}
-          style={{
-            bottom: '2px',
-            left: '30px',
-          }}
+          animate={{ left: dotX - 4 }}
+          transition={{ type: 'spring', stiffness: 300, damping: 25 }}
         />
 
-        <Link href='/' className='flex flex-col items-center'>
-          <span
-            className='text-gray-500 data-[active=true]:text-gray-900 transition-colors duration-150'
-            data-active={pathname === '/'}
+        {NAVIGATIONS.map(item => (
+          <Link
+            key={item.href}
+            href={item.href}
+            className='flex flex-col items-center'
           >
-            About
-          </span>
-        </Link>
-        <Link href='/socials' className='flex flex-col items-center'>
-          <span
-            className='text-gray-500 data-[active=true]:text-gray-900 transition-colors duration-150'
-            data-active={pathname === '/socials'}
-          >
-            Socials
-          </span>
-        </Link>
+            <span
+              className='text-gray-500 data-[active=true]:text-gray-900 transition-colors duration-150'
+              data-active={pathname === item.href}
+            >
+              {item.label}
+            </span>
+          </Link>
+        ))}
       </nav>
     </div>
   );

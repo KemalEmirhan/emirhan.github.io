@@ -22,7 +22,16 @@ export const AccountLinksArraySchema = z.array(AccountLinkSchema);
 // Age calculation schema
 export const BirthDateSchema = z.date();
 
+export const NavigationSchema = z.object({
+  href: z.string(),
+  label: z.string(),
+});
+
+export const NavigationsArraySchema = z.array(NavigationSchema);
+
 // Type exports
 export type TAccountLink = z.infer<typeof AccountLinkSchema>;
 export type TAccountLinks = z.infer<typeof AccountLinksArraySchema>;
 export type TAccountName = z.infer<typeof AccountNameSchema>;
+export type TNavigation = z.infer<typeof NavigationSchema>;
+export type TNavigations = z.infer<typeof NavigationsArraySchema>;
