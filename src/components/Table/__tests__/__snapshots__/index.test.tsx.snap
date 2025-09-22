@@ -22,12 +22,14 @@ exports[`Table Component > applies custom className when provided 1`] = `
         >
           <th
             class="text-base md:text-lg font-semibold pb-1 mb-1 px-0"
+            scope="col"
             style="text-align: left;"
           >
             PLATFORM
           </th>
           <th
             class="text-base md:text-lg font-semibold pb-1 mb-1 px-0"
+            scope="col"
             style="text-align: right;"
           >
             ACCOUNT
@@ -38,10 +40,11 @@ exports[`Table Component > applies custom className when provided 1`] = `
         class="space-y-2 md:space-y-1"
       >
         <tr
-          class="px-2 md:px-4 lg:px-0 relative border-b border-black border-dashed translate-0 [clip-path:inset(0)]"
+          class="px-2 md:px-4 lg:px-0 relative border-b border-black border-dashed translate-x-0 translate-y-0 [clip-path:inset(0)]"
         >
           <td
-            class="text-left align-baseline py-2"
+            class="align-baseline py-2"
+            style="text-align: left;"
           >
             <span
               class="text-base uppercase"
@@ -50,7 +53,8 @@ exports[`Table Component > applies custom className when provided 1`] = `
             </span>
           </td>
           <td
-            class="text-right align-baseline py-2"
+            class="align-baseline py-2"
+            style="text-align: right;"
           >
             <span
               class="text-base uppercase"
@@ -60,10 +64,11 @@ exports[`Table Component > applies custom className when provided 1`] = `
           </td>
         </tr>
         <tr
-          class="px-2 md:px-4 lg:px-0 relative border-b border-black border-dashed translate-0 [clip-path:inset(0)]"
+          class="px-2 md:px-4 lg:px-0 relative border-b border-black border-dashed translate-x-0 translate-y-0 [clip-path:inset(0)]"
         >
           <td
-            class="text-left align-baseline py-2"
+            class="align-baseline py-2"
+            style="text-align: left;"
           >
             <span
               class="text-base uppercase"
@@ -72,7 +77,8 @@ exports[`Table Component > applies custom className when provided 1`] = `
             </span>
           </td>
           <td
-            class="text-right align-baseline py-2"
+            class="align-baseline py-2"
+            style="text-align: right;"
           >
             <span
               class="text-base uppercase"
@@ -82,10 +88,11 @@ exports[`Table Component > applies custom className when provided 1`] = `
           </td>
         </tr>
         <tr
-          class="px-2 md:px-4 lg:px-0 relative border-b border-black border-dashed translate-0 [clip-path:inset(0)]"
+          class="px-2 md:px-4 lg:px-0 relative border-b border-black border-dashed translate-x-0 translate-y-0 [clip-path:inset(0)]"
         >
           <td
-            class="text-left align-baseline py-2"
+            class="align-baseline py-2"
+            style="text-align: left;"
           >
             <span
               class="text-base uppercase"
@@ -94,7 +101,8 @@ exports[`Table Component > applies custom className when provided 1`] = `
             </span>
           </td>
           <td
-            class="text-right align-baseline py-2"
+            class="align-baseline py-2"
+            style="text-align: right;"
           >
             <span
               class="text-base uppercase"
@@ -104,10 +112,11 @@ exports[`Table Component > applies custom className when provided 1`] = `
           </td>
         </tr>
         <tr
-          class="px-2 md:px-4 lg:px-0 relative border-b border-black border-dashed translate-0 [clip-path:inset(0)]"
+          class="px-2 md:px-4 lg:px-0 relative border-b border-black border-dashed translate-x-0 translate-y-0 [clip-path:inset(0)]"
         >
           <td
-            class="text-left align-baseline py-2"
+            class="align-baseline py-2"
+            style="text-align: left;"
           >
             <span
               class="text-base uppercase"
@@ -116,7 +125,8 @@ exports[`Table Component > applies custom className when provided 1`] = `
             </span>
           </td>
           <td
-            class="text-right align-baseline py-2"
+            class="align-baseline py-2"
+            style="text-align: right;"
           >
             <span
               class="text-base uppercase"
@@ -126,10 +136,11 @@ exports[`Table Component > applies custom className when provided 1`] = `
           </td>
         </tr>
         <tr
-          class="px-2 md:px-4 lg:px-0 relative border-b border-black border-dashed translate-0 [clip-path:inset(0)]"
+          class="px-2 md:px-4 lg:px-0 relative border-b border-black border-dashed translate-x-0 translate-y-0 [clip-path:inset(0)]"
         >
           <td
-            class="text-left align-baseline py-2"
+            class="align-baseline py-2"
+            style="text-align: left;"
           >
             <span
               class="text-base uppercase"
@@ -138,7 +149,8 @@ exports[`Table Component > applies custom className when provided 1`] = `
             </span>
           </td>
           <td
-            class="text-right align-baseline py-2"
+            class="align-baseline py-2"
+            style="text-align: right;"
           >
             <span
               class="text-base uppercase"
@@ -148,10 +160,11 @@ exports[`Table Component > applies custom className when provided 1`] = `
           </td>
         </tr>
         <tr
-          class="px-2 md:px-4 lg:px-0 relative border-b border-black border-dashed translate-0 [clip-path:inset(0)]"
+          class="px-2 md:px-4 lg:px-0 relative border-b border-black border-dashed translate-x-0 translate-y-0 [clip-path:inset(0)]"
         >
           <td
-            class="text-left align-baseline py-2"
+            class="align-baseline py-2"
+            style="text-align: left;"
           >
             <span
               class="text-base uppercase"
@@ -160,7 +173,8 @@ exports[`Table Component > applies custom className when provided 1`] = `
             </span>
           </td>
           <td
-            class="text-right align-baseline py-2"
+            class="align-baseline py-2"
+            style="text-align: right;"
           >
             <span
               class="text-base uppercase"
@@ -197,12 +211,14 @@ exports[`Table Component > renders links when cell is marked as link 1`] = `
         >
           <th
             class="text-base md:text-lg font-semibold pb-1 mb-1 px-0"
+            scope="col"
             style="text-align: left;"
           >
             PLATFORM
           </th>
           <th
             class="text-base md:text-lg font-semibold pb-1 mb-1 px-0"
+            scope="col"
             style="text-align: right;"
           >
             ACCOUNT
@@ -213,10 +229,11 @@ exports[`Table Component > renders links when cell is marked as link 1`] = `
         class="space-y-2 md:space-y-1"
       >
         <tr
-          class="px-2 md:px-4 lg:px-0 relative border-b border-black border-dashed translate-0 [clip-path:inset(0)]"
+          class="px-2 md:px-4 lg:px-0 relative border-b border-black border-dashed translate-x-0 translate-y-0 [clip-path:inset(0)]"
         >
           <td
-            class="text-left align-baseline py-2"
+            class="align-baseline py-2"
+            style="text-align: left;"
           >
             <span
               class="text-base uppercase"
@@ -225,7 +242,8 @@ exports[`Table Component > renders links when cell is marked as link 1`] = `
             </span>
           </td>
           <td
-            class="text-right align-baseline py-2"
+            class="align-baseline py-2"
+            style="text-align: right;"
           >
             <a
               class="text-gray-500 hover:text-gray-800 underline flex items-center justify-end text-base after:absolute after:inset-0"
@@ -289,12 +307,14 @@ exports[`Table Component > renders regular text when cell is not a link 1`] = `
         >
           <th
             class="text-base md:text-lg font-semibold pb-1 mb-1 px-0"
+            scope="col"
             style="text-align: left;"
           >
             PLATFORM
           </th>
           <th
             class="text-base md:text-lg font-semibold pb-1 mb-1 px-0"
+            scope="col"
             style="text-align: right;"
           >
             ACCOUNT
@@ -305,10 +325,11 @@ exports[`Table Component > renders regular text when cell is not a link 1`] = `
         class="space-y-2 md:space-y-1"
       >
         <tr
-          class="px-2 md:px-4 lg:px-0 relative border-b border-black border-dashed translate-0 [clip-path:inset(0)]"
+          class="px-2 md:px-4 lg:px-0 relative border-b border-black border-dashed translate-x-0 translate-y-0 [clip-path:inset(0)]"
         >
           <td
-            class="text-left align-baseline py-2"
+            class="align-baseline py-2"
+            style="text-align: left;"
           >
             <span
               class="text-base uppercase"
@@ -317,7 +338,8 @@ exports[`Table Component > renders regular text when cell is not a link 1`] = `
             </span>
           </td>
           <td
-            class="text-right align-baseline py-2"
+            class="align-baseline py-2"
+            style="text-align: right;"
           >
             <span
               class="text-base uppercase"
@@ -327,10 +349,11 @@ exports[`Table Component > renders regular text when cell is not a link 1`] = `
           </td>
         </tr>
         <tr
-          class="px-2 md:px-4 lg:px-0 relative border-b border-black border-dashed translate-0 [clip-path:inset(0)]"
+          class="px-2 md:px-4 lg:px-0 relative border-b border-black border-dashed translate-x-0 translate-y-0 [clip-path:inset(0)]"
         >
           <td
-            class="text-left align-baseline py-2"
+            class="align-baseline py-2"
+            style="text-align: left;"
           >
             <span
               class="text-base uppercase"
@@ -339,7 +362,8 @@ exports[`Table Component > renders regular text when cell is not a link 1`] = `
             </span>
           </td>
           <td
-            class="text-right align-baseline py-2"
+            class="align-baseline py-2"
+            style="text-align: right;"
           >
             <span
               class="text-base uppercase"
@@ -349,10 +373,11 @@ exports[`Table Component > renders regular text when cell is not a link 1`] = `
           </td>
         </tr>
         <tr
-          class="px-2 md:px-4 lg:px-0 relative border-b border-black border-dashed translate-0 [clip-path:inset(0)]"
+          class="px-2 md:px-4 lg:px-0 relative border-b border-black border-dashed translate-x-0 translate-y-0 [clip-path:inset(0)]"
         >
           <td
-            class="text-left align-baseline py-2"
+            class="align-baseline py-2"
+            style="text-align: left;"
           >
             <span
               class="text-base uppercase"
@@ -361,7 +386,8 @@ exports[`Table Component > renders regular text when cell is not a link 1`] = `
             </span>
           </td>
           <td
-            class="text-right align-baseline py-2"
+            class="align-baseline py-2"
+            style="text-align: right;"
           >
             <span
               class="text-base uppercase"
@@ -371,10 +397,11 @@ exports[`Table Component > renders regular text when cell is not a link 1`] = `
           </td>
         </tr>
         <tr
-          class="px-2 md:px-4 lg:px-0 relative border-b border-black border-dashed translate-0 [clip-path:inset(0)]"
+          class="px-2 md:px-4 lg:px-0 relative border-b border-black border-dashed translate-x-0 translate-y-0 [clip-path:inset(0)]"
         >
           <td
-            class="text-left align-baseline py-2"
+            class="align-baseline py-2"
+            style="text-align: left;"
           >
             <span
               class="text-base uppercase"
@@ -383,7 +410,8 @@ exports[`Table Component > renders regular text when cell is not a link 1`] = `
             </span>
           </td>
           <td
-            class="text-right align-baseline py-2"
+            class="align-baseline py-2"
+            style="text-align: right;"
           >
             <span
               class="text-base uppercase"
@@ -393,10 +421,11 @@ exports[`Table Component > renders regular text when cell is not a link 1`] = `
           </td>
         </tr>
         <tr
-          class="px-2 md:px-4 lg:px-0 relative border-b border-black border-dashed translate-0 [clip-path:inset(0)]"
+          class="px-2 md:px-4 lg:px-0 relative border-b border-black border-dashed translate-x-0 translate-y-0 [clip-path:inset(0)]"
         >
           <td
-            class="text-left align-baseline py-2"
+            class="align-baseline py-2"
+            style="text-align: left;"
           >
             <span
               class="text-base uppercase"
@@ -405,7 +434,8 @@ exports[`Table Component > renders regular text when cell is not a link 1`] = `
             </span>
           </td>
           <td
-            class="text-right align-baseline py-2"
+            class="align-baseline py-2"
+            style="text-align: right;"
           >
             <span
               class="text-base uppercase"
@@ -415,10 +445,11 @@ exports[`Table Component > renders regular text when cell is not a link 1`] = `
           </td>
         </tr>
         <tr
-          class="px-2 md:px-4 lg:px-0 relative border-b border-black border-dashed translate-0 [clip-path:inset(0)]"
+          class="px-2 md:px-4 lg:px-0 relative border-b border-black border-dashed translate-x-0 translate-y-0 [clip-path:inset(0)]"
         >
           <td
-            class="text-left align-baseline py-2"
+            class="align-baseline py-2"
+            style="text-align: left;"
           >
             <span
               class="text-base uppercase"
@@ -427,7 +458,8 @@ exports[`Table Component > renders regular text when cell is not a link 1`] = `
             </span>
           </td>
           <td
-            class="text-right align-baseline py-2"
+            class="align-baseline py-2"
+            style="text-align: right;"
           >
             <span
               class="text-base uppercase"
@@ -464,12 +496,14 @@ exports[`Table Component > renders with empty data array 1`] = `
         >
           <th
             class="text-base md:text-lg font-semibold pb-1 mb-1 px-0"
+            scope="col"
             style="text-align: left;"
           >
             PLATFORM
           </th>
           <th
             class="text-base md:text-lg font-semibold pb-1 mb-1 px-0"
+            scope="col"
             style="text-align: right;"
           >
             ACCOUNT
@@ -506,12 +540,14 @@ exports[`Table Component > should render with new generic data structure 1`] = `
         >
           <th
             class="text-base md:text-lg font-semibold pb-1 mb-1 px-0"
+            scope="col"
             style="text-align: left;"
           >
             PLATFORM
           </th>
           <th
             class="text-base md:text-lg font-semibold pb-1 mb-1 px-0"
+            scope="col"
             style="text-align: right;"
           >
             ACCOUNT
@@ -522,10 +558,11 @@ exports[`Table Component > should render with new generic data structure 1`] = `
         class="space-y-2 md:space-y-1"
       >
         <tr
-          class="px-2 md:px-4 lg:px-0 relative border-b border-black border-dashed translate-0 [clip-path:inset(0)]"
+          class="px-2 md:px-4 lg:px-0 relative border-b border-black border-dashed translate-x-0 translate-y-0 [clip-path:inset(0)]"
         >
           <td
-            class="text-left align-baseline py-2"
+            class="align-baseline py-2"
+            style="text-align: left;"
           >
             <span
               class="text-base uppercase"
@@ -534,7 +571,8 @@ exports[`Table Component > should render with new generic data structure 1`] = `
             </span>
           </td>
           <td
-            class="text-right align-baseline py-2"
+            class="align-baseline py-2"
+            style="text-align: right;"
           >
             <span
               class="text-base uppercase"
@@ -544,10 +582,11 @@ exports[`Table Component > should render with new generic data structure 1`] = `
           </td>
         </tr>
         <tr
-          class="px-2 md:px-4 lg:px-0 relative border-b border-black border-dashed translate-0 [clip-path:inset(0)]"
+          class="px-2 md:px-4 lg:px-0 relative border-b border-black border-dashed translate-x-0 translate-y-0 [clip-path:inset(0)]"
         >
           <td
-            class="text-left align-baseline py-2"
+            class="align-baseline py-2"
+            style="text-align: left;"
           >
             <span
               class="text-base uppercase"
@@ -556,7 +595,8 @@ exports[`Table Component > should render with new generic data structure 1`] = `
             </span>
           </td>
           <td
-            class="text-right align-baseline py-2"
+            class="align-baseline py-2"
+            style="text-align: right;"
           >
             <span
               class="text-base uppercase"
@@ -566,10 +606,11 @@ exports[`Table Component > should render with new generic data structure 1`] = `
           </td>
         </tr>
         <tr
-          class="px-2 md:px-4 lg:px-0 relative border-b border-black border-dashed translate-0 [clip-path:inset(0)]"
+          class="px-2 md:px-4 lg:px-0 relative border-b border-black border-dashed translate-x-0 translate-y-0 [clip-path:inset(0)]"
         >
           <td
-            class="text-left align-baseline py-2"
+            class="align-baseline py-2"
+            style="text-align: left;"
           >
             <span
               class="text-base uppercase"
@@ -578,7 +619,8 @@ exports[`Table Component > should render with new generic data structure 1`] = `
             </span>
           </td>
           <td
-            class="text-right align-baseline py-2"
+            class="align-baseline py-2"
+            style="text-align: right;"
           >
             <span
               class="text-base uppercase"
@@ -588,10 +630,11 @@ exports[`Table Component > should render with new generic data structure 1`] = `
           </td>
         </tr>
         <tr
-          class="px-2 md:px-4 lg:px-0 relative border-b border-black border-dashed translate-0 [clip-path:inset(0)]"
+          class="px-2 md:px-4 lg:px-0 relative border-b border-black border-dashed translate-x-0 translate-y-0 [clip-path:inset(0)]"
         >
           <td
-            class="text-left align-baseline py-2"
+            class="align-baseline py-2"
+            style="text-align: left;"
           >
             <span
               class="text-base uppercase"
@@ -600,7 +643,8 @@ exports[`Table Component > should render with new generic data structure 1`] = `
             </span>
           </td>
           <td
-            class="text-right align-baseline py-2"
+            class="align-baseline py-2"
+            style="text-align: right;"
           >
             <span
               class="text-base uppercase"
@@ -610,10 +654,11 @@ exports[`Table Component > should render with new generic data structure 1`] = `
           </td>
         </tr>
         <tr
-          class="px-2 md:px-4 lg:px-0 relative border-b border-black border-dashed translate-0 [clip-path:inset(0)]"
+          class="px-2 md:px-4 lg:px-0 relative border-b border-black border-dashed translate-x-0 translate-y-0 [clip-path:inset(0)]"
         >
           <td
-            class="text-left align-baseline py-2"
+            class="align-baseline py-2"
+            style="text-align: left;"
           >
             <span
               class="text-base uppercase"
@@ -622,7 +667,8 @@ exports[`Table Component > should render with new generic data structure 1`] = `
             </span>
           </td>
           <td
-            class="text-right align-baseline py-2"
+            class="align-baseline py-2"
+            style="text-align: right;"
           >
             <span
               class="text-base uppercase"
@@ -632,10 +678,11 @@ exports[`Table Component > should render with new generic data structure 1`] = `
           </td>
         </tr>
         <tr
-          class="px-2 md:px-4 lg:px-0 relative border-b border-black border-dashed translate-0 [clip-path:inset(0)]"
+          class="px-2 md:px-4 lg:px-0 relative border-b border-black border-dashed translate-x-0 translate-y-0 [clip-path:inset(0)]"
         >
           <td
-            class="text-left align-baseline py-2"
+            class="align-baseline py-2"
+            style="text-align: left;"
           >
             <span
               class="text-base uppercase"
@@ -644,7 +691,8 @@ exports[`Table Component > should render with new generic data structure 1`] = `
             </span>
           </td>
           <td
-            class="text-right align-baseline py-2"
+            class="align-baseline py-2"
+            style="text-align: right;"
           >
             <span
               class="text-base uppercase"
