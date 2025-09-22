@@ -22,6 +22,7 @@ const About = (): React.ReactElement => {
       className='space-y-6 text-base md:text-lg text-gray-700 leading-relaxed max-w-none'
       {...animationProps}
     >
+      <h2 className='sr-only'>About Me</h2>
       <motion.p>
         Hey, I'm Emirhan 👋 {age} years old. I'm a Frontend Software Engineer
         with over 8 years of experience building high-performance web

@@ -35,9 +35,9 @@ exports[`Header > should render 1`] = `
           emrhnkml.
         </h1>
         <time
-          datetime="September 22, 2025"
+          datetime="January 1, 2025"
         >
-          September 22, 2025
+          January 1, 2025
         </time>
       </div>
     </div>
