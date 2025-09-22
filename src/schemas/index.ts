@@ -57,6 +57,14 @@ export const TableDataSchema = z.object({
   className: z.string().optional(),
 });
 
+// Tracking event schema
+export const TrackingEventSchema = z.object({
+  action: z.string().min(1),
+  category: z.string().optional(),
+  label: z.string().optional(),
+  value: z.number().optional(),
+});
+
 // Type exports
 export type TAccountLink = z.infer<typeof AccountLinkSchema>;
 export type TAccountLinks = z.infer<typeof AccountLinksArraySchema>;
@@ -69,3 +77,6 @@ export type TTableCell = z.infer<typeof TableCellSchema>;
 export type TTableRow = z.infer<typeof TableRowSchema>;
 export type TTableColumn = z.infer<typeof TableColumnSchema>;
 export type TTableData = z.infer<typeof TableDataSchema>;
+
+// Tracking event type export
+export type TTrackingEvent = z.infer<typeof TrackingEventSchema>;
