@@ -10,10 +10,12 @@ import {
   getActiveLinkIndex,
   calculateDotPosition,
 } from '@/components/StickyBottomNavigation/utils';
+import useTracking from '@/hooks/useTracking';
 
 const SideBarNavigation = () => {
   const pathname = usePathname();
   const [arrowY, setArrowY] = useState(14);
+  const { clickEvent } = useTracking('Side Bar Navigation');
 
   const activeIndex = getActiveLinkIndex(pathname);
 
@@ -26,6 +28,13 @@ const SideBarNavigation = () => {
     },
     [activeIndex]
   );
+
+  const handleClick = (href: string) => {
+    clickEvent({
+      category: 'navigation',
+      label: href,
+    });
+  };
 
   return (
     <aside className='hidden lg:block border-r border-black border-dashed'>
@@ -47,6 +56,7 @@ const SideBarNavigation = () => {
             key={item.href}
             href={item.href}
             className='text-gray-700 hover:text-gray-900 transition-colors duration-150 underline text-xl uppercase flex items-center gap-2'
+            onClick={() => handleClick(item.href)}
           >
             {item.label}
           </Link>
