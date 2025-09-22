@@ -1,34 +1,63 @@
-import {
-  AccountLinksArraySchema,
-  type TAccountLinks,
-  type TAccountLink,
-} from '@/schemas';
+import { type TTableData } from '@/schemas';
+import { createTextCell, createLinkCell } from '@/components/Table/utilities';
 
-const accountLinksData: TAccountLink[] = [
-  {
-    url: 'https://github.com/KemalEmirhan',
-    name: 'Github',
-  },
-  {
-    url: 'https://www.linkedin.com/in/emirhan-kemal-kosem-259569b3/',
-    name: 'Linkedin',
-  },
-  {
-    url: 'https://medium.com/@emirhankemalkosem',
-    name: 'Medium',
-  },
-  {
-    url: 'https://twitter.com/KsemEmir',
-    name: 'Twitter',
-  },
-  {
-    url: 'https://www.instagram.com/emirhankemalkosem/',
-    name: 'Instagram',
-  },
-];
+const socialAccountsTableData: TTableData = {
+  columns: [
+    {
+      key: 'platform',
+      label: 'PLATFORM',
+      align: 'left',
+    },
+    {
+      key: 'account',
+      label: 'ACCOUNT',
+      align: 'right',
+    },
+  ],
+  rows: [
+    {
+      platform: createTextCell('Github'),
+      account: createLinkCell(
+        'https://github.com/KemalEmirhan',
+        'https://github.com/KemalEmirhan'
+      ),
+    },
+    {
+      platform: createTextCell('Linkedin'),
+      account: createLinkCell(
+        'https://www.linkedin.com/in/emirhan-kemal-kosem-259569b3/',
+        'https://www.linkedin.com/in/emirhan-kemal-kosem-259569b3/'
+      ),
+    },
+    {
+      platform: createTextCell('Medium'),
+      account: createLinkCell(
+        'https://medium.com/@emirhankemalkosem',
+        'https://medium.com/@emirhankemalkosem'
+      ),
+    },
+    {
+      platform: createTextCell('Twitter'),
+      account: createLinkCell(
+        'https://x.com/KsemEmir',
+        'https://x.com/KsemEmir'
+      ),
+    },
+    {
+      platform: createTextCell('Instagram'),
+      account: createLinkCell(
+        'https://www.instagram.com/emirhankemalkosem/',
+        'https://www.instagram.com/emirhankemalkosem/'
+      ),
+    },
+    {
+      platform: createTextCell('Bluesky'),
+      account: createLinkCell(
+        'https://bsky.app/profile/emirkosem.bsky.social',
+        'https://bsky.app/profile/emirkosem.bsky.social'
+      ),
+    },
+  ],
+};
 
-// Validate and parse account links with Zod
-const accountLinks: TAccountLinks =
-  AccountLinksArraySchema.parse(accountLinksData);
-
-export default accountLinks;
+export default socialAccountsTableData;

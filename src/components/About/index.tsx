@@ -1,58 +1,50 @@
 'use client';
 
-import React from 'react';
-import Image from 'next/image';
+import React, { useMemo } from 'react';
+import { motion, Easing } from 'motion/react';
 import useAge from '@/hooks/useAge';
 
 const About = (): React.ReactElement => {
   const age = useAge();
 
-  return (
-    <article className='max-w-4xl mx-auto px-6 py-12 flex-1'>
-      <div className='flex flex-col lg:flex-row gap-8 items-start'>
-        <div className='flex-shrink-0 mx-auto lg:mx-0'>
-          <div className='relative w-48 h-48 sm:w-56 sm:h-56 lg:w-64 lg:h-64'>
-            <Image
-              src='/pp.png'
-              alt='Emirhan profile picture'
-              fill
-              className='object-cover rounded-lg border border-gray-200 shadow-sm'
-              priority
-            />
-          </div>
-        </div>
+  const animationProps = useMemo(
+    () => ({
+      initial: { opacity: 0, y: 20 },
+      animate: { opacity: 1, y: 0 },
+      exit: { opacity: 0, y: 20 },
+      transition: { duration: 0.2, ease: 'easeOut' as Easing },
+    }),
+    []
+  );
 
-        <section className='flex-1'>
-          <h2 className='text-2xl md:text-3xl font-bold text-gray-900 mb-6'>
-            About Me
-          </h2>
-          <div className='space-y-4'>
-            <p className='text-lg text-gray-700 leading-relaxed'>
-              Hey, I'm Emirhan 👋 {age} years old. I'm a Frontend Software
-              Engineer with over 8 years of experience building high-performance
-              web applications across various industries. Based in Berlin, I
-              specialise in React, Next.js, JavaScript, TypeScript, and GraphQL,
-              with a strong focus on accessibility and web standards.
-            </p>
-            <p className='text-lg text-gray-700 leading-relaxed'>
-              Throughout my career in fintech, media, telecommunications, and
-              e-commerce, I've collaborated closely with cross-functional teams
-              to develop scalable solutions. I enjoy modernising outdated
-              systems, designing efficient component libraries that accelerate
-              development, and optimising web applications for seamless user
-              experiences. By combining technical expertise with a strategic
-              mindset, I make architectural decisions that enhance performance
-              and drive business success.
-            </p>
-            <p className='text-lg text-gray-700 leading-relaxed'>
-              Passionate about creating accessible, user-friendly digital
-              experiences, I'm always eager to stay ahead of the latest software
-              technologies and continuously expand my skill set.
-            </p>
-          </div>
-        </section>
-      </div>
-    </article>
+  return (
+    <motion.article
+      className='space-y-6 text-base md:text-lg text-gray-700 leading-relaxed max-w-none'
+      {...animationProps}
+    >
+      <h2 className='sr-only'>About Me</h2>
+      <motion.p>
+        Hey, I'm Emirhan 👋 {age} years old. I'm a Frontend Software Engineer
+        with over 8 years of experience building high-performance web
+        applications across various industries. Based in Berlin, I specialise in
+        React, Next.js, JavaScript, TypeScript, and GraphQL, with a strong focus
+        on accessibility and web standards.
+      </motion.p>
+      <motion.p>
+        Throughout my career in fintech, media, telecommunications, and
+        e-commerce, I've collaborated closely with cross-functional teams to
+        develop scalable solutions. I enjoy modernising outdated systems,
+        designing efficient component libraries that accelerate development, and
+        optimising web applications for seamless user experiences. By combining
+        technical expertise with a strategic mindset, I make architectural
+        decisions that enhance performance and drive business success.
+      </motion.p>
+      <motion.p>
+        Passionate about creating accessible, user-friendly digital experiences,
+        I'm always eager to stay ahead of the latest software technologies and
+        continuously expand my skill set.
+      </motion.p>
+    </motion.article>
   );
 };
 

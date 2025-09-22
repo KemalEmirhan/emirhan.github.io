@@ -1,8 +1,19 @@
 /* eslint-disable no-undef */
 import type { Metadata } from 'next';
 import { GoogleAnalytics } from '@next/third-parties/google';
+import { Inconsolata } from 'next/font/google';
 import SEOData from '@/components/SEOData';
+import Blur from '@/components/Blur';
 import '@/styles/globals.css';
+import Header from '@/components/Header';
+import SideBarNavigation from '@/components/SideBarNavigation';
+import Separator from '@/components/Separator';
+import StickyBottomNavigation from '@/components/StickyBottomNavigation';
+
+const inconsolata = Inconsolata({
+  subsets: ['latin'],
+  variable: '--font-inconsolata',
+});
 
 export const metadata: Metadata = {
   title: {
@@ -113,7 +124,17 @@ export default function RootLayout({
         <SEOData />
         <GoogleAnalytics gaId={process.env.GA_ID || ''} />
       </head>
-      <body>{children}</body>
+      <body className={inconsolata.variable}>
+        <Blur />
+        <Header />
+        <Separator className='mb-1' />
+        <Separator />
+        <div className='grid lg:grid-cols-[145px_1fr] max-w-5xl mx-auto md:min-h-[calc(100vh-312px-64px)] gap-6 p-4 md:p-6 lg:px-0'>
+          <SideBarNavigation />
+          <main className='pb-8 md:pb-0'>{children}</main>
+          <StickyBottomNavigation />
+        </div>
+      </body>
     </html>
   );
 }

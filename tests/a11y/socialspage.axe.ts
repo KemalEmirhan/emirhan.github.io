@@ -2,11 +2,11 @@ import { test, expect } from '@playwright/test';
 import { axeAnalyze } from '@/utilities/axeBuilder';
 import { PAGES } from '../constants';
 
-test.describe('Home page accessibility test', () => {
+test.describe('Socials page accessibility test', () => {
   test('should render without detected accessibility issues', async ({
     page,
   }) => {
-    await page.goto(PAGES.HOME, { waitUntil: 'load' });
+    await page.goto(PAGES.SOCIALS, { waitUntil: 'load' });
     const { violations } = await axeAnalyze(page);
 
     if (violations.length) {
@@ -21,7 +21,7 @@ test.describe('Home page accessibility test', () => {
 
   test('should be accessible on mobile devices', async ({ page }) => {
     await page.setViewportSize({ width: 375, height: 667 });
-    await page.goto(PAGES.HOME, { waitUntil: 'load' });
+    await page.goto(PAGES.SOCIALS, { waitUntil: 'load' });
 
     const { violations } = await axeAnalyze(page);
 
