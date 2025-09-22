@@ -6,6 +6,11 @@ exports[`About Component > should render 1`] = `
     class="space-y-6 text-base md:text-lg text-gray-700 leading-relaxed max-w-none"
     style="opacity: 0; transform: translateY(20px);"
   >
+    <h2
+      class="sr-only"
+    >
+      About Me
+    </h2>
     <p>
       Hey, I'm Emirhan 👋 
       30
