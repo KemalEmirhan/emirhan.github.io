@@ -8,7 +8,7 @@ interface TableRowProps {
 }
 
 const TableRow = ({ row, columns }: TableRowProps): React.ReactElement => (
-  <tr className='px-2 md:px-4 lg:px-0 relative border-b border-black border-dashed'>
+  <tr className='px-2 md:px-4 lg:px-0 relative border-b border-black border-dashed translate-0 [clip-path:inset(0)]'>
     {columns.map(column => (
       <td
         key={column.key}

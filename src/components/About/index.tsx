@@ -19,7 +19,7 @@ const About = (): React.ReactElement => {
 
   return (
     <motion.article
-      className='space-y-6 text-base md:text-lg text-gray-700 leading-relaxed max-w-none'
+      className='flex flex-col gap-4 text-base md:text-lg text-gray-700 leading-relaxed max-w-none'
       {...animationProps}
     >
       <h2 className='sr-only'>About Me</h2>
