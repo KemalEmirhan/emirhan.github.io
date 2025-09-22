@@ -1,63 +1,39 @@
 import { render } from '@testing-library/react';
 import { describe, expect, it } from 'vitest';
 import Table from '../';
-
-const mockData = [
-  { platform: 'GITHUB', accountName: 'httml' },
-  {
-    platform: 'LINKEDIN',
-    accountName: 'https://www.linkedin.com/in/emirhan-kemal-kosem-259569b3/',
-  },
-  { platform: 'MEDIUM', accountName: 'https://medium.com/emirhankemalkosem' },
-  { platform: 'TWITTER', accountName: 'https://x.com/KsemEmir' },
-  {
-    platform: 'INSTAGRAM',
-    accountName: 'https://www.instagram.com/emirhankemalkosem/',
-  },
-  {
-    platform: 'BLUESKY',
-    accountName: 'https://bsky.app/profile/emirkosem.bsky.social',
-  },
-];
-
-const mockHeaders: [string, string] = ['PLATFORM', 'ACCOUNT'];
+import { mockTableData, mockTableDataWithLinks } from '@/mocks/mockTableData';
+import { type TTableData } from '@/schemas';
 
 describe('Table Component', () => {
-  it('should render', () => {
-    const { container } = render(
-      <Table headers={mockHeaders} data={mockData} />
-    );
+  it('should render with new generic data structure', () => {
+    const { container } = render(<Table data={mockTableData} />);
     expect(container).toMatchSnapshot();
   });
 
   it('applies custom className when provided', () => {
     const customClass = 'custom-table-class';
-    const { container } = render(
-      <Table headers={mockHeaders} data={mockData} className={customClass} />
-    );
+    const dataWithClass = { ...mockTableData, className: customClass };
+    const { container } = render(<Table data={dataWithClass} />);
 
     expect(container.firstChild).toHaveClass(customClass);
     expect(container).toMatchSnapshot();
   });
 
   it('renders with empty data array', () => {
-    const { container, getByText } = render(
-      <Table headers={mockHeaders} data={[]} />
-    );
+    const emptyData: TTableData = {
+      columns: mockTableData.columns,
+      rows: [],
+    };
+    const { container, getByText } = render(<Table data={emptyData} />);
 
     expect(getByText('PLATFORM')).toBeInTheDocument();
     expect(getByText('ACCOUNT')).toBeInTheDocument();
     expect(container).toMatchSnapshot();
   });
 
-  it('renders links when linkField is provided', () => {
-    const linkData = [
-      { platform: 'GITHUB', accountName: 'https://github.com/KemalEmirhan' },
-    ];
-    const linkHeaders: [string, string] = ['PLATFORM', 'ACCOUNT'];
-
+  it('renders links when cell is marked as link', () => {
     const { container, getByRole } = render(
-      <Table headers={linkHeaders} data={linkData} linkField='ACCOUNT' />
+      <Table data={mockTableDataWithLinks} />
     );
 
     const link = getByRole('link', { name: 'https://github.com/KemalEmirhan' });
@@ -68,9 +44,9 @@ describe('Table Component', () => {
     expect(container).toMatchSnapshot();
   });
 
-  it('renders regular text when linkField is not provided', () => {
+  it('renders regular text when cell is not a link', () => {
     const { container, getByText, queryByRole } = render(
-      <Table headers={mockHeaders} data={mockData} />
+      <Table data={mockTableData} />
     );
 
     expect(getByText('GITHUB')).toBeInTheDocument();

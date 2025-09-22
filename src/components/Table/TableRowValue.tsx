@@ -3,40 +3,36 @@
 import React from 'react';
 import Link from 'next/link';
 import { ArrowUpRight } from 'lucide-react';
-import { isLinkField } from './utilities';
+import { type TTableCell } from '../../schemas';
 
 interface TableRowValueProps {
-  value: string;
-  header: string;
-  linkField?: string;
-  direction: 'left' | 'right';
+  cell: TTableCell;
 }
 
-const TableRowValue = ({
-  value,
-  header,
-  linkField,
-  direction,
-}: TableRowValueProps): React.ReactElement => {
-  if (isLinkField(header, linkField)) {
+const TableRowValue = ({ cell }: TableRowValueProps): React.ReactElement => {
+  if (!cell) {
+    return <span className='text-base uppercase'>-</span>;
+  }
+
+  const { value, isLink, linkProps } = cell;
+
+  if (isLink && linkProps) {
     return (
       <Link
-        href={value}
-        target='_blank'
-        rel='noopener noreferrer'
-        className={`text-gray-500 hover:text-gray-800 underline flex items-center ${direction === 'right' && 'justify-end'} text-[${direction}]`}
+        href={linkProps.href}
+        target={linkProps.target}
+        rel={linkProps.rel}
+        className='text-gray-500 hover:text-gray-800 underline flex items-center justify-end text-base after:absolute after:inset-0'
       >
         <span className='whitespace-nowrap max-w-[100px] truncate md:max-w-none'>
           {value}
         </span>
-        {direction === 'right' && (
-          <ArrowUpRight className='w-3 h-3 md:w-4 md:h-4 flex-shrink-0 ml-1' />
-        )}
+        <ArrowUpRight className='w-3 h-3 md:w-4 md:h-4 flex-shrink-0 ml-1' />
       </Link>
     );
   }
 
-  return <span className={`text-[${direction}] uppercase`}>{value}</span>;
+  return <span className='text-base uppercase'>{value}</span>;
 };
 
 export default TableRowValue;

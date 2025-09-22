@@ -1,33 +1,11 @@
 import React from 'react';
 import Table from '@/components/Table';
+import socialAccountsTableData from '@/constants/accountLinks';
 
 const Socials = () => {
-  const accountsData = [
-    { platform: 'GITHUB', accountName: 'https://github.com/KemalEmirhan' },
-    {
-      platform: 'LINKEDIN',
-      accountName: 'https://www.linkedin.com/in/emirhan-kemal-kosem-259569b3/',
-    },
-    {
-      platform: 'MEDIUM',
-      accountName: 'https://medium.com/emirhankemalkosem',
-    },
-    { platform: 'TWITTER', accountName: 'https://x.com/KsemEmir' },
-    {
-      platform: 'INSTAGRAM',
-      accountName: 'https://www.instagram.com/emirhankemalkosem/',
-    },
-    {
-      platform: 'BLUESKY',
-      accountName: 'https://bsky.app/profile/emirkosem.bsky.social',
-    },
-  ];
-
-  const headers: [string, string] = ['PLATFORM', 'ACCOUNT'];
-
   return (
     <div className='px-2'>
-      <Table headers={headers} data={accountsData} linkField='ACCOUNT' />
+      <Table data={socialAccountsTableData} />
     </div>
   );
 };

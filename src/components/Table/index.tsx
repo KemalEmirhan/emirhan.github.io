@@ -1,47 +1,41 @@
-import React from 'react';
+import React, { useMemo } from 'react';
+import { TableDataSchema, type TTableData } from '@/schemas';
 import TableRow from './TableRow';
-
-interface TableData {
-  [key: string]: string;
-}
+import { getColumnWidth } from './utilities';
 
 interface TableProps {
-  headers: [string, string];
-  data: TableData[];
-  className?: string;
-  linkField?: string;
+  data: TTableData;
 }
 
-const Table = ({
-  headers,
-  data,
-  className = '',
-  linkField,
-}: TableProps): React.ReactElement => {
-  const [leftHeader, rightHeader] = headers;
+const Table = ({ data }: TableProps): React.ReactElement => {
+  const validatedData = TableDataSchema.parse(data);
+  const { columns, rows, className = '' } = validatedData;
+
+  const columnWidth = useMemo(() => getColumnWidth(columns), [columns]);
 
   return (
     <div className={`w-full max-w-4xl ${className}`}>
-      <table className='w-full text-black bg-white text-sm md:text-base'>
+      <table className='w-full text-black bg-white text-sm md:text-base table-fixed'>
+        <colgroup>
+          {columns.map(column => (
+            <col key={column.key} className={column.width || columnWidth} />
+          ))}
+        </colgroup>
         <thead>
           <tr className='border-b border-black'>
-            <th className='text-left text-base md:text-lg font-semibold pr-2 pb-1 mb-1 px-2 md:px-4 lg:px-0'>
-              {leftHeader}
-            </th>
-            <th className='text-right text-base md:text-lg font-semibold pl-2 pb-1 mb-1 px-2 md:px-4 lg:px-0'>
-              {rightHeader}
-            </th>
+            {columns.map(column => (
+              <th
+                key={column.key}
+                className={`text-${column.align} text-base md:text-lg font-semibold pb-1 mb-1 px-0`}
+              >
+                {column.label}
+              </th>
+            ))}
           </tr>
         </thead>
         <tbody className='space-y-2 md:space-y-1'>
-          {data.map((row, index) => (
-            <TableRow
-              key={index}
-              row={row}
-              leftHeader={leftHeader}
-              rightHeader={rightHeader}
-              linkField={linkField}
-            />
+          {rows.map((row, index) => (
+            <TableRow key={index} row={row} columns={columns} />
           ))}
         </tbody>
       </table>

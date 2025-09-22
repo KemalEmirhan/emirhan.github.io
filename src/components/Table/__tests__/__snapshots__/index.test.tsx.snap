@@ -6,19 +6,27 @@ exports[`Table Component > applies custom className when provided 1`] = `
     class="w-full max-w-4xl custom-table-class"
   >
     <table
-      class="w-full text-black bg-white text-sm md:text-base"
+      class="w-full text-black bg-white text-sm md:text-base table-fixed"
     >
+      <colgroup>
+        <col
+          class="w-1/2"
+        />
+        <col
+          class="w-1/2"
+        />
+      </colgroup>
       <thead>
         <tr
           class="border-b border-black"
         >
           <th
-            class="text-left text-base md:text-lg font-semibold pr-2 pb-1 mb-1 px-2 md:px-4 lg:px-0"
+            class="text-left text-base md:text-lg font-semibold pb-1 mb-1 px-0"
           >
             PLATFORM
           </th>
           <th
-            class="text-right text-base md:text-lg font-semibold pl-2 pb-1 mb-1 px-2 md:px-4 lg:px-0"
+            class="text-right text-base md:text-lg font-semibold pb-1 mb-1 px-0"
           >
             ACCOUNT
           </th>
@@ -31,19 +39,19 @@ exports[`Table Component > applies custom className when provided 1`] = `
           class="px-2 md:px-4 lg:px-0 relative border-b border-black border-dashed"
         >
           <td
-            class="relative pr-2 pl-0 align-baseline py-2"
+            class="text-left align-baseline py-2"
           >
             <span
-              class="text-[left] uppercase"
+              class="text-base uppercase"
             >
               GITHUB
             </span>
           </td>
           <td
-            class="relative pr-0 pl-2 align-baseline py-2"
+            class="text-right align-baseline py-2"
           >
             <span
-              class="text-[right] uppercase"
+              class="text-base uppercase"
             >
               httml
             </span>
@@ -53,19 +61,19 @@ exports[`Table Component > applies custom className when provided 1`] = `
           class="px-2 md:px-4 lg:px-0 relative border-b border-black border-dashed"
         >
           <td
-            class="relative pr-2 pl-0 align-baseline py-2"
+            class="text-left align-baseline py-2"
           >
             <span
-              class="text-[left] uppercase"
+              class="text-base uppercase"
             >
               LINKEDIN
             </span>
           </td>
           <td
-            class="relative pr-0 pl-2 align-baseline py-2"
+            class="text-right align-baseline py-2"
           >
             <span
-              class="text-[right] uppercase"
+              class="text-base uppercase"
             >
               https://www.linkedin.com/in/emirhan-kemal-kosem-259569b3/
             </span>
@@ -75,19 +83,19 @@ exports[`Table Component > applies custom className when provided 1`] = `
           class="px-2 md:px-4 lg:px-0 relative border-b border-black border-dashed"
         >
           <td
-            class="relative pr-2 pl-0 align-baseline py-2"
+            class="text-left align-baseline py-2"
           >
             <span
-              class="text-[left] uppercase"
+              class="text-base uppercase"
             >
               MEDIUM
             </span>
           </td>
           <td
-            class="relative pr-0 pl-2 align-baseline py-2"
+            class="text-right align-baseline py-2"
           >
             <span
-              class="text-[right] uppercase"
+              class="text-base uppercase"
             >
               https://medium.com/emirhankemalkosem
             </span>
@@ -97,19 +105,19 @@ exports[`Table Component > applies custom className when provided 1`] = `
           class="px-2 md:px-4 lg:px-0 relative border-b border-black border-dashed"
         >
           <td
-            class="relative pr-2 pl-0 align-baseline py-2"
+            class="text-left align-baseline py-2"
           >
             <span
-              class="text-[left] uppercase"
+              class="text-base uppercase"
             >
               TWITTER
             </span>
           </td>
           <td
-            class="relative pr-0 pl-2 align-baseline py-2"
+            class="text-right align-baseline py-2"
           >
             <span
-              class="text-[right] uppercase"
+              class="text-base uppercase"
             >
               https://x.com/KsemEmir
             </span>
@@ -119,19 +127,19 @@ exports[`Table Component > applies custom className when provided 1`] = `
           class="px-2 md:px-4 lg:px-0 relative border-b border-black border-dashed"
         >
           <td
-            class="relative pr-2 pl-0 align-baseline py-2"
+            class="text-left align-baseline py-2"
           >
             <span
-              class="text-[left] uppercase"
+              class="text-base uppercase"
             >
               INSTAGRAM
             </span>
           </td>
           <td
-            class="relative pr-0 pl-2 align-baseline py-2"
+            class="text-right align-baseline py-2"
           >
             <span
-              class="text-[right] uppercase"
+              class="text-base uppercase"
             >
               https://www.instagram.com/emirhankemalkosem/
             </span>
@@ -141,19 +149,19 @@ exports[`Table Component > applies custom className when provided 1`] = `
           class="px-2 md:px-4 lg:px-0 relative border-b border-black border-dashed"
         >
           <td
-            class="relative pr-2 pl-0 align-baseline py-2"
+            class="text-left align-baseline py-2"
           >
             <span
-              class="text-[left] uppercase"
+              class="text-base uppercase"
             >
               BLUESKY
             </span>
           </td>
           <td
-            class="relative pr-0 pl-2 align-baseline py-2"
+            class="text-right align-baseline py-2"
           >
             <span
-              class="text-[right] uppercase"
+              class="text-base uppercase"
             >
               https://bsky.app/profile/emirkosem.bsky.social
             </span>
@@ -165,25 +173,33 @@ exports[`Table Component > applies custom className when provided 1`] = `
 </div>
 `;
 
-exports[`Table Component > renders links when linkField is provided 1`] = `
+exports[`Table Component > renders links when cell is marked as link 1`] = `
 <div>
   <div
     class="w-full max-w-4xl "
   >
     <table
-      class="w-full text-black bg-white text-sm md:text-base"
+      class="w-full text-black bg-white text-sm md:text-base table-fixed"
     >
+      <colgroup>
+        <col
+          class="w-1/2"
+        />
+        <col
+          class="w-1/2"
+        />
+      </colgroup>
       <thead>
         <tr
           class="border-b border-black"
         >
           <th
-            class="text-left text-base md:text-lg font-semibold pr-2 pb-1 mb-1 px-2 md:px-4 lg:px-0"
+            class="text-left text-base md:text-lg font-semibold pb-1 mb-1 px-0"
           >
             PLATFORM
           </th>
           <th
-            class="text-right text-base md:text-lg font-semibold pl-2 pb-1 mb-1 px-2 md:px-4 lg:px-0"
+            class="text-right text-base md:text-lg font-semibold pb-1 mb-1 px-0"
           >
             ACCOUNT
           </th>
@@ -196,19 +212,19 @@ exports[`Table Component > renders links when linkField is provided 1`] = `
           class="px-2 md:px-4 lg:px-0 relative border-b border-black border-dashed"
         >
           <td
-            class="relative pr-2 pl-0 align-baseline py-2"
+            class="text-left align-baseline py-2"
           >
             <span
-              class="text-[left] uppercase"
+              class="text-base uppercase"
             >
               GITHUB
             </span>
           </td>
           <td
-            class="relative pr-0 pl-2 align-baseline py-2"
+            class="text-right align-baseline py-2"
           >
             <a
-              class="text-gray-500 hover:text-gray-800 underline flex items-center justify-end text-[right]"
+              class="text-gray-500 hover:text-gray-800 underline flex items-center justify-end text-base after:absolute after:inset-0"
               href="https://github.com/KemalEmirhan"
               rel="noopener noreferrer"
               target="_blank"
@@ -247,25 +263,33 @@ exports[`Table Component > renders links when linkField is provided 1`] = `
 </div>
 `;
 
-exports[`Table Component > renders regular text when linkField is not provided 1`] = `
+exports[`Table Component > renders regular text when cell is not a link 1`] = `
 <div>
   <div
     class="w-full max-w-4xl "
   >
     <table
-      class="w-full text-black bg-white text-sm md:text-base"
+      class="w-full text-black bg-white text-sm md:text-base table-fixed"
     >
+      <colgroup>
+        <col
+          class="w-1/2"
+        />
+        <col
+          class="w-1/2"
+        />
+      </colgroup>
       <thead>
         <tr
           class="border-b border-black"
         >
           <th
-            class="text-left text-base md:text-lg font-semibold pr-2 pb-1 mb-1 px-2 md:px-4 lg:px-0"
+            class="text-left text-base md:text-lg font-semibold pb-1 mb-1 px-0"
           >
             PLATFORM
           </th>
           <th
-            class="text-right text-base md:text-lg font-semibold pl-2 pb-1 mb-1 px-2 md:px-4 lg:px-0"
+            class="text-right text-base md:text-lg font-semibold pb-1 mb-1 px-0"
           >
             ACCOUNT
           </th>
@@ -278,19 +302,19 @@ exports[`Table Component > renders regular text when linkField is not provided 1
           class="px-2 md:px-4 lg:px-0 relative border-b border-black border-dashed"
         >
           <td
-            class="relative pr-2 pl-0 align-baseline py-2"
+            class="text-left align-baseline py-2"
           >
             <span
-              class="text-[left] uppercase"
+              class="text-base uppercase"
             >
               GITHUB
             </span>
           </td>
           <td
-            class="relative pr-0 pl-2 align-baseline py-2"
+            class="text-right align-baseline py-2"
           >
             <span
-              class="text-[right] uppercase"
+              class="text-base uppercase"
             >
               httml
             </span>
@@ -300,19 +324,19 @@ exports[`Table Component > renders regular text when linkField is not provided 1
           class="px-2 md:px-4 lg:px-0 relative border-b border-black border-dashed"
         >
           <td
-            class="relative pr-2 pl-0 align-baseline py-2"
+            class="text-left align-baseline py-2"
           >
             <span
-              class="text-[left] uppercase"
+              class="text-base uppercase"
             >
               LINKEDIN
             </span>
           </td>
           <td
-            class="relative pr-0 pl-2 align-baseline py-2"
+            class="text-right align-baseline py-2"
           >
             <span
-              class="text-[right] uppercase"
+              class="text-base uppercase"
             >
               https://www.linkedin.com/in/emirhan-kemal-kosem-259569b3/
             </span>
@@ -322,19 +346,19 @@ exports[`Table Component > renders regular text when linkField is not provided 1
           class="px-2 md:px-4 lg:px-0 relative border-b border-black border-dashed"
         >
           <td
-            class="relative pr-2 pl-0 align-baseline py-2"
+            class="text-left align-baseline py-2"
           >
             <span
-              class="text-[left] uppercase"
+              class="text-base uppercase"
             >
               MEDIUM
             </span>
           </td>
           <td
-            class="relative pr-0 pl-2 align-baseline py-2"
+            class="text-right align-baseline py-2"
           >
             <span
-              class="text-[right] uppercase"
+              class="text-base uppercase"
             >
               https://medium.com/emirhankemalkosem
             </span>
@@ -344,19 +368,19 @@ exports[`Table Component > renders regular text when linkField is not provided 1
           class="px-2 md:px-4 lg:px-0 relative border-b border-black border-dashed"
         >
           <td
-            class="relative pr-2 pl-0 align-baseline py-2"
+            class="text-left align-baseline py-2"
           >
             <span
-              class="text-[left] uppercase"
+              class="text-base uppercase"
             >
               TWITTER
             </span>
           </td>
           <td
-            class="relative pr-0 pl-2 align-baseline py-2"
+            class="text-right align-baseline py-2"
           >
             <span
-              class="text-[right] uppercase"
+              class="text-base uppercase"
             >
               https://x.com/KsemEmir
             </span>
@@ -366,19 +390,19 @@ exports[`Table Component > renders regular text when linkField is not provided 1
           class="px-2 md:px-4 lg:px-0 relative border-b border-black border-dashed"
         >
           <td
-            class="relative pr-2 pl-0 align-baseline py-2"
+            class="text-left align-baseline py-2"
           >
             <span
-              class="text-[left] uppercase"
+              class="text-base uppercase"
             >
               INSTAGRAM
             </span>
           </td>
           <td
-            class="relative pr-0 pl-2 align-baseline py-2"
+            class="text-right align-baseline py-2"
           >
             <span
-              class="text-[right] uppercase"
+              class="text-base uppercase"
             >
               https://www.instagram.com/emirhankemalkosem/
             </span>
@@ -388,19 +412,19 @@ exports[`Table Component > renders regular text when linkField is not provided 1
           class="px-2 md:px-4 lg:px-0 relative border-b border-black border-dashed"
         >
           <td
-            class="relative pr-2 pl-0 align-baseline py-2"
+            class="text-left align-baseline py-2"
           >
             <span
-              class="text-[left] uppercase"
+              class="text-base uppercase"
             >
               BLUESKY
             </span>
           </td>
           <td
-            class="relative pr-0 pl-2 align-baseline py-2"
+            class="text-right align-baseline py-2"
           >
             <span
-              class="text-[right] uppercase"
+              class="text-base uppercase"
             >
               https://bsky.app/profile/emirkosem.bsky.social
             </span>
@@ -418,19 +442,27 @@ exports[`Table Component > renders with empty data array 1`] = `
     class="w-full max-w-4xl "
   >
     <table
-      class="w-full text-black bg-white text-sm md:text-base"
+      class="w-full text-black bg-white text-sm md:text-base table-fixed"
     >
+      <colgroup>
+        <col
+          class="w-1/2"
+        />
+        <col
+          class="w-1/2"
+        />
+      </colgroup>
       <thead>
         <tr
           class="border-b border-black"
         >
           <th
-            class="text-left text-base md:text-lg font-semibold pr-2 pb-1 mb-1 px-2 md:px-4 lg:px-0"
+            class="text-left text-base md:text-lg font-semibold pb-1 mb-1 px-0"
           >
             PLATFORM
           </th>
           <th
-            class="text-right text-base md:text-lg font-semibold pl-2 pb-1 mb-1 px-2 md:px-4 lg:px-0"
+            class="text-right text-base md:text-lg font-semibold pb-1 mb-1 px-0"
           >
             ACCOUNT
           </th>
@@ -444,25 +476,33 @@ exports[`Table Component > renders with empty data array 1`] = `
 </div>
 `;
 
-exports[`Table Component > should render 1`] = `
+exports[`Table Component > should render with new generic data structure 1`] = `
 <div>
   <div
     class="w-full max-w-4xl "
   >
     <table
-      class="w-full text-black bg-white text-sm md:text-base"
+      class="w-full text-black bg-white text-sm md:text-base table-fixed"
     >
+      <colgroup>
+        <col
+          class="w-1/2"
+        />
+        <col
+          class="w-1/2"
+        />
+      </colgroup>
       <thead>
         <tr
           class="border-b border-black"
         >
           <th
-            class="text-left text-base md:text-lg font-semibold pr-2 pb-1 mb-1 px-2 md:px-4 lg:px-0"
+            class="text-left text-base md:text-lg font-semibold pb-1 mb-1 px-0"
           >
             PLATFORM
           </th>
           <th
-            class="text-right text-base md:text-lg font-semibold pl-2 pb-1 mb-1 px-2 md:px-4 lg:px-0"
+            class="text-right text-base md:text-lg font-semibold pb-1 mb-1 px-0"
           >
             ACCOUNT
           </th>
@@ -475,19 +515,19 @@ exports[`Table Component > should render 1`] = `
           class="px-2 md:px-4 lg:px-0 relative border-b border-black border-dashed"
         >
           <td
-            class="relative pr-2 pl-0 align-baseline py-2"
+            class="text-left align-baseline py-2"
           >
             <span
-              class="text-[left] uppercase"
+              class="text-base uppercase"
             >
               GITHUB
             </span>
           </td>
           <td
-            class="relative pr-0 pl-2 align-baseline py-2"
+            class="text-right align-baseline py-2"
           >
             <span
-              class="text-[right] uppercase"
+              class="text-base uppercase"
             >
               httml
             </span>
@@ -497,19 +537,19 @@ exports[`Table Component > should render 1`] = `
           class="px-2 md:px-4 lg:px-0 relative border-b border-black border-dashed"
         >
           <td
-            class="relative pr-2 pl-0 align-baseline py-2"
+            class="text-left align-baseline py-2"
           >
             <span
-              class="text-[left] uppercase"
+              class="text-base uppercase"
             >
               LINKEDIN
             </span>
           </td>
           <td
-            class="relative pr-0 pl-2 align-baseline py-2"
+            class="text-right align-baseline py-2"
           >
             <span
-              class="text-[right] uppercase"
+              class="text-base uppercase"
             >
               https://www.linkedin.com/in/emirhan-kemal-kosem-259569b3/
             </span>
@@ -519,19 +559,19 @@ exports[`Table Component > should render 1`] = `
           class="px-2 md:px-4 lg:px-0 relative border-b border-black border-dashed"
         >
           <td
-            class="relative pr-2 pl-0 align-baseline py-2"
+            class="text-left align-baseline py-2"
           >
             <span
-              class="text-[left] uppercase"
+              class="text-base uppercase"
             >
               MEDIUM
             </span>
           </td>
           <td
-            class="relative pr-0 pl-2 align-baseline py-2"
+            class="text-right align-baseline py-2"
           >
             <span
-              class="text-[right] uppercase"
+              class="text-base uppercase"
             >
               https://medium.com/emirhankemalkosem
             </span>
@@ -541,19 +581,19 @@ exports[`Table Component > should render 1`] = `
           class="px-2 md:px-4 lg:px-0 relative border-b border-black border-dashed"
         >
           <td
-            class="relative pr-2 pl-0 align-baseline py-2"
+            class="text-left align-baseline py-2"
           >
             <span
-              class="text-[left] uppercase"
+              class="text-base uppercase"
             >
               TWITTER
             </span>
           </td>
           <td
-            class="relative pr-0 pl-2 align-baseline py-2"
+            class="text-right align-baseline py-2"
           >
             <span
-              class="text-[right] uppercase"
+              class="text-base uppercase"
             >
               https://x.com/KsemEmir
             </span>
@@ -563,19 +603,19 @@ exports[`Table Component > should render 1`] = `
           class="px-2 md:px-4 lg:px-0 relative border-b border-black border-dashed"
         >
           <td
-            class="relative pr-2 pl-0 align-baseline py-2"
+            class="text-left align-baseline py-2"
           >
             <span
-              class="text-[left] uppercase"
+              class="text-base uppercase"
             >
               INSTAGRAM
             </span>
           </td>
           <td
-            class="relative pr-0 pl-2 align-baseline py-2"
+            class="text-right align-baseline py-2"
           >
             <span
-              class="text-[right] uppercase"
+              class="text-base uppercase"
             >
               https://www.instagram.com/emirhankemalkosem/
             </span>
@@ -585,19 +625,19 @@ exports[`Table Component > should render 1`] = `
           class="px-2 md:px-4 lg:px-0 relative border-b border-black border-dashed"
         >
           <td
-            class="relative pr-2 pl-0 align-baseline py-2"
+            class="text-left align-baseline py-2"
           >
             <span
-              class="text-[left] uppercase"
+              class="text-base uppercase"
             >
               BLUESKY
             </span>
           </td>
           <td
-            class="relative pr-0 pl-2 align-baseline py-2"
+            class="text-right align-baseline py-2"
           >
             <span
-              class="text-[right] uppercase"
+              class="text-base uppercase"
             >
               https://bsky.app/profile/emirkosem.bsky.social
             </span>
