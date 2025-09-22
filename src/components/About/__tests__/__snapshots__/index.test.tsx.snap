@@ -3,7 +3,7 @@
 exports[`About Component > should render 1`] = `
 <div>
   <article
-    class="space-y-6 text-base md:text-lg text-gray-700 leading-relaxed max-w-none"
+    class="flex flex-col gap-4 text-base md:text-lg text-gray-900 leading-relaxed max-w-none"
     style="opacity: 0; transform: translateY(20px);"
   >
     <h2

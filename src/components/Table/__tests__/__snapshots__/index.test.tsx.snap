@@ -21,12 +21,14 @@ exports[`Table Component > applies custom className when provided 1`] = `
           class="border-b border-black"
         >
           <th
-            class="text-left text-base md:text-lg font-semibold pb-1 mb-1 px-0"
+            class="text-base md:text-lg font-semibold pb-1 mb-1 px-0"
+            style="text-align: left;"
           >
             PLATFORM
           </th>
           <th
-            class="text-right text-base md:text-lg font-semibold pb-1 mb-1 px-0"
+            class="text-base md:text-lg font-semibold pb-1 mb-1 px-0"
+            style="text-align: right;"
           >
             ACCOUNT
           </th>
@@ -36,7 +38,7 @@ exports[`Table Component > applies custom className when provided 1`] = `
         class="space-y-2 md:space-y-1"
       >
         <tr
-          class="px-2 md:px-4 lg:px-0 relative border-b border-black border-dashed"
+          class="px-2 md:px-4 lg:px-0 relative border-b border-black border-dashed translate-0 [clip-path:inset(0)]"
         >
           <td
             class="text-left align-baseline py-2"
@@ -58,7 +60,7 @@ exports[`Table Component > applies custom className when provided 1`] = `
           </td>
         </tr>
         <tr
-          class="px-2 md:px-4 lg:px-0 relative border-b border-black border-dashed"
+          class="px-2 md:px-4 lg:px-0 relative border-b border-black border-dashed translate-0 [clip-path:inset(0)]"
         >
           <td
             class="text-left align-baseline py-2"
@@ -80,7 +82,7 @@ exports[`Table Component > applies custom className when provided 1`] = `
           </td>
         </tr>
         <tr
-          class="px-2 md:px-4 lg:px-0 relative border-b border-black border-dashed"
+          class="px-2 md:px-4 lg:px-0 relative border-b border-black border-dashed translate-0 [clip-path:inset(0)]"
         >
           <td
             class="text-left align-baseline py-2"
@@ -102,7 +104,7 @@ exports[`Table Component > applies custom className when provided 1`] = `
           </td>
         </tr>
         <tr
-          class="px-2 md:px-4 lg:px-0 relative border-b border-black border-dashed"
+          class="px-2 md:px-4 lg:px-0 relative border-b border-black border-dashed translate-0 [clip-path:inset(0)]"
         >
           <td
             class="text-left align-baseline py-2"
@@ -124,7 +126,7 @@ exports[`Table Component > applies custom className when provided 1`] = `
           </td>
         </tr>
         <tr
-          class="px-2 md:px-4 lg:px-0 relative border-b border-black border-dashed"
+          class="px-2 md:px-4 lg:px-0 relative border-b border-black border-dashed translate-0 [clip-path:inset(0)]"
         >
           <td
             class="text-left align-baseline py-2"
@@ -146,7 +148,7 @@ exports[`Table Component > applies custom className when provided 1`] = `
           </td>
         </tr>
         <tr
-          class="px-2 md:px-4 lg:px-0 relative border-b border-black border-dashed"
+          class="px-2 md:px-4 lg:px-0 relative border-b border-black border-dashed translate-0 [clip-path:inset(0)]"
         >
           <td
             class="text-left align-baseline py-2"
@@ -194,12 +196,14 @@ exports[`Table Component > renders links when cell is marked as link 1`] = `
           class="border-b border-black"
         >
           <th
-            class="text-left text-base md:text-lg font-semibold pb-1 mb-1 px-0"
+            class="text-base md:text-lg font-semibold pb-1 mb-1 px-0"
+            style="text-align: left;"
           >
             PLATFORM
           </th>
           <th
-            class="text-right text-base md:text-lg font-semibold pb-1 mb-1 px-0"
+            class="text-base md:text-lg font-semibold pb-1 mb-1 px-0"
+            style="text-align: right;"
           >
             ACCOUNT
           </th>
@@ -209,7 +213,7 @@ exports[`Table Component > renders links when cell is marked as link 1`] = `
         class="space-y-2 md:space-y-1"
       >
         <tr
-          class="px-2 md:px-4 lg:px-0 relative border-b border-black border-dashed"
+          class="px-2 md:px-4 lg:px-0 relative border-b border-black border-dashed translate-0 [clip-path:inset(0)]"
         >
           <td
             class="text-left align-baseline py-2"
@@ -284,12 +288,14 @@ exports[`Table Component > renders regular text when cell is not a link 1`] = `
           class="border-b border-black"
         >
           <th
-            class="text-left text-base md:text-lg font-semibold pb-1 mb-1 px-0"
+            class="text-base md:text-lg font-semibold pb-1 mb-1 px-0"
+            style="text-align: left;"
           >
             PLATFORM
           </th>
           <th
-            class="text-right text-base md:text-lg font-semibold pb-1 mb-1 px-0"
+            class="text-base md:text-lg font-semibold pb-1 mb-1 px-0"
+            style="text-align: right;"
           >
             ACCOUNT
           </th>
@@ -299,7 +305,7 @@ exports[`Table Component > renders regular text when cell is not a link 1`] = `
         class="space-y-2 md:space-y-1"
       >
         <tr
-          class="px-2 md:px-4 lg:px-0 relative border-b border-black border-dashed"
+          class="px-2 md:px-4 lg:px-0 relative border-b border-black border-dashed translate-0 [clip-path:inset(0)]"
         >
           <td
             class="text-left align-baseline py-2"
@@ -321,7 +327,7 @@ exports[`Table Component > renders regular text when cell is not a link 1`] = `
           </td>
         </tr>
         <tr
-          class="px-2 md:px-4 lg:px-0 relative border-b border-black border-dashed"
+          class="px-2 md:px-4 lg:px-0 relative border-b border-black border-dashed translate-0 [clip-path:inset(0)]"
         >
           <td
             class="text-left align-baseline py-2"
@@ -343,7 +349,7 @@ exports[`Table Component > renders regular text when cell is not a link 1`] = `
           </td>
         </tr>
         <tr
-          class="px-2 md:px-4 lg:px-0 relative border-b border-black border-dashed"
+          class="px-2 md:px-4 lg:px-0 relative border-b border-black border-dashed translate-0 [clip-path:inset(0)]"
         >
           <td
             class="text-left align-baseline py-2"
@@ -365,7 +371,7 @@ exports[`Table Component > renders regular text when cell is not a link 1`] = `
           </td>
         </tr>
         <tr
-          class="px-2 md:px-4 lg:px-0 relative border-b border-black border-dashed"
+          class="px-2 md:px-4 lg:px-0 relative border-b border-black border-dashed translate-0 [clip-path:inset(0)]"
         >
           <td
             class="text-left align-baseline py-2"
@@ -387,7 +393,7 @@ exports[`Table Component > renders regular text when cell is not a link 1`] = `
           </td>
         </tr>
         <tr
-          class="px-2 md:px-4 lg:px-0 relative border-b border-black border-dashed"
+          class="px-2 md:px-4 lg:px-0 relative border-b border-black border-dashed translate-0 [clip-path:inset(0)]"
         >
           <td
             class="text-left align-baseline py-2"
@@ -409,7 +415,7 @@ exports[`Table Component > renders regular text when cell is not a link 1`] = `
           </td>
         </tr>
         <tr
-          class="px-2 md:px-4 lg:px-0 relative border-b border-black border-dashed"
+          class="px-2 md:px-4 lg:px-0 relative border-b border-black border-dashed translate-0 [clip-path:inset(0)]"
         >
           <td
             class="text-left align-baseline py-2"
@@ -457,12 +463,14 @@ exports[`Table Component > renders with empty data array 1`] = `
           class="border-b border-black"
         >
           <th
-            class="text-left text-base md:text-lg font-semibold pb-1 mb-1 px-0"
+            class="text-base md:text-lg font-semibold pb-1 mb-1 px-0"
+            style="text-align: left;"
           >
             PLATFORM
           </th>
           <th
-            class="text-right text-base md:text-lg font-semibold pb-1 mb-1 px-0"
+            class="text-base md:text-lg font-semibold pb-1 mb-1 px-0"
+            style="text-align: right;"
           >
             ACCOUNT
           </th>
@@ -497,12 +505,14 @@ exports[`Table Component > should render with new generic data structure 1`] = `
           class="border-b border-black"
         >
           <th
-            class="text-left text-base md:text-lg font-semibold pb-1 mb-1 px-0"
+            class="text-base md:text-lg font-semibold pb-1 mb-1 px-0"
+            style="text-align: left;"
           >
             PLATFORM
           </th>
           <th
-            class="text-right text-base md:text-lg font-semibold pb-1 mb-1 px-0"
+            class="text-base md:text-lg font-semibold pb-1 mb-1 px-0"
+            style="text-align: right;"
           >
             ACCOUNT
           </th>
@@ -512,7 +522,7 @@ exports[`Table Component > should render with new generic data structure 1`] = `
         class="space-y-2 md:space-y-1"
       >
         <tr
-          class="px-2 md:px-4 lg:px-0 relative border-b border-black border-dashed"
+          class="px-2 md:px-4 lg:px-0 relative border-b border-black border-dashed translate-0 [clip-path:inset(0)]"
         >
           <td
             class="text-left align-baseline py-2"
@@ -534,7 +544,7 @@ exports[`Table Component > should render with new generic data structure 1`] = `
           </td>
         </tr>
         <tr
-          class="px-2 md:px-4 lg:px-0 relative border-b border-black border-dashed"
+          class="px-2 md:px-4 lg:px-0 relative border-b border-black border-dashed translate-0 [clip-path:inset(0)]"
         >
           <td
             class="text-left align-baseline py-2"
@@ -556,7 +566,7 @@ exports[`Table Component > should render with new generic data structure 1`] = `
           </td>
         </tr>
         <tr
-          class="px-2 md:px-4 lg:px-0 relative border-b border-black border-dashed"
+          class="px-2 md:px-4 lg:px-0 relative border-b border-black border-dashed translate-0 [clip-path:inset(0)]"
         >
           <td
             class="text-left align-baseline py-2"
@@ -578,7 +588,7 @@ exports[`Table Component > should render with new generic data structure 1`] = `
           </td>
         </tr>
         <tr
-          class="px-2 md:px-4 lg:px-0 relative border-b border-black border-dashed"
+          class="px-2 md:px-4 lg:px-0 relative border-b border-black border-dashed translate-0 [clip-path:inset(0)]"
         >
           <td
             class="text-left align-baseline py-2"
@@ -600,7 +610,7 @@ exports[`Table Component > should render with new generic data structure 1`] = `
           </td>
         </tr>
         <tr
-          class="px-2 md:px-4 lg:px-0 relative border-b border-black border-dashed"
+          class="px-2 md:px-4 lg:px-0 relative border-b border-black border-dashed translate-0 [clip-path:inset(0)]"
         >
           <td
             class="text-left align-baseline py-2"
@@ -622,7 +632,7 @@ exports[`Table Component > should render with new generic data structure 1`] = `
           </td>
         </tr>
         <tr
-          class="px-2 md:px-4 lg:px-0 relative border-b border-black border-dashed"
+          class="px-2 md:px-4 lg:px-0 relative border-b border-black border-dashed translate-0 [clip-path:inset(0)]"
         >
           <td
             class="text-left align-baseline py-2"
