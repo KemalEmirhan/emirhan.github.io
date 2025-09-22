@@ -25,8 +25,10 @@ const Table = ({ data }: TableProps): React.ReactElement => {
           <tr className='border-b border-black'>
             {columns.map(column => (
               <th
+                scope='col'
                 key={column.key}
-                className={`text-${column.align} text-base md:text-lg font-semibold pb-1 mb-1 px-0`}
+                className='text-base md:text-lg font-semibold pb-1 mb-1 px-0'
+                style={{ textAlign: column.align }}
               >
                 {column.label}
               </th>
