@@ -1,4 +1,3 @@
-/* eslint-disable no-undef */
 import type { Metadata } from 'next';
 import { GoogleAnalytics, GoogleTagManager } from '@next/third-parties/google';
 import { Inconsolata } from 'next/font/google';
