@@ -1,6 +1,6 @@
 /* eslint-disable no-undef */
 import type { Metadata } from 'next';
-import { GoogleAnalytics } from '@next/third-parties/google';
+import { GoogleAnalytics, GoogleTagManager } from '@next/third-parties/google';
 import { Inconsolata } from 'next/font/google';
 import SEOData from '@/components/SEOData';
 import Blur from '@/components/Blur';
@@ -122,7 +122,7 @@ export default function RootLayout({
     <html lang='en'>
       <head>
         <SEOData />
-        <GoogleAnalytics gaId={process.env.GA_ID || ''} />
+        <GoogleTagManager gtmId={process.env.GTM_ID || ''} />
       </head>
       <body className={inconsolata.variable}>
         <Blur />
@@ -135,6 +135,7 @@ export default function RootLayout({
           <StickyBottomNavigation />
         </div>
       </body>
+      <GoogleAnalytics gaId={process.env.GA_ID || ''} />
     </html>
   );
 }
