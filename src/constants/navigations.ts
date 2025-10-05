@@ -9,4 +9,8 @@ export const NAVIGATIONS: TNavigations = [
     href: '/socials',
     label: 'Socials',
   },
+  {
+    href: '/bookmarks',
+    label: 'Bookmarks',
+  },
 ];

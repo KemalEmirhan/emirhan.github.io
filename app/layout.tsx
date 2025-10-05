@@ -1,6 +1,6 @@
 import type { Metadata } from 'next';
 import { GoogleAnalytics, GoogleTagManager } from '@next/third-parties/google';
-import { Inconsolata } from 'next/font/google';
+import { Geist_Mono } from 'next/font/google';
 import SEOData from '@/components/SEOData';
 import Blur from '@/components/Blur';
 import '@/styles/globals.css';
@@ -9,9 +9,11 @@ import SideBarNavigation from '@/components/SideBarNavigation';
 import Separator from '@/components/Separator';
 import StickyBottomNavigation from '@/components/StickyBottomNavigation';
 
-const inconsolata = Inconsolata({
+import { isProd, gtmId, gaId } from '@/lib/utils';
+
+const geistMono = Geist_Mono({
   subsets: ['latin'],
-  variable: '--font-inconsolata',
+  variable: '--font-geist',
 });
 
 export const metadata: Metadata = {
@@ -23,6 +25,10 @@ export const metadata: Metadata = {
     'Frontend Software Engineer with 8+ years of experience in React, Next.js, TypeScript, and GraphQL. Based in Berlin, specializing in high-performance web applications, accessibility, and modern web standards.',
   keywords: [
     'Emirhan Kemal Kosem',
+    'Emir Kemal',
+    'Emirhan Kemal',
+    'Emir Kosem',
+    'Emirhan Kosem',
     'Frontend Developer',
     'React Developer',
     'Next.js Developer',
@@ -30,8 +36,6 @@ export const metadata: Metadata = {
     'JavaScript Developer',
     'Web Developer',
     'Software Engineer',
-    'Berlin Developer',
-    'GraphQL Developer',
     'Web Accessibility',
     'Frontend Engineer',
     'UI/UX Developer',
@@ -121,9 +125,9 @@ export default function RootLayout({
     <html lang='en'>
       <head>
         <SEOData />
-        <GoogleTagManager gtmId={process.env.GTM_ID || ''} />
+        {isProd && gtmId && <GoogleTagManager gtmId={gtmId} />}
       </head>
-      <body className={inconsolata.variable}>
+      <body className={`${geistMono.variable} antialiased`}>
         <Blur />
         <Header />
         <Separator className='mb-1' />
@@ -133,8 +137,8 @@ export default function RootLayout({
           <main className='pb-8 md:pb-0'>{children}</main>
           <StickyBottomNavigation />
         </div>
+        {isProd && gaId && <GoogleAnalytics gaId={gaId} />}
       </body>
-      <GoogleAnalytics gaId={process.env.GA_ID || ''} />
     </html>
   );
 }
