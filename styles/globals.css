@@ -2,9 +2,15 @@
 @tailwind components;
 @tailwind utilities;
 
+:root {
+  --color-background: #e6e4dc;
+  --color-background-secondary: #d5cfbd;
+}
+
 @layer base {
   body {
-    font-family: var(--font-inconsolata);
+    font-family: var(--font-inter);
+    background-color: var(--color-background);
   }
 
   #__next {
@@ -26,5 +32,48 @@
     background-size: 4px 2px;
     background-repeat: repeat-x;
     background-position: center;
+  }
+
+  .visually-hidden-focusable {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    transform: translateY(-100%);
+    transition: transform 0.3s ease-out;
+
+    &:focus-visible {
+      transform: translateY(10%);
+    }
+  }
+
+  .grid-col-full {
+    grid-column: 1 / -1;
+  }
+
+  .container {
+    margin: 0px auto;
+    max-width: 60rem;
+    padding-inline: var(--size-4);
+    width: 100%;
+  }
+
+  .box-shadow {
+    --box-line-color: #000;
+    --box-line-size: 10px;
+    --box-border-radius: 0.5rem;
+    --box-offset: 1rem;
+
+    background-image: linear-gradient(45deg, transparent 33.33%, var(--box-line-color) 33.33%, var(--box-line-color) 50%, transparent 50%, transparent 83.33%, var(--box-line-color) 83.33%, var(--box-line-color) 100%);
+    background-size: var(--box-line-size) var(--box-line-size);
+    border-radius: var(--box-border-radius);
+    content: "";
+    display: block;
+    height: 100%;
+    left: var(--box-offset);
+    position: absolute;
+    top: var(--box-offset);
+    width: 100%;
+    z-index: -2;
   }
 }

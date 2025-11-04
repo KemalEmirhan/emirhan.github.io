@@ -2,15 +2,15 @@ import { TNavigations } from '@/schemas';
 
 export const NAVIGATIONS: TNavigations = [
   {
-    href: '/',
-    label: 'About',
+    href: '/resume',
+    label: 'Resume',
   },
   {
     href: '/socials',
     label: 'Socials',
   },
   {
-    href: '/bookmarks',
-    label: 'Bookmarks',
+    href: '/links',
+    label: 'Links',
   },
 ];

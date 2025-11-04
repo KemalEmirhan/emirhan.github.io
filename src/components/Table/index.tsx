@@ -14,8 +14,8 @@ const Table = ({ data }: TableProps): React.ReactElement => {
   const columnWidth = useMemo(() => getColumnWidth(columns), [columns]);
 
   return (
-    <div className={`w-full max-w-4xl ${className}`}>
-      <table className='w-full text-black bg-white text-sm md:text-base table-fixed'>
+    <div className={`w-full ${className}`}>
+      <table className='w-full text-black text-sm md:text-base table-fixed'>
         <colgroup>
           {columns.map(column => (
             <col key={column.key} className={column.width || columnWidth} />

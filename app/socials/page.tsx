@@ -1,12 +1,13 @@
 import React from 'react';
 import Table from '@/components/Table';
 import socialAccountsTableData from '@/constants/accountLinks';
+import Card from '@/components/Card';
 
 const Socials = () => {
   return (
-    <div className='px-2'>
+    <Card className='grid-col-full'>
       <Table data={socialAccountsTableData} />
-    </div>
+    </Card>
   );
 };
 

@@ -1,19 +1,17 @@
 import type { Metadata } from 'next';
 import { GoogleAnalytics, GoogleTagManager } from '@next/third-parties/google';
-import { Geist_Mono } from 'next/font/google';
+import { Inter } from 'next/font/google';
 import SEOData from '@/components/SEOData';
-import Blur from '@/components/Blur';
 import '@/styles/globals.css';
 import Header from '@/components/Header';
-import SideBarNavigation from '@/components/SideBarNavigation';
-import Separator from '@/components/Separator';
 import StickyBottomNavigation from '@/components/StickyBottomNavigation';
 
 import { isProd, gtmId, gaId } from '@/lib/utils';
+import SkipToMainContent from '@/components/SkipToMainContent';
 
-const geistMono = Geist_Mono({
+const inter = Inter({
   subsets: ['latin'],
-  variable: '--font-geist',
+  variable: '--font-inter',
 });
 
 export const metadata: Metadata = {
@@ -116,27 +114,23 @@ export const metadata: Metadata = {
   },
 };
 
-export default function RootLayout({
-  children,
-}: {
-  children: React.ReactNode;
-}) {
+export default function RootLayout({ children }: React.PropsWithChildren) {
   return (
     <html lang='en'>
       <head>
         <SEOData />
         {isProd && gtmId && <GoogleTagManager gtmId={gtmId} />}
       </head>
-      <body className={`${geistMono.variable} antialiased`}>
-        <Blur />
+      <body className={`${inter.variable} antialiased`}>
+        <SkipToMainContent />
         <Header />
-        <Separator className='mb-1' />
-        <Separator />
-        <div className='grid lg:grid-cols-[145px_1fr] max-w-5xl mx-auto md:min-h-[calc(100vh-312px-64px)] gap-6 p-4 md:p-6 lg:px-0'>
-          <SideBarNavigation />
-          <main className='pb-8 md:pb-0'>{children}</main>
-          <StickyBottomNavigation />
-        </div>
+        <main
+          id='main-content'
+          className='container grid grid-cols-1 md:grid-cols-2 gap-8 lg:gap-16'
+        >
+          {children}
+        </main>
+        <StickyBottomNavigation />
         {isProd && gaId && <GoogleAnalytics gaId={gaId} />}
       </body>
     </html>

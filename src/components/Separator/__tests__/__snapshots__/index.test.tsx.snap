@@ -1,9 +1,0 @@
-// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
-
-exports[`Separator > should render 1`] = `
-<div>
-  <hr
-    class="separator max-w-6xl mx-auto bg-black w-full h-1 undefined"
-  />
-</div>
-`;
