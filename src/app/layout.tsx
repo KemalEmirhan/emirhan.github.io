@@ -6,8 +6,9 @@ import '@/styles/globals.css';
 import Header from '@/components/Header';
 import StickyBottomNavigation from '@/components/StickyBottomNavigation';
 
-import { isProd, gtmId, gaId } from '@/lib/utils';
+import { isProd, gtmId, gaId } from '@/utilities/common';
 import SkipToMainContent from '@/components/SkipToMainContent';
+import Footer from '@/components/Footer';
 
 const inter = Inter({
   subsets: ['latin'],
@@ -121,16 +122,19 @@ export default function RootLayout({ children }: React.PropsWithChildren) {
         <SEOData />
         {isProd && gtmId && <GoogleTagManager gtmId={gtmId} />}
       </head>
-      <body className={`${inter.variable} antialiased`}>
+      <body className={`${inter.variable} antialiased container`}>
         <SkipToMainContent />
-        <Header />
-        <main
-          id='main-content'
-          className='container grid grid-cols-1 md:grid-cols-2 gap-8 lg:gap-16'
-        >
-          {children}
-        </main>
+        <div className='flex flex-col items-center justify-center gap-6 md:gap-8 px-4 md:px-0 mb-24'>
+          <Header />
+          <main
+            id='main-content'
+            className='grid grid-cols-1 md:grid-cols-2 gap-8 lg:gap-16 items-center'
+          >
+            {children}
+          </main>
+        </div>
         <StickyBottomNavigation />
+        <Footer />
         {isProd && gaId && <GoogleAnalytics gaId={gaId} />}
       </body>
     </html>

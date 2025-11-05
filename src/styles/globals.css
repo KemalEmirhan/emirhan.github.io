@@ -60,7 +60,7 @@
 
   .box-shadow {
     --box-line-color: #000;
-    --box-line-size: 10px;
+    --box-line-size: 8px;
     --box-border-radius: 0.5rem;
     --box-offset: 1rem;
 

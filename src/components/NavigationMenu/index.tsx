@@ -16,7 +16,7 @@ const NavigationMenu = () => {
   };
 
   return (
-    <nav className='flex items-center gap-4'>
+    <nav className='items-center gap-4 hidden lg:flex'>
       {NAVIGATIONS.map(item => (
         <Link
           key={item.href}

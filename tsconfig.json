@@ -25,7 +25,7 @@
       "@/components/*": ["./src/components/*"],
       "@/hooks/*": ["./src/hooks/*"],
       "@/constants/*": ["./src/constants/*"],
-      "@/styles/*": ["./styles/*"]
+      "@/styles/*": ["./src/styles/*"]
     }
   },
   "include": [

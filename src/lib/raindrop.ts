@@ -1,6 +1,6 @@
 import 'server-only';
 
-const RAIDDROP_API_URL = 'https://api.raindrop.io/rest/v1/';
+const RAINDROP_API_URL = 'https://api.raindrop.io/rest/v1/';
 
 type BookmarkItem = {
   _id: string;
@@ -38,13 +38,13 @@ const options = {
     Authorization: `Bearer ${process.env.NEXT_PUBLIC_RAINDROP_ACCESS_TOKEN}`,
   },
   next: {
-    revalidate: 60 * 60 * 24 * 1, // Revalidate once a day
+    revalidate: 60 * 60 * 24 * 1,
   },
 };
 
 export const getBookmarks = async (): Promise<Bookmarks | null> => {
   try {
-    const response = await fetch(`${RAIDDROP_API_URL}/collections`, options);
+    const response = await fetch(`${RAINDROP_API_URL}/collections`, options);
     if (!response.ok) {
       throw new Error('Failed to fetch bookmarks');
     }
