@@ -31,6 +31,19 @@ type Bookmarks = {
   items: BookmarkItem[];
 };
 
+type CollectionBookmark = {
+  _id: number;
+  link: string;
+  title: string;
+  excerpt?: string;
+  [key: string]: unknown;
+};
+
+type CollectionBookmarks = {
+  result: boolean;
+  items: CollectionBookmark[];
+};
+
 const options = {
   method: 'GET',
   headers: {
@@ -53,6 +66,26 @@ export const getBookmarks = async (): Promise<Bookmarks | null> => {
     return data;
   } catch (error) {
     console.error('Error fetching bookmarks:', error);
+    return null;
+  }
+};
+
+export const getCollectionBookmarks = async (
+  collectionId: number
+): Promise<CollectionBookmarks | null> => {
+  try {
+    const response = await fetch(
+      `${RAINDROP_API_URL}/raindrops/${collectionId}`,
+      options
+    );
+    if (!response.ok) {
+      throw new Error('Failed to fetch collection bookmarks');
+    }
+
+    const data = await response.json();
+    return data;
+  } catch (error) {
+    console.error('Error fetching collection bookmarks:', error);
     return null;
   }
 };

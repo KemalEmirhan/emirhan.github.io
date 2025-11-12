@@ -1,13 +1,31 @@
 import React from 'react';
 import type { Metadata } from 'next';
-import { getBookmarks } from '@/lib/raindrop';
-import Card from '@/components/Card';
+import { getBookmarks, getCollectionBookmarks } from '@/lib/raindrop';
+import FilterableCollections from '@/components/FilterableCollections';
 
-export async function fetchData() {
-  const collections = await getBookmarks();
+const fetchCollectionsWithBookmarks = async () => {
+  const collectionsData = await getBookmarks();
 
-  return collections;
-}
+  if (!collectionsData?.items) {
+    return [];
+  }
+
+  const collectionsWithBookmarks = await Promise.all(
+    collectionsData.items.map(async collection => {
+      const collectionId =
+        typeof collection._id === 'string'
+          ? parseInt(collection._id, 10)
+          : collection._id;
+      const bookmarks = await getCollectionBookmarks(collectionId);
+      return {
+        ...collection,
+        bookmarks: bookmarks?.items || [],
+      };
+    })
+  );
+
+  return collectionsWithBookmarks.filter(collection => collection.count > 0);
+};
 
 export const metadata: Metadata = {
   title: 'Links',
@@ -24,19 +42,9 @@ export const metadata: Metadata = {
 };
 
 const LinksPage = async () => {
-  // const collections = await fetchData();
+  const filteredCollections = await fetchCollectionsWithBookmarks();
 
-  return (
-    <>
-      <Card className='grid-col-full'>
-        <h2 className='text-2xl font-bold text-gray-900'>Links</h2>
-
-        <p className='text-base text-gray-800'>
-          Links will be here...(no worries)
-        </p>
-      </Card>
-    </>
-  );
+  return <FilterableCollections collections={filteredCollections} />;
 };
 
 export default LinksPage;
