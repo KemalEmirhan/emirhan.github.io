@@ -33,13 +33,13 @@ const StickyBottomNavigation = () => {
   };
 
   return (
-    <div className='fixed lg:hidden bottom-8 left-1/2 -translate-x-1/2 bg-white rounded-3xl shadow-lg px-4 py-2 drop-shadow-lg border border-gray-500 w-fit z-50'>
+    <div className='fixed lg:hidden bottom-8 left-1/2 -translate-x-1/2 bg-white shadow-lg px-4 py-2 drop-shadow-lg border border-gray-500 w-fit z-50'>
       <nav
         ref={navRef}
         className='flex justify-evenly items-center gap-4 relative'
       >
         <motion.div
-          className='absolute w-2 h-2 bg-blue-500 rounded-full bottom-[-4px]'
+          className='absolute w-2 h-2 bg-gray-500 rounded-full bottom-[-4px]'
           initial={false}
           animate={{ left: dotX - 4 }}
           transition={{ type: 'spring', stiffness: 300, damping: 25 }}

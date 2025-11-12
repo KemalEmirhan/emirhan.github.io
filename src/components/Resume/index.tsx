@@ -11,8 +11,15 @@ const Resume = () => {
             Emirhan Kemal KOSEM
           </h1>
           <div className='text-sm text-gray-700 flex flex-wrap gap-2 sm:gap-4'>
-            <span>0176 207 390 60</span>
-            <span>emirhankemalkosem@gmail.com</span>
+            <a href='tel:+4917620739060' className='focus-visible:focus-ring'>
+              0176 207 390 60
+            </a>
+            <a
+              href='mailto:emirhankemalkosem@gmail.com'
+              className='focus-visible:focus-ring'
+            >
+              emirhankemalkosem@gmail.com
+            </a>
             <span>Berlin, Germany</span>
           </div>
         </header>
