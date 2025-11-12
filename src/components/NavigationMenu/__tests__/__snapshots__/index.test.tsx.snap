@@ -2,50 +2,27 @@
 
 exports[`SideBarNavigation > should render 1`] = `
 <div>
-  <aside
-    class="hidden lg:block border-r border-black border-dashed"
+  <nav
+    class="items-center gap-4 hidden lg:flex"
   >
-    <nav
-      class="relative flex md:flex-col items-end gap-4 py-0 mr-8"
+    <a
+      class="text-gray-700 transition-colors duration-150 font-bold hover:bg-[--color-background-secondary] rounded-md px-2 py-1 underline-offset-2 underline focus-visible:focus-ring"
+      href="/resume"
     >
-      <div
-        class="absolute flex items-center justify-center right-[-24px]"
-        style="top: 6px;"
-      >
-        <svg
-          aria-hidden="true"
-          class="lucide lucide-arrow-right w-4 h-4"
-          fill="none"
-          height="24"
-          stroke="currentColor"
-          stroke-linecap="round"
-          stroke-linejoin="round"
-          stroke-width="2"
-          viewBox="0 0 24 24"
-          width="24"
-          xmlns="http://www.w3.org/2000/svg"
-        >
-          <path
-            d="M5 12h14"
-          />
-          <path
-            d="m12 5 7 7-7 7"
-          />
-        </svg>
-      </div>
-      <a
-        class="text-gray-700 hover:text-gray-900 transition-colors duration-150 underline text-xl uppercase flex items-center gap-2"
-        href="/"
-      >
-        About
-      </a>
-      <a
-        class="text-gray-700 hover:text-gray-900 transition-colors duration-150 underline text-xl uppercase flex items-center gap-2"
-        href="/socials"
-      >
-        Socials
-      </a>
-    </nav>
-  </aside>
+      Resume
+    </a>
+    <a
+      class="text-gray-700 transition-colors duration-150 font-bold hover:bg-[--color-background-secondary] rounded-md px-2 py-1 underline-offset-2 underline focus-visible:focus-ring"
+      href="/socials"
+    >
+      Socials
+    </a>
+    <a
+      class="text-gray-700 transition-colors duration-150 font-bold hover:bg-[--color-background-secondary] rounded-md px-2 py-1 underline-offset-2 underline focus-visible:focus-ring"
+      href="/links"
+    >
+      Links
+    </a>
+  </nav>
 </div>
 `;

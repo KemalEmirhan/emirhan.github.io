@@ -1,65 +1,26 @@
 // Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
 
-exports[`StickyBottomNavigation > should handle / 1`] = `
-<div>
-  <div
-    class="fixed lg:hidden bottom-8 left-1/2 -translate-x-1/2 bg-white rounded-3xl shadow-lg px-4 py-2 drop-shadow-lg border border-gray-500 w-fit z-50"
-  >
-    <nav
-      class="flex justify-evenly items-center gap-4 relative"
-    >
-      <div
-        class="absolute w-2 h-2 bg-blue-500 rounded-full bottom-[-4px]"
-        style="left: 16px;"
-      />
-      <a
-        class="flex flex-col items-center"
-        href="/"
-      >
-        <span
-          class="text-gray-500 data-[active=true]:text-gray-900 transition-colors duration-150"
-          data-active="true"
-        >
-          About
-        </span>
-      </a>
-      <a
-        class="flex flex-col items-center"
-        href="/socials"
-      >
-        <span
-          class="text-gray-500 data-[active=true]:text-gray-900 transition-colors duration-150"
-          data-active="false"
-        >
-          Socials
-        </span>
-      </a>
-    </nav>
-  </div>
-</div>
-`;
-
 exports[`StickyBottomNavigation > should handle /socials 1`] = `
 <div>
   <div
-    class="fixed lg:hidden bottom-8 left-1/2 -translate-x-1/2 bg-white rounded-3xl shadow-lg px-4 py-2 drop-shadow-lg border border-gray-500 w-fit z-50"
+    class="fixed lg:hidden bottom-8 left-1/2 -translate-x-1/2 bg-white shadow-lg px-4 py-2 drop-shadow-lg border border-gray-500 w-fit z-50"
   >
     <nav
       class="flex justify-evenly items-center gap-4 relative"
     >
       <div
-        class="absolute w-2 h-2 bg-blue-500 rounded-full bottom-[-4px]"
+        class="absolute w-2 h-2 bg-gray-500 rounded-full bottom-[-4px]"
         style="left: 16px;"
       />
       <a
         class="flex flex-col items-center"
-        href="/"
+        href="/resume"
       >
         <span
           class="text-gray-500 data-[active=true]:text-gray-900 transition-colors duration-150"
           data-active="false"
         >
-          About
+          Resume
         </span>
       </a>
       <a
@@ -71,6 +32,17 @@ exports[`StickyBottomNavigation > should handle /socials 1`] = `
           data-active="true"
         >
           Socials
+        </span>
+      </a>
+      <a
+        class="flex flex-col items-center"
+        href="/links"
+      >
+        <span
+          class="text-gray-500 data-[active=true]:text-gray-900 transition-colors duration-150"
+          data-active="false"
+        >
+          Links
         </span>
       </a>
     </nav>
@@ -81,24 +53,24 @@ exports[`StickyBottomNavigation > should handle /socials 1`] = `
 exports[`StickyBottomNavigation > should render 1`] = `
 <div>
   <div
-    class="fixed lg:hidden bottom-8 left-1/2 -translate-x-1/2 bg-white rounded-3xl shadow-lg px-4 py-2 drop-shadow-lg border border-gray-500 w-fit z-50"
+    class="fixed lg:hidden bottom-8 left-1/2 -translate-x-1/2 bg-white shadow-lg px-4 py-2 drop-shadow-lg border border-gray-500 w-fit z-50"
   >
     <nav
       class="flex justify-evenly items-center gap-4 relative"
     >
       <div
-        class="absolute w-2 h-2 bg-blue-500 rounded-full bottom-[-4px]"
+        class="absolute w-2 h-2 bg-gray-500 rounded-full bottom-[-4px]"
         style="left: 16px;"
       />
       <a
         class="flex flex-col items-center"
-        href="/"
+        href="/resume"
       >
         <span
           class="text-gray-500 data-[active=true]:text-gray-900 transition-colors duration-150"
-          data-active="true"
+          data-active="false"
         >
-          About
+          Resume
         </span>
       </a>
       <a
@@ -110,6 +82,17 @@ exports[`StickyBottomNavigation > should render 1`] = `
           data-active="false"
         >
           Socials
+        </span>
+      </a>
+      <a
+        class="flex flex-col items-center"
+        href="/links"
+      >
+        <span
+          class="text-gray-500 data-[active=true]:text-gray-900 transition-colors duration-150"
+          data-active="false"
+        >
+          Links
         </span>
       </a>
     </nav>

@@ -35,19 +35,6 @@
     background-position: center;
   }
 
-  .visually-hidden-focusable {
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    gap: 0.5rem;
-    transform: translateY(-100%);
-    transition: transform 0.3s ease-out;
-
-    &:focus-visible {
-      transform: translateY(10%);
-    }
-  }
-
   .grid-col-full {
     grid-column: 1 / -1;
   }

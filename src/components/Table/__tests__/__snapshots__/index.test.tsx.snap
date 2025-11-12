@@ -3,10 +3,10 @@
 exports[`Table Component > applies custom className when provided 1`] = `
 <div>
   <div
-    class="w-full max-w-4xl custom-table-class"
+    class="w-full custom-table-class"
   >
     <table
-      class="w-full text-black bg-white text-sm md:text-base table-fixed"
+      class="w-full text-black text-sm md:text-base table-fixed"
     >
       <colgroup>
         <col
@@ -192,10 +192,10 @@ exports[`Table Component > applies custom className when provided 1`] = `
 exports[`Table Component > renders links when cell is marked as link 1`] = `
 <div>
   <div
-    class="w-full max-w-4xl "
+    class="w-full "
   >
     <table
-      class="w-full text-black bg-white text-sm md:text-base table-fixed"
+      class="w-full text-black text-sm md:text-base table-fixed"
     >
       <colgroup>
         <col
@@ -246,7 +246,7 @@ exports[`Table Component > renders links when cell is marked as link 1`] = `
             style="text-align: right;"
           >
             <a
-              class="text-gray-500 hover:text-gray-800 underline flex items-center justify-end text-base after:absolute after:inset-0"
+              class="text-gray-500 hover:text-gray-800 underline flex items-center justify-end text-base after:absolute after:inset-0 focus-visible:focus-ring"
               href="https://github.com/KemalEmirhan"
               rel="noopener noreferrer"
               target="_blank"
@@ -288,10 +288,10 @@ exports[`Table Component > renders links when cell is marked as link 1`] = `
 exports[`Table Component > renders regular text when cell is not a link 1`] = `
 <div>
   <div
-    class="w-full max-w-4xl "
+    class="w-full "
   >
     <table
-      class="w-full text-black bg-white text-sm md:text-base table-fixed"
+      class="w-full text-black text-sm md:text-base table-fixed"
     >
       <colgroup>
         <col
@@ -477,10 +477,10 @@ exports[`Table Component > renders regular text when cell is not a link 1`] = `
 exports[`Table Component > renders with empty data array 1`] = `
 <div>
   <div
-    class="w-full max-w-4xl "
+    class="w-full "
   >
     <table
-      class="w-full text-black bg-white text-sm md:text-base table-fixed"
+      class="w-full text-black text-sm md:text-base table-fixed"
     >
       <colgroup>
         <col
@@ -521,10 +521,10 @@ exports[`Table Component > renders with empty data array 1`] = `
 exports[`Table Component > should render with new generic data structure 1`] = `
 <div>
   <div
-    class="w-full max-w-4xl "
+    class="w-full "
   >
     <table
-      class="w-full text-black bg-white text-sm md:text-base table-fixed"
+      class="w-full text-black text-sm md:text-base table-fixed"
     >
       <colgroup>
         <col

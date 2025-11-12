@@ -44,28 +44,43 @@ type CollectionBookmarks = {
   items: CollectionBookmark[];
 };
 
-const options = {
-  method: 'GET',
-  headers: {
-    'Content-Type': 'application/json',
-    Authorization: `Bearer ${process.env.NEXT_PUBLIC_RAINDROP_ACCESS_TOKEN}`,
-  },
-  next: {
-    revalidate: 60 * 60 * 24 * 1,
-  },
+const getOptions = () => {
+  const token = process.env.RAINDROP_ACCESS_TOKEN;
+
+  if (!token) {
+    throw new Error(
+      'RAINDROP_ACCESS_TOKEN environment variable is not set. Please set it in your .env.local file.'
+    );
+  }
+
+  return {
+    method: 'GET',
+    headers: {
+      'Content-Type': 'application/json',
+      Authorization: `Bearer ${token}`,
+    },
+    next: {
+      revalidate: 60 * 60 * 24 * 1,
+    },
+  };
 };
 
 export const getBookmarks = async (): Promise<Bookmarks | null> => {
   try {
+    const options = getOptions();
     const response = await fetch(`${RAINDROP_API_URL}/collections`, options);
+
     if (!response.ok) {
-      throw new Error('Failed to fetch bookmarks');
+      const errorText = await response.text().catch(() => 'Unknown error');
+      throw new Error(
+        `Failed to fetch collections: ${response.status} ${response.statusText}. ${errorText}`
+      );
     }
 
     const data = await response.json();
     return data;
   } catch (error) {
-    console.error('Error fetching bookmarks:', error);
+    console.error('Error fetching collections:', error);
     return null;
   }
 };
@@ -74,12 +89,17 @@ export const getCollectionBookmarks = async (
   collectionId: number
 ): Promise<CollectionBookmarks | null> => {
   try {
+    const options = getOptions();
     const response = await fetch(
       `${RAINDROP_API_URL}/raindrops/${collectionId}`,
       options
     );
+
     if (!response.ok) {
-      throw new Error('Failed to fetch collection bookmarks');
+      const errorText = await response.text().catch(() => 'Unknown error');
+      throw new Error(
+        `Failed to fetch collection bookmarks: ${response.status} ${response.statusText}. ${errorText}`
+      );
     }
 
     const data = await response.json();

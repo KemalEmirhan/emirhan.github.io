@@ -2,7 +2,7 @@ import classNames from 'classnames';
 import { twMerge } from 'tailwind-merge';
 
 export const cn = (...inputs: Parameters<typeof classNames>) => {
-  return twMerge(classNames(inputs));
+  return twMerge(classNames(...inputs));
 };
 
 export const isProd = process.env.NODE_ENV === 'production';
