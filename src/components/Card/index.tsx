@@ -2,9 +2,9 @@ import React from 'react';
 
 import { cn } from '@/utilities/common';
 
-interface CardProps extends React.PropsWithChildren {
+type CardProps = React.PropsWithChildren & {
   className?: string;
-}
+};
 
 const Card = ({ children, className }: CardProps) => {
   return (

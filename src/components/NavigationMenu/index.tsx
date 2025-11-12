@@ -21,7 +21,7 @@ const NavigationMenu = () => {
         <Link
           key={item.href}
           href={item.href}
-          className='text-gray-700 transition-colors duration-150 font-bold hover:bg-[--color-background-secondary] rounded-md px-2 py-1 underline-offset-2 underline '
+          className='text-gray-700 transition-colors duration-150 font-bold hover:bg-[--color-background-secondary] rounded-md px-2 py-1 underline-offset-2 underline focus-ring'
           onClick={() => handleClick(item.href)}
         >
           {item.label}

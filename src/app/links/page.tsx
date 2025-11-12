@@ -12,7 +12,7 @@ const LinksPage = async () => {
   // const collections = await fetchData();
 
   return (
-    <div>
+    <>
       <Card className='grid-col-full'>
         <h2 className='text-2xl font-bold text-gray-900'>Links</h2>
 
@@ -20,7 +20,7 @@ const LinksPage = async () => {
           Links will be here...(no worries)
         </p>
       </Card>
-    </div>
+    </>
   );
 };
 

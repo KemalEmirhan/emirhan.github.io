@@ -3,11 +3,11 @@ import { TableDataSchema, type TTableData } from '@/schemas';
 import TableRow from './TableRow';
 import { getColumnWidth } from './utilities';
 
-interface TableProps {
+type TableProps = {
   data: TTableData;
-}
+};
 
-const Table = ({ data }: TableProps): React.ReactElement => {
+const Table = ({ data }: TableProps) => {
   const validatedData = TableDataSchema.parse(data);
   const { columns, rows, className = '' } = validatedData;
 

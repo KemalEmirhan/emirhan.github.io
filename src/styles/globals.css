@@ -3,8 +3,8 @@
 @tailwind utilities;
 
 :root {
-  --color-background: #e6e4dc;
-  --color-background-secondary: #d5cfbd;
+  --color-background: #efefef;
+  --color-background-secondary: #f5f5f5;
 }
 
 @layer base {
@@ -54,7 +54,7 @@
   .container {
     margin: 0px auto;
     max-width: 60rem;
-    padding-inline: var(--size-4);
+    padding-inline: 1.5rem;
     width: 100%;
   }
 
@@ -75,5 +75,11 @@
     top: var(--box-offset);
     width: 100%;
     z-index: -2;
+  }
+
+  .focus-ring {
+    &:focus-visible {
+      @apply outline-none ring-2 ring-gray-500 ring-offset-2;
+    }
   }
 }
