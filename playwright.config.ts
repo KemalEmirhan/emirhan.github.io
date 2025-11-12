@@ -4,9 +4,8 @@ export default defineConfig({
   testDir: './tests/e2e',
   fullyParallel: true,
   forbidOnly: !!process.env.CI,
-  workers: 8,
-  reporter: [['json', { outputFile: 'results.json' }]],
-  outputDir: './test-results/output',
+  workers: process.env.CI ? 8 : undefined,
+  reporter: 'json',
   use: {
     baseURL: 'http://localhost:3000',
     trace: 'on-first-retry',

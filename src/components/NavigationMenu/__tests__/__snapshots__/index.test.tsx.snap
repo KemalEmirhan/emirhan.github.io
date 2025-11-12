@@ -1,0 +1,28 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`SideBarNavigation > should render 1`] = `
+<div>
+  <nav
+    class="items-center gap-4 hidden lg:flex"
+  >
+    <a
+      class="text-gray-700 transition-colors duration-150 font-bold hover:bg-[--color-background-secondary] rounded-md px-2 py-1 underline-offset-2 underline focus-visible:focus-ring"
+      href="/resume"
+    >
+      Resume
+    </a>
+    <a
+      class="text-gray-700 transition-colors duration-150 font-bold hover:bg-[--color-background-secondary] rounded-md px-2 py-1 underline-offset-2 underline focus-visible:focus-ring"
+      href="/socials"
+    >
+      Socials
+    </a>
+    <a
+      class="text-gray-700 transition-colors duration-150 font-bold hover:bg-[--color-background-secondary] rounded-md px-2 py-1 underline-offset-2 underline focus-visible:focus-ring"
+      href="/links"
+    >
+      Links
+    </a>
+  </nav>
+</div>
+`;
