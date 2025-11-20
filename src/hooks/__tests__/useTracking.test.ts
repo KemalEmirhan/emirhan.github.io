@@ -3,18 +3,22 @@ import { describe, it, expect, vi, beforeEach, afterEach } from 'vitest';
 import useTracking from '../useTracking';
 
 describe('useTracking', () => {
-  // Mock console methods to keep test output clean
-  vi.spyOn(console, 'group').mockImplementation(() => {});
-  vi.spyOn(console, 'log').mockImplementation(() => {});
-  const consoleWarnSpy = vi.spyOn(console, 'warn').mockImplementation(() => {});
-  vi.spyOn(console, 'groupEnd').mockImplementation(() => {});
+  let consoleWarnSpy: ReturnType<typeof vi.spyOn>;
 
   beforeEach(() => {
+    // Mock console methods to keep test output clean
+    vi.spyOn(console, 'group').mockImplementation(vi.fn());
+    vi.spyOn(console, 'log').mockImplementation(vi.fn());
+    consoleWarnSpy = vi.spyOn(console, 'warn').mockImplementation(vi.fn());
+    vi.spyOn(console, 'groupEnd').mockImplementation(vi.fn());
+
     vi.clearAllMocks();
     window.gtag = vi.fn();
   });
 
   afterEach(() => {
+    vi.restoreAllMocks();
+    // @ts-expect-error - cleaning up test mock
     delete window.gtag;
   });
 
@@ -47,6 +51,7 @@ describe('useTracking', () => {
   });
 
   it('should warn if window or gtag is not available', () => {
+    // @ts-expect-error - testing undefined gtag scenario
     window.gtag = undefined;
     const { result } = renderHook(() => useTracking('test-action'));
 

@@ -1,5 +1,6 @@
 import { useCallback } from 'react';
 import { TrackingEventSchema, type TTrackingEvent } from '@/schemas';
+import { isDev } from '@/config/env';
 
 const useTracking = (action: string) => {
   const clickEvent = useCallback(
@@ -13,29 +14,38 @@ const useTracking = (action: string) => {
 
       const event = TrackingEventSchema.parse(eventDataWithDefaults);
 
-      // Debug logging for development
-      console.group(`🎯 Tracking Event: ${event.action}`);
-      console.log('📊 Event Data:', {
-        action: event.action,
-        category: event.category,
-        label: event.label,
-        value: event.value,
-      });
+      if (isDev) {
+        console.group(`🎯 Tracking Event: ${event.action}`);
+        console.log('📊 Event Data:', {
+          action: event.action,
+          category: event.category,
+          label: event.label,
+          value: event.value,
+        });
+      }
 
       if (typeof window === 'undefined' || !window.gtag) {
-        console.warn('⚠️  Tracking skipped: window or gtag not available');
-        console.groupEnd();
+        if (isDev) {
+          console.warn('⚠️  Tracking skipped: window or gtag not available');
+          console.groupEnd();
+        }
         return;
       }
 
-      console.log('✅ Sending to Google Analytics...');
+      if (isDev) {
+        console.log('✅ Sending to Google Analytics...');
+      }
+
       window.gtag('event', event.action, {
         event_category: event.category,
         event_label: event.label,
         value: event.value,
       });
-      console.log('📤 Event sent successfully');
-      console.groupEnd();
+
+      if (isDev) {
+        console.log('📤 Event sent successfully');
+        console.groupEnd();
+      }
     },
     [action]
   );

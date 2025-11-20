@@ -3,18 +3,17 @@ import { describe, it, expect } from 'vitest';
 import TableRow from '../TableRow';
 
 const mockColumns = [
-  { key: 'col1', label: 'Column 1' },
-  { key: 'col2', label: 'Column 2' },
+  { key: 'col1', label: 'Column 1', align: 'left' as const },
+  { key: 'col2', label: 'Column 2', align: 'left' as const },
 ];
 
 const mockRow = {
-  col1: { type: 'text', value: 'Value 1' },
-  col2: { type: 'text', value: 'Value 2' },
+  col1: { value: 'Value 1', isLink: false },
+  col2: { value: 'Value 2', isLink: false },
 };
 
 describe('TableRow', () => {
   it('renders cells for each column', () => {
-    // @ts-expect-error - mocking data structure partially
     render(
       <table>
         <tbody>

@@ -5,7 +5,7 @@ import '@/styles/globals.css';
 import Header from '@/components/Header';
 import StickyBottomNavigation from '@/components/StickyBottomNavigation';
 
-import { isProd, gtmId, gaId } from '@/utilities/common';
+import { isProd, gtmId, gaId } from '@/config/env';
 import SkipToMainContent from '@/components/SkipToMainContent';
 import Footer from '@/components/Footer';
 import { metadata } from '@/constants/metadata';

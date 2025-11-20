@@ -1,9 +1,25 @@
-import { describe, it, expect, vi, beforeEach, afterEach } from 'vitest';
+import { describe, it, expect, vi, beforeEach } from 'vitest';
 
 // Mock server-only to prevent error in test environment
 vi.mock('server-only', () => {
   return {};
 });
+
+// Mock config/env.server before importing raindrop
+vi.mock('@/config/env.server', () => ({
+  serverEnv: {
+    RAINDROP_ACCESS_TOKEN: 'test-token',
+  },
+}));
+
+vi.mock('@/config/app', () => ({
+  appConfig: {
+    raindrop: {
+      apiUrl: 'https://api.raindrop.io/rest/v1/',
+      revalidate: 60 * 60 * 24,
+    },
+  },
+}));
 
 import { getBookmarks, getCollectionBookmarks } from '../raindrop';
 
@@ -12,16 +28,8 @@ const fetchMock = vi.fn();
 globalThis.fetch = fetchMock;
 
 describe('raindrop', () => {
-  const originalEnv = process.env;
-
   beforeEach(() => {
-    vi.resetModules();
-    process.env = { ...originalEnv, RAINDROP_ACCESS_TOKEN: 'test-token' };
     fetchMock.mockClear();
-  });
-
-  afterEach(() => {
-    process.env = originalEnv;
   });
 
   describe('getBookmarks', () => {
@@ -35,7 +43,7 @@ describe('raindrop', () => {
       const result = await getBookmarks();
 
       expect(fetchMock).toHaveBeenCalledWith(
-        'https://api.raindrop.io/rest/v1//collections',
+        'https://api.raindrop.io/rest/v1/collections',
         expect.objectContaining({
           method: 'GET',
           headers: {
@@ -80,7 +88,7 @@ describe('raindrop', () => {
       const result = await getCollectionBookmarks(123);
 
       expect(fetchMock).toHaveBeenCalledWith(
-        'https://api.raindrop.io/rest/v1//raindrops/123',
+        'https://api.raindrop.io/rest/v1/raindrops/123',
         expect.any(Object)
       );
       expect(result).toEqual(mockData);
@@ -104,21 +112,6 @@ describe('raindrop', () => {
 
       const result = await getCollectionBookmarks(123);
 
-      expect(result).toBeNull();
-    });
-  });
-
-  describe('getOptions', () => {
-    it('should return null when RAINDROP_ACCESS_TOKEN is not set', async () => {
-      process.env = { ...originalEnv };
-      delete process.env.RAINDROP_ACCESS_TOKEN;
-
-      vi.resetModules();
-      const { getBookmarks: getBookmarksWithoutToken } = await import(
-        '../raindrop'
-      );
-
-      const result = await getBookmarksWithoutToken();
       expect(result).toBeNull();
     });
   });

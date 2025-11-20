@@ -4,20 +4,21 @@ import TableRowValue from '../TableRowValue';
 
 describe('TableRowValue', () => {
   it('renders text value', () => {
-    const cell = { type: 'text', value: 'Test Value' };
-    // @ts-expect-error - mocking cell structure
+    const cell = { value: 'Test Value', isLink: false };
     render(<TableRowValue cell={cell} />);
     expect(screen.getByText('Test Value')).toBeInTheDocument();
   });
 
   it('renders link value', () => {
     const cell = {
-      type: 'link',
       value: 'Link Text',
       isLink: true,
-      linkProps: { href: 'http://example.com', target: '_blank' },
+      linkProps: {
+        href: 'http://example.com',
+        target: '_blank',
+        rel: 'noopener noreferrer',
+      },
     };
-    // @ts-expect-error - mocking cell structure
     render(<TableRowValue cell={cell} />);
 
     const link = screen.getByRole('link', { name: /link text/i });
