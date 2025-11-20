@@ -15,7 +15,7 @@ vi.mock('@/config/env.server', () => ({
 vi.mock('@/config/app', () => ({
   appConfig: {
     raindrop: {
-      apiUrl: 'https://api.raindrop.io/rest/v1/',
+      apiUrl: 'https://api.raindrop.io/rest/v1',
       revalidate: 60 * 60 * 24,
     },
   },
@@ -49,6 +49,9 @@ describe('raindrop', () => {
           headers: {
             'Content-Type': 'application/json',
             Authorization: 'Bearer test-token',
+          },
+          next: {
+            revalidate: 86400,
           },
         })
       );
@@ -89,7 +92,16 @@ describe('raindrop', () => {
 
       expect(fetchMock).toHaveBeenCalledWith(
         'https://api.raindrop.io/rest/v1/raindrops/123',
-        expect.any(Object)
+        expect.objectContaining({
+          method: 'GET',
+          headers: {
+            'Content-Type': 'application/json',
+            Authorization: 'Bearer test-token',
+          },
+          next: {
+            revalidate: 86400,
+          },
+        })
       );
       expect(result).toEqual(mockData);
     });
