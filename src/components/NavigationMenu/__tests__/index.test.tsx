@@ -1,39 +1,39 @@
 import { render } from '@testing-library/react';
 import { describe, expect, it } from 'vitest';
-import SideBarNavigation from '../index';
+import NavigationMenu from '../index';
 
-describe('SideBarNavigation', () => {
+describe('NavigationMenu', () => {
   it('should render', () => {
-    const { container } = render(<SideBarNavigation />);
+    const { container } = render(<NavigationMenu />);
     expect(container).toMatchSnapshot();
   });
 
   it('should render all navigation links', () => {
-    const { getByRole } = render(<SideBarNavigation />);
+    const { getByRole } = render(<NavigationMenu />);
 
-    const aboutLink = getByRole('link', { name: 'About' });
+    const resumeLink = getByRole('link', { name: 'Resume' });
     const socialsLink = getByRole('link', { name: 'Socials' });
-    const bookmarksLink = getByRole('link', { name: 'Bookmarks' });
+    const linksLink = getByRole('link', { name: 'Links' });
 
-    expect(aboutLink).toBeInTheDocument();
+    expect(resumeLink).toBeInTheDocument();
     expect(socialsLink).toBeInTheDocument();
-    expect(bookmarksLink).toBeInTheDocument();
+    expect(linksLink).toBeInTheDocument();
   });
 
   it('should have correct href attributes', () => {
-    const { getByRole } = render(<SideBarNavigation />);
+    const { getByRole } = render(<NavigationMenu />);
 
-    const aboutLink = getByRole('link', { name: 'About' });
+    const resumeLink = getByRole('link', { name: 'Resume' });
     const socialsLink = getByRole('link', { name: 'Socials' });
-    const bookmarksLink = getByRole('link', { name: 'Bookmarks' });
+    const linksLink = getByRole('link', { name: 'Links' });
 
-    expect(aboutLink).toHaveAttribute('href', '/');
+    expect(resumeLink).toHaveAttribute('href', '/resume');
     expect(socialsLink).toHaveAttribute('href', '/socials');
-    expect(bookmarksLink).toHaveAttribute('href', '/bookmarks');
+    expect(linksLink).toHaveAttribute('href', '/links');
   });
 
   it('should have proper accessibility attributes', () => {
-    const { getByRole, getAllByRole } = render(<SideBarNavigation />);
+    const { getByRole, getAllByRole } = render(<NavigationMenu />);
 
     const nav = getByRole('navigation');
     expect(nav).toBeInTheDocument();

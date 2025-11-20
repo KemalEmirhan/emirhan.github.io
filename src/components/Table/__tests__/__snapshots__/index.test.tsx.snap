@@ -246,7 +246,7 @@ exports[`Table Component > renders links when cell is marked as link 1`] = `
             style="text-align: right;"
           >
             <a
-              class="text-gray-500 hover:text-gray-800 underline flex items-center justify-end text-base after:absolute after:inset-0 focus-visible:focus-ring"
+              class="text-gray-700 hover:text-gray-900 underline flex items-center justify-end text-base after:absolute after:inset-0 focus-visible:focus-ring"
               href="https://github.com/KemalEmirhan"
               rel="noopener noreferrer"
               target="_blank"

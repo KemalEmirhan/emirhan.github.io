@@ -19,10 +19,10 @@ describe('StickyBottomNavigation', () => {
     expect(container).toMatchSnapshot();
   });
 
-  test('should handle /', () => {
-    mockPathname.mockReturnValue('/');
+  test('should handle /resume', () => {
+    mockPathname.mockReturnValue('/resume');
     const { container, getByText } = render(<StickyBottomNavigation />);
-    expect(getByText('About')).toHaveAttribute('data-active', 'true');
+    expect(getByText('Resume')).toHaveAttribute('data-active', 'true');
     expect(container).toMatchSnapshot();
   });
 

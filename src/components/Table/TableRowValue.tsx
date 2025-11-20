@@ -22,7 +22,7 @@ const TableRowValue = ({ cell }: TableRowValueProps) => {
         href={linkProps.href}
         target={linkProps.target}
         rel={linkProps.rel}
-        className='text-gray-500 hover:text-gray-800 underline flex items-center justify-end text-base after:absolute after:inset-0 focus-visible:focus-ring'
+        className='text-gray-700 hover:text-gray-900 underline flex items-center justify-end text-base after:absolute after:inset-0 focus-visible:focus-ring'
       >
         <span className='whitespace-nowrap max-w-[100px] truncate md:max-w-none'>
           {value}
