@@ -117,14 +117,12 @@ export const BookmarksSchema = z.object({
   items: z.array(BookmarkItemSchema),
 });
 
-export const CollectionBookmarkSchema = z
-  .object({
-    _id: z.number(),
-    link: z.string(),
-    title: z.string(),
-    excerpt: z.string().optional(),
-  })
-  .loose();
+export const CollectionBookmarkSchema = z.looseObject({
+  _id: z.number(),
+  link: z.string(),
+  title: z.string(),
+  excerpt: z.string().optional(),
+});
 
 export const CollectionBookmarksSchema = z.object({
   result: z.boolean(),
