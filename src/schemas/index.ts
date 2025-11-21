@@ -96,7 +96,7 @@ export const BookmarkUserSchema = z.object({
 });
 
 export const BookmarkItemSchema = z.object({
-  _id: z.string(),
+  _id: z.number(),
   access: BookmarkAccessSchema,
   collaborators: BookmarkCollaboratorsSchema,
   color: z.string(),
