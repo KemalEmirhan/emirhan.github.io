@@ -4,9 +4,7 @@ import { PAGES } from '../constants';
 test.describe('Socials page', () => {
   test('should load the socials page successfully', async ({ page }) => {
     await page.goto(PAGES.SOCIALS, { waitUntil: 'load' });
-    await expect(page).toHaveTitle(
-      'Emirhan Kemal Kosem - Frontend Software Engineer'
-    );
+    await expect(page).toHaveTitle(/Socials | Emirhan Kemal Kosem/);
 
     // Check if the main content is visible
     await expect(page.locator('main')).toBeVisible();

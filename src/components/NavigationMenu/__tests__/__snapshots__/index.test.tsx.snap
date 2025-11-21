@@ -1,6 +1,6 @@
 // Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
 
-exports[`SideBarNavigation > should render 1`] = `
+exports[`NavigationMenu > should render 1`] = `
 <div>
   <nav
     class="items-center gap-4 hidden lg:flex"

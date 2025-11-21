@@ -4,7 +4,7 @@ import { getActiveLinkIndex, calculateDotPosition } from '../utils';
 describe('StickyBottomNavigation utils', () => {
   describe('getActiveLinkIndex', () => {
     test('should return correct index for existing pathname', () => {
-      expect(getActiveLinkIndex('/')).toBe(0);
+      expect(getActiveLinkIndex('/resume')).toBe(0);
       expect(getActiveLinkIndex('/socials')).toBe(1);
     });
 

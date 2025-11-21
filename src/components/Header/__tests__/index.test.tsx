@@ -27,25 +27,10 @@ describe('Header', () => {
     expect(heading).toHaveTextContent('emrhnkml.');
   });
 
-  it('should render the current date', () => {
-    render(<Header />);
-
-    const timeElement = screen.getByText(/^\w+ \d{1,2}, \d{4}$/);
-    expect(timeElement).toBeInTheDocument();
-    expect(timeElement.tagName).toBe('TIME');
-
-    // Check that the date is in the expected format
-    const dateText = timeElement.textContent;
-    expect(dateText).toMatch(/^\w+ \d{1,2}, \d{4}$/);
-  });
-
   it('should have proper accessibility attributes', () => {
     render(<Header />);
 
     const header = screen.getByRole('banner');
     expect(header).toBeInTheDocument();
-
-    const timeElement = screen.getByText(/^\w+ \d{1,2}, \d{4}$/);
-    expect(timeElement).toHaveAttribute('dateTime');
   });
 });

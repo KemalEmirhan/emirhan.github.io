@@ -80,3 +80,61 @@ export type TTableData = z.infer<typeof TableDataSchema>;
 
 // Tracking event type export
 export type TTrackingEvent = z.infer<typeof TrackingEventSchema>;
+
+// Raindrop API schemas
+export const BookmarkAccessSchema = z.object({
+  level: z.number(),
+  draggable: z.boolean(),
+});
+
+export const BookmarkCollaboratorsSchema = z.object({
+  $id: z.string(),
+});
+
+export const BookmarkUserSchema = z.object({
+  $id: z.number(),
+});
+
+export const BookmarkItemSchema = z.object({
+  _id: z.number(),
+  access: BookmarkAccessSchema,
+  collaborators: BookmarkCollaboratorsSchema,
+  color: z.string(),
+  count: z.number(),
+  cover: z.array(z.string()),
+  created: z.string(),
+  expanded: z.boolean(),
+  lastUpdate: z.string(),
+  public: z.boolean(),
+  sort: z.number(),
+  title: z.string(),
+  user: BookmarkUserSchema,
+  view: z.string(),
+});
+
+export const BookmarksSchema = z.object({
+  result: z.number(),
+  items: z.array(BookmarkItemSchema),
+});
+
+export const CollectionBookmarkSchema = z.looseObject({
+  _id: z.number(),
+  link: z.string(),
+  title: z.string(),
+  excerpt: z.string().optional(),
+});
+
+export const CollectionBookmarksSchema = z.object({
+  result: z.boolean(),
+  items: z.array(CollectionBookmarkSchema),
+});
+
+export type TBookmarkAccess = z.infer<typeof BookmarkAccessSchema>;
+export type TBookmarkCollaborators = z.infer<
+  typeof BookmarkCollaboratorsSchema
+>;
+export type TBookmarkUser = z.infer<typeof BookmarkUserSchema>;
+export type TBookmarkItem = z.infer<typeof BookmarkItemSchema>;
+export type TBookmarks = z.infer<typeof BookmarksSchema>;
+export type TCollectionBookmark = z.infer<typeof CollectionBookmarkSchema>;
+export type TCollectionBookmarks = z.infer<typeof CollectionBookmarksSchema>;
