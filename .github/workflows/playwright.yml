@@ -37,6 +37,7 @@ jobs:
 
       - uses: daun/playwright-report-summary@v3.10.0
         if: always()
+        continue-on-error: true
         with:
           report-file: ./results.json
           comment-title: 'Playwright Report'
