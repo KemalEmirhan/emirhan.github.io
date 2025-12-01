@@ -5,7 +5,7 @@ export default defineConfig({
   fullyParallel: true,
   forbidOnly: !!process.env.CI,
   workers: process.env.CI ? 8 : undefined,
-  reporter: 'json',
+  reporter: [['json', { outputFile: './accessibility-results.json' }]],
   use: {
     baseURL: 'http://localhost:3000',
     trace: 'on-first-retry',

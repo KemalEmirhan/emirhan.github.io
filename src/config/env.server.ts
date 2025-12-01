@@ -2,7 +2,7 @@ import 'server-only';
 import { z } from 'zod';
 
 const serverEnvSchema = z.object({
-  RAINDROP_ACCESS_TOKEN: z.string().min(1),
+  RAINDROP_ACCESS_TOKEN: z.string().optional(),
 });
 
 export const serverEnv = serverEnvSchema.parse({

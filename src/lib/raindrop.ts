@@ -3,20 +3,28 @@ import { appConfig } from '@/config/app';
 import { serverEnv } from '@/config/env.server';
 import type { TBookmarks, TCollectionBookmarks } from '@/schemas';
 
-const getOptions = () => ({
-  method: 'GET' as const,
-  headers: {
-    'Content-Type': 'application/json',
-    Authorization: `Bearer ${serverEnv.RAINDROP_ACCESS_TOKEN}`,
-  },
-  next: {
-    revalidate: appConfig.raindrop.revalidate,
-  },
-});
+const getOptions = () => {
+  if (!serverEnv.RAINDROP_ACCESS_TOKEN) {
+    return null;
+  }
+  return {
+    method: 'GET' as const,
+    headers: {
+      'Content-Type': 'application/json',
+      Authorization: `Bearer ${serverEnv.RAINDROP_ACCESS_TOKEN}`,
+    },
+    next: {
+      revalidate: appConfig.raindrop.revalidate,
+    },
+  };
+};
 
 export const getBookmarks = async (): Promise<TBookmarks | null> => {
   try {
     const options = getOptions();
+    if (!options) {
+      return null;
+    }
     const response = await fetch(
       `${appConfig.raindrop.apiUrl}/collections`,
       options
@@ -42,6 +50,9 @@ export const getCollectionBookmarks = async (
 ): Promise<TCollectionBookmarks | null> => {
   try {
     const options = getOptions();
+    if (!options) {
+      return null;
+    }
     const response = await fetch(
       `${appConfig.raindrop.apiUrl}/raindrops/${collectionId}`,
       options
