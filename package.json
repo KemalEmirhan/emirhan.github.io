@@ -35,7 +35,7 @@
     "classnames": "^2.5.1",
     "lucide-react": "^0.544.0",
     "motion": "^12.23.16",
-    "next": "^15.5.3",
+    "next": "^15.5.7",
     "react": "^19.0.0",
     "react-dom": "^19.0.0",
     "server-only": "^0.0.1",
