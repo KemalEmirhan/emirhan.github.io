@@ -25,7 +25,7 @@ export default function RootLayout({ children }: React.PropsWithChildren) {
         {isProd && gtmId && <GoogleTagManager gtmId={gtmId} />}
       </head>
       <body
-        className={`${inter.variable} antialiased container min-h-screen flex flex-col`}
+        className={`${inter.variable} antialiased container-wrapper min-h-screen flex flex-col`}
       >
         <SkipToMainContent />
         <Header />
