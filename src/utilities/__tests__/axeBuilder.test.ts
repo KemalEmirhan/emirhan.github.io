@@ -6,10 +6,11 @@ import { Page } from '@playwright/test';
 vi.mock('@axe-core/playwright', () => {
   const mockAnalyze = vi.fn().mockResolvedValue({ violations: [] });
   const mockWithTags = vi.fn().mockReturnValue({ analyze: mockAnalyze });
-  const mockAxeBuilder = vi.fn().mockReturnValue({ withTags: mockWithTags });
 
   return {
-    AxeBuilder: mockAxeBuilder,
+    AxeBuilder: vi.fn(function () {
+      return { withTags: mockWithTags };
+    }),
   };
 });
 
