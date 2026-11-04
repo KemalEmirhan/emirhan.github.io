@@ -6,7 +6,7 @@ export const metadata: Metadata = {
     template: '%s | Emirhan Kemal Kosem',
   },
   description:
-    'Frontend Software Engineer with 8+ years of experience in React, Next.js, TypeScript, and GraphQL. Based in Berlin, specializing in high-performance web applications, accessibility, and modern web standards.',
+    'Frontend engineer in Berlin, originally from Türkiye. Mostly thinking about animations, accessibility, and how things feel under a finger.',
   keywords: [
     'Emirhan Kemal Kosem',
     'Emir Kemal',
@@ -46,7 +46,7 @@ export const metadata: Metadata = {
     siteName: 'Emirhan Kemal Kosem',
     title: 'Emirhan Kemal Kosem - Frontend Software Engineer',
     description:
-      'Frontend Software Engineer with 8+ years of experience in React, Next.js, TypeScript, and GraphQL. Based in Berlin, specializing in high-performance web applications, accessibility, and modern web standards.',
+      'Frontend engineer in Berlin, originally from Türkiye. Mostly thinking about animations, accessibility, and how things feel under a finger.',
     images: [
       {
         url: '/og',
@@ -70,7 +70,7 @@ export const metadata: Metadata = {
     creator: '@KsemEmir',
     title: 'Emirhan Kemal Kosem - Frontend Software Engineer',
     description:
-      'Frontend Software Engineer with 8+ years of experience in React, Next.js, TypeScript, and GraphQL. Based in Berlin, specializing in high-performance web applications, accessibility, and modern web standards.',
+      'Frontend engineer in Berlin, originally from Türkiye. Mostly thinking about animations, accessibility, and how things feel under a finger.',
     images: ['/og'],
   },
   robots: {
@@ -95,7 +95,6 @@ export const metadata: Metadata = {
   category: 'technology',
   classification: 'Personal Website',
   other: {
-    'theme-color': '#ffffff',
     'color-scheme': 'light',
     'msapplication-TileColor': '#ffffff',
     'msapplication-config': '/browserconfig.xml',

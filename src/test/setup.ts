@@ -10,3 +10,20 @@ expect.extend(matchers);
 afterEach(() => {
   cleanup();
 });
+
+// jsdom has no matchMedia; components read it for reduced motion and pointer type.
+if (!window.matchMedia) {
+  Object.defineProperty(window, 'matchMedia', {
+    writable: true,
+    value: (query: string) => ({
+      matches: false,
+      media: query,
+      onchange: null,
+      addEventListener: () => undefined,
+      removeEventListener: () => undefined,
+      addListener: () => undefined,
+      removeListener: () => undefined,
+      dispatchEvent: () => false,
+    }),
+  });
+}

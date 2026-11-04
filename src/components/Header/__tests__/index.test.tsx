@@ -1,36 +1,25 @@
 import { render, screen } from '@testing-library/react';
-import {
-  afterAll,
-  beforeAll,
-  beforeEach,
-  describe,
-  expect,
-  it,
-  vi,
-} from 'vitest';
+import { describe, expect, it } from 'vitest';
 import Header from '../';
 
 describe('Header', () => {
-  beforeAll(() => vi.useFakeTimers());
-  beforeEach(() => vi.setSystemTime(new Date('2025-01-01T00:00:00Z')));
-  afterAll(() => vi.useRealTimers());
-
-  it('should render', () => {
-    const { container } = render(<Header />);
-    expect(container).toMatchSnapshot();
+  it('renders the name as the page heading', () => {
+    render(<Header />);
+    expect(screen.getByRole('heading', { level: 1 })).toHaveTextContent(
+      'Emirhan Kemal Kosem'
+    );
+    expect(screen.getByRole('banner')).toBeInTheDocument();
   });
 
-  it('should render the main heading', () => {
-    render(<Header />);
-
-    const heading = screen.getByRole('heading', { level: 1 });
-    expect(heading).toHaveTextContent('emrhnkml.');
+  it('shows only the city when weather is unavailable', () => {
+    render(<Header weather={null} />);
+    expect(screen.getByText('berlin')).toBeInTheDocument();
   });
 
-  it('should have proper accessibility attributes', () => {
-    render(<Header />);
-
-    const header = screen.getByRole('banner');
-    expect(header).toBeInTheDocument();
+  it('shows Berlin weather when available', () => {
+    render(
+      <Header weather={{ temperature: 9, label: 'overcast', rainy: false }} />
+    );
+    expect(screen.getByText(/berlin · 9° overcast/)).toBeInTheDocument();
   });
 });

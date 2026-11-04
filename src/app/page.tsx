@@ -1,67 +1,54 @@
 import React from 'react';
 
-import Card from '@/components/Card';
+import Header from '@/components/Header';
+import Footer from '@/components/Footer';
+import Pond from '@/components/Pond';
+import FloatSink from '@/components/FloatSink';
+import Works from '@/components/Works';
+import LinkPreview from '@/components/LinkPreview';
+import { FLOATS, SINKS, WORKS } from '@/constants/content';
+import { getBerlinWeather } from '@/lib/weather';
+import { getPackageStats } from '@/lib/npm';
 
-const Home = () => {
+export const revalidate = 3600;
+
+const Home = async () => {
+  const [weather, ...packageStats] = await Promise.all([
+    getBerlinWeather(),
+    ...WORKS.map(work =>
+      work.npm ? getPackageStats(work.npm) : Promise.resolve(null)
+    ),
+  ]);
+  const stats = Object.fromEntries(
+    WORKS.map((work, i) => [work.npm ?? work.name, packageStats[i]])
+  );
+
   return (
-    <>
-      <Card className='grid-col-full'>
-        <h2 className='text-2xl font-bold'>Hello 🖖🏽, welcome to my ...</h2>
-        <p>Here is some random facts about me if you are interested...</p>
-      </Card>
-
-      <Card>
-        <h3 className='text-lg font-bold'>Me</h3>
-        <ol className='list-disc list-inside'>
-          <li>I'm a Software Engineer but mostly frontend focused.</li>
-          <li>I'm based in Berlin, Germany but I'm originally from Turkey.</li>
-        </ol>
-      </Card>
-
-      <Card>
-        <h3 className='text-lg font-bold inline-flex items-center gap-2'>
-          Things That I Like
-          <small className='text-sm font-light text-gray-700'>
-            (in random order)
-          </small>
-        </h3>
-        <ol className='list-disc list-inside'>
-          <li>Accessibility.</li>
-          <li>Animations.</li>
-          <li>Design and UX.</li>
-          <li>Games.</li>
-          <li>Bouldering and gym stuff.</li>
-          <li>Spending time in the kitchen.</li>
-          <li>Sociology, history and philosophy.</li>
-          <li>Books.</li>
-          <li>Movies.</li>
-          <li>Classical music.</li>
-          <li>Football (not soccer).</li>
-        </ol>
-      </Card>
-
-      <Card>
-        <h3 className='text-lg font-bold inline-flex items-center gap-2'>
-          Things Don't I Like
-          <small className='text-sm font-light text-gray-700'>
-            (in random order)
-          </small>
-        </h3>
-        <ol className='list-disc list-inside'>
-          <li>RPG games.</li>
-          <li>Turkish pop music.</li>
-          <li>Coriander.</li>
-          <li>Discussing politics.</li>
-          <li>Shopping malls.</li>
-          <li>Slow walkers.</li>
-          <li>Eggs.</li>
-        </ol>
-      </Card>
-
-      <Card className='grid-col-full'>
-        <h3 className='text-lg'>This is a banner</h3>
-      </Card>
-    </>
+    <div className='page'>
+      <Header weather={weather} />
+      <main id='main-content' className='stack'>
+        <p className='rise lede' style={{ '--i': 1 } as React.CSSProperties}>
+          Frontend engineer in Berlin, originally from Türkiye. I work at{' '}
+          <LinkPreview
+            href='https://madita.ai/en'
+            image='/previews/madita.jpg'
+            domain='madita.ai'
+            title='AI-powered first interviews for recruiting teams'
+          >
+            HeyJobs
+          </LinkPreview>
+          , where I do both design and engineering. I spend most of my time on
+          animations, accessibility, and <em>how things feel</em> under a
+          finger.
+        </p>
+        <div className='rise-fade' style={{ '--i': 2 } as React.CSSProperties}>
+          <Pond rainy={weather?.rainy ?? false} />
+        </div>
+        <Works works={WORKS} stats={stats} />
+        <FloatSink floats={FLOATS} sinks={SINKS} />
+      </main>
+      <Footer />
+    </div>
   );
 };
 

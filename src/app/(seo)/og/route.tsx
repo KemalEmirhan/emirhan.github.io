@@ -119,7 +119,7 @@ export async function GET() {
               lineHeight: '1.4',
             }}
           >
-            8+ years of experience building high-performance web applications
+            Animations, accessibility, and how things feel under a finger
             <br />
             Based in Berlin • Specializing in accessibility & modern web
             standards

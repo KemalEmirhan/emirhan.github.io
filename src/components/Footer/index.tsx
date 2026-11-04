@@ -1,19 +1,27 @@
 import React from 'react';
-import Card from '../Card';
+import { SOCIALS } from '@/constants/content';
+import Clock from '@/components/Clock';
+import SoundToggle from '@/components/SoundToggle';
+import ExternalLink from '@/components/ExternalLink';
 
-const Footer = () => {
-  return (
-    <footer className='mt-auto py-24'>
-      <Card>
-        <h2 className='text-2xl font-bold'>This is Footer</h2>
-        <p>Thank you for visiting and hope to see you again!</p>
-        <hr className='border-gray-700' />
-        <p className='text-sm text-gray-700 text-right'>
-          <small>© {new Date().getFullYear()} Emirhan Kemal Kosem.</small>
-        </p>
-      </Card>
-    </footer>
-  );
-};
+const Footer = () => (
+  <footer
+    className='rise flex flex-col gap-2 border-t border-ink/20 pt-2 md:flex-row md:items-center md:justify-between md:pt-6'
+    style={{ '--i': 5 } as React.CSSProperties}
+  >
+    <ul className='grid grid-cols-2 md:flex md:gap-5'>
+      {SOCIALS.map(({ label, href }) => (
+        <li key={label}>
+          <ExternalLink href={href} className='social'>
+            {label}
+          </ExternalLink>
+        </li>
+      ))}
+    </ul>
+    <p className='label pt-2 md:pt-0'>
+      <Clock /> · <SoundToggle /> · © {new Date().getFullYear()}
+    </p>
+  </footer>
+);
 
 export default Footer;

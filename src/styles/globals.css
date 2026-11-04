@@ -1,78 +1,429 @@
 @import 'tailwindcss';
 
 @theme {
-  --font-sans: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica,
-    Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol';
-  --color-background: #efefef;
-  --color-background-secondary: #f5f5f5;
+  --color-fog: #e8ecee;
+  --color-ink: #13254f;
+  --color-muted: #5b6b80;
+  --font-sans: var(--font-inter), system-ui, sans-serif;
+  --ease-out-quart: cubic-bezier(0.165, 0.84, 0.44, 1);
 }
 
 @layer base {
-  body {
-    font-family: var(--font-inter);
-    background-color: var(--color-background);
-    scroll-behavior: smooth;
+  html {
+    background-color: var(--color-fog);
+    color: var(--color-ink);
+    -webkit-tap-highlight-color: transparent;
   }
 
-  #__next {
-    min-height: 100vh;
+  body {
+    font-family: var(--font-sans);
+    min-height: 100dvh;
+  }
+
+  :focus-visible {
+    outline: 2px solid var(--color-ink);
+    outline-offset: 4px;
+    border-radius: 2px;
   }
 }
 
 @layer components {
-  .top-blur {
-    mask-image: linear-gradient(#000 25%, #0000);
-  }
-
-  .dot-leaders {
-    background-image: repeating-linear-gradient(to right,
-        #9ca3af 0px,
-        #9ca3af 2px,
-        transparent 1px,
-        transparent 8px);
-    background-size: 4px 2px;
-    background-repeat: repeat-x;
-    background-position: center;
-  }
-
-  .grid-col-full {
-    grid-column: 1 / -1;
-  }
-
-  .container-wrapper {
-    margin: 0px auto;
-    max-width: 60rem;
-    padding-inline: 1.5rem;
+  .page {
+    --item-size: 16px;
+    display: flex;
+    flex-direction: column;
+    gap: 72px;
     width: 100%;
+    max-width: calc(600px + 48px);
+    margin-inline: auto;
+    padding: 28px 24px 40px;
   }
 
-  .box-shadow {
-    --box-line-color: #000;
-    --box-line-size: 8px;
-    --box-border-radius: 0.5rem;
-    --box-offset: 1rem;
+  @media (min-width: 768px) {
+    .page {
+      --item-size: 18px;
+      gap: 96px;
+      padding-top: 88px;
+      padding-bottom: 72px;
+    }
+  }
 
-    background-image: linear-gradient(45deg,
-        transparent 33.33%,
-        var(--box-line-color) 33.33%,
-        var(--box-line-color) 50%,
-        transparent 50%,
-        transparent 83.33%,
-        var(--box-line-color) 83.33%,
-        var(--box-line-color) 100%);
-    background-size: var(--box-line-size) var(--box-line-size);
-    border-radius: var(--box-border-radius);
-    content: '';
-    display: block;
-    height: 100%;
-    left: var(--box-offset);
+  .stack {
+    display: flex;
+    flex-direction: column;
+    gap: inherit;
+  }
+
+  .label {
+    font-size: 12px;
+    letter-spacing: 0.01em;
+    font-variant-numeric: tabular-nums;
+    color: var(--color-muted);
+  }
+
+  .lede {
+    font-size: 20px;
+    line-height: 30px;
+    letter-spacing: -0.015em;
+  }
+
+  @media (min-width: 768px) {
+    .lede {
+      font-size: 22px;
+      line-height: 33px;
+      letter-spacing: -0.02em;
+    }
+  }
+
+  .item {
+    font-size: var(--item-size);
+    line-height: 1.4;
+    letter-spacing: -0.011em;
+  }
+
+  .lean > li {
+    translate: var(--lean, 0px) 0;
+    transition: translate 250ms var(--ease-out-quart);
+  }
+
+  .preview {
+    position: relative;
+    white-space: nowrap;
+  }
+
+  /* Resting underline at 30%, a full-strength one draws in on hover/focus. */
+  .preview-link {
+    font-style: italic;
+    color: var(--color-ink);
+    background-image:
+      linear-gradient(var(--color-ink), var(--color-ink)),
+      linear-gradient(
+        color-mix(in srgb, var(--color-ink) 30%, transparent),
+        color-mix(in srgb, var(--color-ink) 30%, transparent)
+      );
+    background-repeat: no-repeat;
+    background-position:
+      0 100%,
+      0 100%;
+    background-size:
+      0% 1px,
+      100% 1px;
+    transition: background-size 250ms var(--ease-out-quart);
+  }
+
+  .preview-link:focus-visible {
+    background-size:
+      100% 1px,
+      100% 1px;
+  }
+
+  @media (hover: hover) and (pointer: fine) {
+    .preview-link:hover {
+      background-size:
+        100% 1px,
+        100% 1px;
+    }
+  }
+
+  /* A small polaroid that swings down from the link, tilted like it was taped on. */
+  .preview-card {
+    --tilt: 10deg;
     position: absolute;
-    top: var(--box-offset);
-    width: 100%;
-    z-index: -2;
+    left: 50%;
+    margin-left: -68px;
+    top: calc(100% + 16px);
+    z-index: 20;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    width: 136px;
+    padding: 5px 5px 7px;
+    border-radius: 4px;
+    background: #fbfcfc;
+    box-shadow:
+      0 1px 2px rgb(19 37 79 / 0.08),
+      0 10px 24px -6px rgb(19 37 79 / 0.22);
+    font-style: normal;
+    white-space: normal;
+    pointer-events: none;
+    transform-origin: 50% 0;
+    opacity: 0;
+    visibility: hidden;
+    transform: rotate(0deg) translateY(-6px) scale(0.9);
+    transition:
+      opacity 120ms ease,
+      transform 120ms ease,
+      visibility 0s linear 120ms;
   }
 
-  .focus-ring {
-    @apply outline-none ring-2 ring-gray-500 ring-offset-2;
+  .preview-card[data-open='true'] {
+    opacity: 1;
+    visibility: visible;
+    transform: rotate(var(--tilt));
+    transition:
+      opacity 160ms var(--ease-out-quart),
+      transform 380ms cubic-bezier(0.34, 1.56, 0.64, 1),
+      visibility 0s;
+  }
+
+  .preview-tape {
+    position: absolute;
+    top: -8px;
+    left: 50%;
+    width: 44px;
+    height: 14px;
+    background: rgb(255 214 102 / 0.55);
+    transform: translateX(-50%) rotate(-4deg);
+    border-radius: 1px;
+  }
+
+  .preview-image {
+    display: block;
+    width: 126px;
+    height: 79px;
+    border-radius: 2px;
+    object-fit: cover;
+    object-position: top;
+  }
+
+  .preview-caption {
+    padding-inline: 2px;
+    font-size: 10px;
+    letter-spacing: 0.01em;
+    color: var(--color-ink);
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .preview-card,
+    .preview-card[data-open='true'] {
+      transform: rotate(var(--tilt));
+    }
+    .preview-link {
+      transition: none;
+    }
+  }
+
+  .work-name {
+    font-size: var(--item-size);
+    font-weight: 500;
+    letter-spacing: -0.011em;
+    color: var(--color-ink);
+    text-decoration: underline;
+    text-decoration-color: color-mix(
+      in srgb,
+      var(--color-ink) 30%,
+      transparent
+    );
+    text-underline-offset: 4px;
+  }
+
+  @media (hover: hover) and (pointer: fine) {
+    .work-name:hover {
+      text-decoration-color: var(--color-ink);
+    }
+  }
+
+  .work-description {
+    font-size: 15px;
+    line-height: 22px;
+    color: var(--color-muted);
+  }
+
+  .link-button,
+  .social {
+    font-size: 12px;
+    letter-spacing: 0.01em;
+    white-space: nowrap;
+    color: var(--color-ink);
+    text-decoration: underline;
+    text-decoration-color: color-mix(
+      in srgb,
+      var(--color-ink) 30%,
+      transparent
+    );
+    text-underline-offset: 3px;
+    cursor: pointer;
+    transition: text-decoration-color 150ms ease;
+  }
+
+  .social {
+    letter-spacing: 0;
+  }
+
+  @media (hover: hover) and (pointer: fine) {
+    .link-button:hover,
+    .social:hover {
+      text-decoration: underline;
+      text-decoration-color: var(--color-ink);
+    }
+  }
+
+  /* 44px finger targets on touch screens without changing the visual size. */
+  .tap-target {
+    display: inline-flex;
+    align-items: center;
+    min-height: 44px;
+  }
+
+  @media (min-width: 768px) {
+    .social.tap-target {
+      min-height: 0;
+    }
+  }
+
+  /* Bigger touch area for inline text buttons without moving the text. */
+  @media (pointer: coarse) {
+    .link-button {
+      display: inline-block;
+      padding-block: 13px;
+      margin-block: -13px;
+    }
+  }
+
+  .pond-surface {
+    position: relative;
+    display: block;
+    width: 100%;
+    height: 160px;
+    color: var(--color-ink);
+    cursor: crosshair;
+    touch-action: manipulation;
+    -webkit-user-select: none;
+    user-select: none;
+  }
+
+  @media (min-width: 768px) {
+    .pond-surface {
+      height: 240px;
+    }
+  }
+
+  .pond-drawing,
+  .pond-canvas {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    transition: opacity 400ms var(--ease-out-quart);
+  }
+
+  .pond-canvas {
+    opacity: 0;
+  }
+
+  .pond-surface:focus-visible {
+    border-radius: 50%;
+    outline-offset: -6px;
+  }
+
+  .pond-surface[data-ready='true'] .pond-canvas {
+    opacity: 1;
+  }
+
+  .pond-surface[data-ready='true'] .pond-drawing {
+    opacity: 0;
+  }
+
+  .pond-dot {
+    position: absolute;
+    width: 5px;
+    height: 5px;
+    border-radius: 999px;
+    background: var(--color-ink);
+    opacity: 0;
+    pointer-events: none;
+  }
+
+  /* Stone cursor: mouse only, switched on by JS so a failed script never hides the cursor. */
+  .pond-surface[data-stone='on'] {
+    cursor: none;
+  }
+
+  .pond-stone {
+    position: absolute;
+    left: 0;
+    top: 0;
+    pointer-events: none;
+    opacity: 0;
+    transition: opacity 150ms ease;
+  }
+
+  .pond-surface[data-stone='on'] .pond-stone {
+    opacity: 1;
+  }
+
+  .pond-stone-art,
+  .pond-stone-shadow {
+    position: absolute;
+    left: 0;
+    top: 0;
+  }
+
+  .pond-stone-art {
+    transform: translate(-50%, -150%);
+  }
+
+  .pond-stone-shadow {
+    width: 18px;
+    height: 5px;
+    border-radius: 50%;
+    background: color-mix(in srgb, var(--color-ink) 18%, transparent);
+    transform: translate(-50%, -50%);
+  }
+
+  .pond-caption {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 16px;
+    min-height: 44px;
+    margin-top: 4px;
+    white-space: nowrap;
+  }
+
+  .hint-coarse {
+    display: none;
+  }
+
+  @media (pointer: coarse) {
+    .hint-fine {
+      display: none;
+    }
+    .hint-coarse {
+      display: inline;
+    }
+  }
+
+  /* Load: CSS only, so it runs while JS is still hydrating. */
+  .rise,
+  .rise-fade {
+    animation: rise 400ms var(--ease-out-quart) both;
+    animation-delay: calc(var(--i, 0) * 60ms);
+  }
+
+  .rise-fade {
+    animation-name: fade;
+  }
+
+  @keyframes rise {
+    from {
+      opacity: 0;
+      transform: translateY(8px);
+    }
+  }
+
+  @keyframes fade {
+    from {
+      opacity: 0;
+    }
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .rise {
+      animation-name: fade;
+    }
+    .lean > li {
+      transition: none;
+    }
   }
 }

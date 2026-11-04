@@ -113,7 +113,7 @@ export async function GET() {
               margin: '0',
             }}
           >
-            8+ years experience • Berlin • Accessibility & Modern Web Standards
+            Berlin • Animations • Accessibility
           </p>
         </div>
       </div>
