@@ -32,6 +32,12 @@ export default defineConfig({
         'src/lib/**',
         'src/utilities/**',
       ],
+      // WebGL and device sensors can't run in jsdom; covered by the e2e and device checks.
+      exclude: [
+        'src/lib/pond/engine.ts',
+        'src/components/Pond/TiltControl.tsx',
+        '**/__tests__/**',
+      ],
     },
   },
   resolve: {

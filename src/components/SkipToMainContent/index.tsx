@@ -1,19 +1,12 @@
 import React from 'react';
 
-import { ArrowDown } from 'lucide-react';
-
-const SkipToMainContent = () => {
-  return (
-    <a
-      href='#main-content'
-      className='w-fit inline-flex items-center justify-center gap-0.5rem transform -translate-y-[200%] transition-transform duration-300 focus-visible:translate-y-1 focus-visible:focus-ring'
-    >
-      <span className='text-base font-medium text-gray-800'>
-        Skip to main content
-      </span>
-      <ArrowDown className='w-4 h-4' />
-    </a>
-  );
-};
+const SkipToMainContent = () => (
+  <a
+    href='#main-content'
+    className='label fixed left-4 top-4 z-50 -translate-y-[200%] bg-fog px-3 py-2 text-ink transition-transform duration-200 focus-visible:translate-y-0'
+  >
+    Skip to main content
+  </a>
+);
 
 export default SkipToMainContent;

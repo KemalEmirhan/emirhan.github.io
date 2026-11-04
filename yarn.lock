@@ -1991,6 +1991,11 @@ braces@^3.0.3:
   dependencies:
     fill-range "^7.1.1"
 
+browser-haptic@^1.1.1:
+  version "1.1.1"
+  resolved "https://registry.yarnpkg.com/browser-haptic/-/browser-haptic-1.1.1.tgz#68334f96c21e7d88223500708ee966dc207c7412"
+  integrity sha512-1JjrtXuHiR7H/g9XDUVe3v28c3b0E0u6izMdWsZBMSRDp5HkcwnbzMiyzw7bzgWpNLfa0VTMmt0HId+A+jXemQ==
+
 browserslist@^4.0.0, browserslist@^4.25.1:
   version "4.26.2"
   resolved "https://registry.yarnpkg.com/browserslist/-/browserslist-4.26.2.tgz#7db3b3577ec97f1140a52db4936654911078cef3"

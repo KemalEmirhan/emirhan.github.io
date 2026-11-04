@@ -13,6 +13,6 @@ describe('SkipToMainContent', () => {
   it('is initially hidden (visually)', () => {
     render(<SkipToMainContent />);
     const link = screen.getByRole('link', { name: /skip to main content/i });
-    expect(link).toHaveClass('transform', '-translate-y-[200%]');
+    expect(link).toHaveClass('-translate-y-[200%]');
   });
 });

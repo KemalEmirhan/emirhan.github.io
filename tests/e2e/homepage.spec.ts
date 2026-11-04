@@ -29,7 +29,7 @@ test.describe('Homepage', () => {
     const metaDescription = page.locator('meta[name="description"]');
     await expect(metaDescription).toHaveAttribute(
       'content',
-      'Frontend Software Engineer with 8+ years of experience in React, Next.js, TypeScript, and GraphQL. Based in Berlin, specializing in high-performance web applications, accessibility, and modern web standards.'
+      'Frontend engineer in Berlin, originally from Türkiye. Mostly thinking about animations, accessibility, and how things feel under a finger.'
     );
 
     // Check favicon

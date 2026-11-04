@@ -1,18 +1,29 @@
 import React from 'react';
-import Link from 'next/link';
-import NavigationMenu from '@/components/NavigationMenu';
+import { BIO_NAME } from '@/constants/content';
+import type { Weather } from '@/lib/weather';
 
-const Header = () => {
-  return (
-    <header className='w-full mb-24'>
-      <div className='flex items-center justify-between'>
-        <Link href='/' className='focus-visible:focus-ring'>
-          <h1 className='text-2xl font-bold'>emrhnkml.</h1>
-        </Link>
-        <NavigationMenu />
-      </div>
-    </header>
-  );
+type HeaderProps = {
+  weather?: Weather | null;
 };
+
+const Header = ({ weather }: HeaderProps) => (
+  <header
+    className='rise flex flex-wrap items-baseline justify-between gap-x-4 gap-y-1'
+    style={{ '--i': 0 } as React.CSSProperties}
+  >
+    <h1 className='whitespace-nowrap text-[15px] font-medium tracking-[-0.01em] text-ink'>
+      {BIO_NAME}
+    </h1>
+    <p className='label whitespace-nowrap'>
+      berlin
+      {weather && (
+        <>
+          {' · '}
+          {weather.temperature}° {weather.label}
+        </>
+      )}
+    </p>
+  </header>
+);
 
 export default Header;

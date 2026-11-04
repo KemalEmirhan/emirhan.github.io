@@ -5,11 +5,11 @@ export default function manifest(): MetadataRoute.Manifest {
     name: 'Emirhan Kemal Kosem - Frontend Software Engineer',
     short_name: 'Emirhan Kosem',
     description:
-      'Personal website of Emirhan Kemal Kosem, a Frontend Software Engineer with 8+ years of experience.',
+      'Personal website of Emirhan Kemal Kosem, a frontend engineer in Berlin.',
     start_url: '/',
     display: 'standalone',
-    background_color: '#ffffff',
-    theme_color: '#3b82f6',
+    background_color: '#e8ecee',
+    theme_color: '#e8ecee',
     orientation: 'portrait-primary',
     icons: [
       {

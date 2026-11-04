@@ -8,7 +8,7 @@ const SEOData = () => {
     alternateName: 'Emir',
     jobTitle: 'Frontend Software Engineer',
     description:
-      'Frontend Software Engineer with 8+ years of experience in React, Next.js, TypeScript, and GraphQL. Based in Berlin, specializing in high-performance web applications, accessibility, and modern web standards.',
+      'Frontend engineer in Berlin, originally from Türkiye. Mostly thinking about animations, accessibility, and how things feel under a finger.',
     url: 'https://emirkemal.com',
     image: 'https://emirhan.github.io/pp.png',
     sameAs: [
@@ -46,7 +46,7 @@ const SEOData = () => {
     '@type': 'WebSite',
     name: 'Emirhan Kemal Kosem - Frontend Software Engineer',
     description:
-      'Personal website of Emirhan Kemal Kosem, a Frontend Software Engineer with 8+ years of experience.',
+      'Personal website of Emirhan Kemal Kosem, a frontend engineer in Berlin.',
     url: 'https://emirkemal.com',
     author: {
       '@type': 'Person',
