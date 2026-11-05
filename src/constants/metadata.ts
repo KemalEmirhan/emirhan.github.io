@@ -49,14 +49,14 @@ export const metadata: Metadata = {
       'Frontend engineer in Berlin, originally from Türkiye. Mostly thinking about animations, accessibility, and how things feel under a finger.',
     images: [
       {
-        url: '/og',
+        url: '/og.png',
         width: 1200,
         height: 630,
         alt: 'Emirhan Kemal Kosem - Frontend Software Engineer',
         type: 'image/png',
       },
       {
-        url: '/og-square',
+        url: '/og-square.png',
         width: 1200,
         height: 1200,
         alt: 'Emirhan Kemal Kosem - Frontend Software Engineer',
@@ -71,7 +71,7 @@ export const metadata: Metadata = {
     title: 'Emirhan Kemal Kosem - Frontend Software Engineer',
     description:
       'Frontend engineer in Berlin, originally from Türkiye. Mostly thinking about animations, accessibility, and how things feel under a finger.',
-    images: ['/og'],
+    images: ['/og.png'],
   },
   robots: {
     index: true,
