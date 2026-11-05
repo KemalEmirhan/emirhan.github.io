@@ -3,7 +3,7 @@ import { Inter } from 'next/font/google';
 import SEOData from '@/components/SEOData';
 import '@/styles/globals.css';
 
-import { isProd, gtmId, gaId } from '@/config/env';
+import { shouldTrack, gtmId, gaId } from '@/config/env';
 import SkipToMainContent from '@/components/SkipToMainContent';
 import { metadata } from '@/constants/metadata';
 
@@ -25,12 +25,12 @@ export default function RootLayout({ children }: React.PropsWithChildren) {
     <html lang='en' className={inter.variable}>
       <head>
         <SEOData />
-        {isProd && gtmId && <GoogleTagManager gtmId={gtmId} />}
+        {shouldTrack && gtmId && <GoogleTagManager gtmId={gtmId} />}
       </head>
       <body className='antialiased'>
         <SkipToMainContent />
         {children}
-        {isProd && gaId && <GoogleAnalytics gaId={gaId} />}
+        {shouldTrack && <GoogleAnalytics gaId={gaId} />}
       </body>
     </html>
   );
