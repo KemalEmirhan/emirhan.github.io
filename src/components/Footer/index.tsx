@@ -2,6 +2,7 @@ import React from 'react';
 import { SOCIALS } from '@/constants/content';
 import Clock from '@/components/Clock';
 import SoundToggle from '@/components/SoundToggle';
+import AnalyticsToggle from '@/components/AnalyticsToggle';
 import ExternalLink from '@/components/ExternalLink';
 
 const Footer = () => (
@@ -19,7 +20,8 @@ const Footer = () => (
       ))}
     </ul>
     <p className='label pt-2 md:pt-0'>
-      <Clock /> · <SoundToggle /> · © {new Date().getFullYear()}
+      <Clock /> · <SoundToggle /> · <AnalyticsToggle /> · ©{' '}
+      {new Date().getFullYear()}
     </p>
   </footer>
 );
