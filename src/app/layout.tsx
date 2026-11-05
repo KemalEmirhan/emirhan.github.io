@@ -1,10 +1,11 @@
-import { GoogleAnalytics, GoogleTagManager } from '@next/third-parties/google';
 import { Inter } from 'next/font/google';
 import SEOData from '@/components/SEOData';
 import '@/styles/globals.css';
 
 import { shouldTrack, gtmId, gaId } from '@/config/env';
 import SkipToMainContent from '@/components/SkipToMainContent';
+import Analytics from '@/components/Analytics';
+import ConsentBanner from '@/components/ConsentBanner';
 import { metadata } from '@/constants/metadata';
 
 const inter = Inter({
@@ -25,12 +26,12 @@ export default function RootLayout({ children }: React.PropsWithChildren) {
     <html lang='en' className={inter.variable}>
       <head>
         <SEOData />
-        {shouldTrack && gtmId && <GoogleTagManager gtmId={gtmId} />}
       </head>
       <body className='antialiased'>
         <SkipToMainContent />
         {children}
-        {shouldTrack && <GoogleAnalytics gaId={gaId} />}
+        <ConsentBanner />
+        <Analytics gaId={gaId} gtmId={gtmId} enabled={shouldTrack} />
       </body>
     </html>
   );
